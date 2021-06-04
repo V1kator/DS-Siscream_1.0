@@ -1,0 +1,42 @@
+﻿<Window x:Class="Projeto_Siscream1._0.Sub_menu_cadastrar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto_Siscream1._0"
+        mc:Ignorable="d"
+        Title="Cadastros" Height="720" Width="1080" ResizeMode="NoResize">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="#FF139506" >
+            <Image Source="/imagens/ICONE PRODUTOS.png" Height="100" Width="100"/>
+            <Button Height="42" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="20"/>
+            <Image Source="/imagens/ICONE VENDAS.png" Height="100" Width="100"/>
+            <Button Height="42" Background="#FF1ADA06" Content="VENDAS" Foreground="White" FontFamily="Arial Black" FontSize="20"/>
+            <Image Source="/imagens/ICONE GASTOS.png" Height="100" Width="100"/>
+            <Button Height="42" Background="#FF1ADA06" Content="LANÇAR GASTOS" Foreground="White" FontFamily="Arial Black" FontSize="20"/>
+            <Image Source="/imagens/ICONE CADASTRAR.png" Height="100" Width="100"/>
+            <Button Height="42" Background="#FF1ADA06" Content="CADASTRAR" Foreground="White" FontFamily="Arial Black" FontSize="20"/>
+        </StackPanel>
+
+        <Button x:Name="botao_sair_subproduto" Grid.Row ="2" Background="#FFF10404" Content="SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="40" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Click="vai_sair"/>
+        <Image Source="/imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="140,20,0,20" Grid.Row="1"/>
+
+        <StackPanel Grid.Column="1" Grid.RowSpan="2" Background="#FF4D4C4C" Margin="2,0,540,0">
+
+            <Button Height="42" Background="#FF999595" Content="CADASTRAR CLIENTE" Foreground="White" FontFamily="Arial Black" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,20,0,0"/>
+            <Button Height="42" Background="#FF999595" Content="CADASTRAR FUNCIONÁRIO" Foreground="White" FontFamily="Arial Black" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,20,0,0"/>
+            <Button Height="42" Background="#FF999595" Content="CONSULTAR CLIENTE" Foreground="White" FontFamily="Arial Black" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,20,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Projeto_Siscream1._0</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="imagens\BOTAO DEMITIR.png" />
+    <None Remove="imagens\BOTÃO CADASTRAR.png" />
+    <None Remove="imagens\BOTÃO CANCELAR.png" />
+    <None Remove="imagens\BOTÃO EDITAR.png" />
+    <None Remove="imagens\chave.png" />
+    <None Remove="imagens\FOTO FUNCIONÁRIO.png" />
+    <None Remove="imagens\ICONE CADASTRAR.png" />
+    <None Remove="imagens\ICONE GASTOS.png" />
+    <None Remove="imagens\ICONE PRODUTOS.png" />
+    <None Remove="imagens\ICONE RELATORIOS.png" />
+    <None Remove="imagens\ICONE VENDAS.png" />
+    <None Remove="imagens\ICONE_SAIR.png" />
+    <None Remove="imagens\logo10_14_103433.png" />
+    <None Remove="imagens\perfil.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="imagens\BOTAO DEMITIR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\BOTÃO CADASTRAR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\BOTÃO CANCELAR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\BOTÃO EDITAR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\chave.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\FOTO FUNCIONÁRIO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\ICONE CADASTRAR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\ICONE GASTOS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\ICONE PRODUTOS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\ICONE RELATORIOS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\ICONE VENDAS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\ICONE_SAIR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\logo10_14_103433.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\perfil.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+  </ItemGroup>
+
+</Project>

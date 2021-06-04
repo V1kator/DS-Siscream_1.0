@@ -1,0 +1,12 @@
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\Projeto Siscream1.0.csproj.AssemblyReference.cache
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\Projeto Siscream1.0_Content.g.cs
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\Projeto Siscream1.0_MarkupCompile.cache
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\Projeto Siscream1.0_MarkupCompile.lref
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\Tela_Menu.g.cs
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\Sub_menu_cadastrar.g.cs
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\Sub_menu_gastos.g.cs
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\Sub_menu_produto.g.cs
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\Sub_Vendas.g.cs
+C:\Users\Victor\Documents\GitHub\DS-Siscream_1.0\Projeto Siscream1.0\Projeto Siscream1.0\obj\Debug\net5.0-windows\Sub_menu_vendas.g.cs
