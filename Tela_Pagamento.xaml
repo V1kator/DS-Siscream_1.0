@@ -1,0 +1,78 @@
+﻿<Window x:Class="Siscream.Tela_Pagamento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Siscream"
+        mc:Ignorable="d"
+        Title="PAGAMENTO" WindowStartupLocation="CenterScreen" Height="720" Width="1280" ResizeMode="NoResize">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <!--ICONES MENU E LABELS-->
+        <StackPanel Background="#FF139506" Margin="0,0,30,0" >
+            <Image Source="imagens/ICONE PRODUTOS.png" Height="100" Width="100"/>
+            <Button Height="42" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_produtos_Click"/>
+            <Image Source="imagens/ICONE VENDAS.png" Height="100" Width="100"/>
+            <Button x:Name="btn_vendas" Height="42" Background="#FF1ADA06" Content="VENDAS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_vendas_Click" />
+            <Image Source="imagens/ICONE GASTOS.png" Height="100" Width="100"/>
+            <Button x:Name="btn_gastos" Height="42" Background="#FF1ADA06" Content="LANÇAR &#xD;&#xA;GASTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_gastos_Click" />
+            <Image Source="imagens/ICONE CADASTRAR.png" Height="100" Width="100"/>
+            <Button x:Name="btn_cadastros" Height="42" Background="#FF1ADA06" Content="CADASTRAR" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_cadastros_Click"/>
+        </StackPanel>
+        <!--LABEL SAIR-->
+        <Button x:Name="btn_close" Grid.Row ="1" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,0,30,0" Click="btn_close_Click"/>
+        <Image Source="imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
+
+        <!--texto FORMA DE PAGAMENTO-->
+        <Label Content="FORMA DE PAGAMENTO" Grid.Column="1" HorizontalAlignment="Left" Margin="288,142,0,0" VerticalAlignment="Top" Height="68" Width="481" FontSize="40" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
+
+        <DockPanel Margin="10"/>
+
+        <!--Botao valor final-->
+        <Label Content="R$80,00" Grid.Column="1" HorizontalAlignment="Left" Margin="881,489,-71,0" VerticalAlignment="Top" Height="88" Width="264" FontSize="45" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Foreground="White"/>
+        <Rectangle Grid.Column="1" Fill="#FFC3C2C0" HorizontalAlignment="Left" Height="31" Margin="135,59,0,0" Stroke="Black" VerticalAlignment="Top" Width="776"/>
+
+        <!--Botao confirmar e bordas-->
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="509" Margin="135,59,0,0" VerticalAlignment="Top" Width="776" Grid.Column="1">
+            <Button Content="CONFIRMAR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="186" Height="40" FontSize="20" Background="#FF139506" Foreground="White" FontFamily="Yu Gothic UI" Click="Button_Click" Margin="436,456,0,0"/>
+        </Border>
+        <Label Content="RESUMO VENDA" Grid.Column="1" HorizontalAlignment="Left" Margin="138,61,0,0" VerticalAlignment="Top" Height="34" Width="195" FontSize="18" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
+
+        <ComboBox x:Name="lbl_pagamento" Grid.Column="1" HorizontalAlignment="Left" Margin="293,233,0,0" VerticalAlignment="Top" 
+                  Width="466" Height="65" OpacityMask="#FFDC1717" BorderThickness="3" FontSize="20" SelectionChanged="lbl_pagamento_SelectionChanged">
+            <ComboBoxItem Content="CARTÃO DE DEBITO"/>
+            <ComboBoxItem Content="CARTÃO DE CRÉDITO"/>
+            <ComboBoxItem Content="DINHEIRO"/>
+        </ComboBox>
+
+        <!--texto valor e preco-->
+        <Label Content="VALOR PAGO:" Grid.Column="1" HorizontalAlignment="Left" Margin="288,336,0,0" VerticalAlignment="Top" Height="58" Width="281" FontSize="35" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
+        <Label Content="R$80,00" Grid.Column="1" HorizontalAlignment="Left" Margin="288,378,0,0" VerticalAlignment="Top" Height="74" Width="281" FontSize="40" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0.2"/>
+            </Label.Background>
+        </Label>
+
+        <!--label pagamento e forma inferior-->
+        <Label Content="PAGAMENTO" Grid.Column="1" HorizontalAlignment="Left" Margin="288,502,0,0" VerticalAlignment="Top" Height="39" Width="272" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
+        <Label Content="R$80,00 | " Grid.Column="1" HorizontalAlignment="Left" Margin="288,527,0,0" VerticalAlignment="Top" Height="43" Width="94" FontSize="18" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0.2"/>
+            </Label.Background>
+        </Label>
+        
+        <!--FORMA SELECIONADA-->
+        <TextBox x:Name="forma_de_pagamento" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="379,538,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox_TextChanged" Text="batata"/>
+
+    </Grid>
+</Window>

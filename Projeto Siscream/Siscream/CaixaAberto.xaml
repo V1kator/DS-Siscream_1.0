@@ -1,0 +1,46 @@
+﻿<Window x:Class="Siscream.CaixaAberto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Siscream"
+        mc:Ignorable="d"
+        Title="INICIAR CUPOM" WindowStartupLocation="CenterScreen" Height="720" Width="1280" ResizeMode="NoResize">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="#FF139506" Margin="0,0,30,0" >
+            <Image Source="/imagens/ICONE PRODUTOS.png" Height="100" Width="100"/>
+            <Button Height="42" Click="vai_tela_subproduto" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="17"/>
+            <Image Source="/imagens/ICONE VENDAS.png" Height="100" Width="100"/>
+            <Button x:Name="botao_vendas" Height="42" Background="#FF1ADA06" Content="VENDAS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="vai_tela_subvendas"/>
+            <Image Source="/imagens/ICONE GASTOS.png" Height="100" Width="100"/>
+            <Button x:Name="botaos_gastos" Height="42" Background="#FF1ADA06" Content="LANÇAR &#xD;&#xA;GASTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="vai_tela_subgastos"/>
+            <Image Source="/imagens/ICONE CADASTRAR.png" Height="100" Width="100"/>
+            <Button x:Name="botao_escravos" Height="42" Background="#FF1ADA06" Content="CADASTRAR" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="vai_tela_subcadastrar"/>
+        </StackPanel>
+
+        <Button x:Name="botao_sair" Grid.Row ="1" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Click="vai_sair" Margin="0,0,30,0"/>
+        <Image Source="/imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
+
+        <!--texto caixa aberto-->
+        <Label Content="CAIXA ABERTO" Grid.Column="1" HorizontalAlignment="Left" Margin="292,115,0,0" VerticalAlignment="Top" Height="96" Width="517" FontSize="70" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
+
+        <!--combobox vendedores-->
+        <Label Content="VENDEDOR:" Grid.Column="1" HorizontalAlignment="Left" Margin="296,278,0,0" VerticalAlignment="Top" Height="43" Width="126" FontSize="20" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="303,317,0,0" VerticalAlignment="Top" Width="487" Height="48"/>
+        <Button Content="INICIAR VENDA" Grid.Column="1" HorizontalAlignment="Left" Margin="303,424,0,0" VerticalAlignment="Top" Width="487" Height="70" FontSize="40" Background="#FF139506" Foreground="White" FontFamily="Yu Gothic UI" Click="Button_Click"/>
+
+
+
+    </Grid>
+</Window>

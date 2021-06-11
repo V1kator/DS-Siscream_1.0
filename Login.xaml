@@ -1,0 +1,38 @@
+﻿<Window x:Class="Siscream.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Siscream"
+        xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        mc:Ignorable="d"
+        Title="LOGIN" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="643*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="489"/>
+            <ColumnDefinition Width="164*"/>
+            <ColumnDefinition Width="621*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="imagens/logo.png" Grid.ColumnSpan="3" Margin="-3,-14,612,-25" Grid.RowSpan="2"/>
+        <Border BorderThickness="0" BorderBrush="#FF0B94E2" Grid.Column="0" Margin="-1,-2,20,2" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Margin="145,58.3,198,0" Text="LOGIN" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bookman Old Style" FontSize="75" FontWeight="Bold" Height="93" Width="278" RenderTransformOrigin="0.498,0.329" Grid.Row="1"/>
+        <wpftool:WatermarkTextBox x:Name="text_cpf_login" Watermark="CPF" Grid.Column="2" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Background="{x:Null}" BorderBrush="#FF0B94E2" Foreground="Black" BorderThickness="2,2,2,2"  CaretBrush="Black" Height="52" FontFamily="Bookman Old Style" FontSize="45" MaxLength="11" MaxLines="11" TextAlignment="Left" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Margin="0,194.3,61,0" Opacity="0.5" Grid.Row="1"/>
+        <wpftool:WatermarkPasswordBox x:Name="text_senha_login_" Watermark="SENHA" Grid.Column="2" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Background="{x:Null}" BorderBrush="#FF0B94E2" Foreground="Black" BorderThickness="2,2,2,2" CaretBrush="Black" Height="52" FontFamily="Bookman Old Style" FontSize="45" TextAlignment="Left" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Margin="0,282.3,61,0" Text="     " Opacity="0.5" Grid.Row="1" />
+
+        <Grid Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Margin="27,194.3,0,0" Grid.Row="1">
+            <Image Source="perfil.png" Stretch="UniformToFill" Margin="0,8,10,2"/>
+        </Grid>
+
+        <Grid Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" Margin="27,286.3,0,307" Grid.Row="1">
+            <Image Source="chave.png" Margin="0,13,10,-7"/>
+        </Grid>
+
+        <Button x:Name="btn_login" Content="ENTRAR" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="469" Margin="87,0,65,149" FontFamily="Bookman Old Style" FontSize="45" FontWeight="Bold" FontStyle="Normal" Background="#FF11CD08" BorderThickness="1,1,1,1" FlowDirection="LeftToRight" ScrollViewer.VerticalScrollBarVisibility="Visible" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="btn_login_Click" Grid.Row="1"/>
+    </Grid>
+</Window>
