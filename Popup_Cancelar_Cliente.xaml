@@ -18,7 +18,7 @@
 
         <StackPanel Grid.Column="1" Margin="4,20,4,-2">
             <TextBlock Margin="-2,5,2,0" FontWeight="Bold" FontSize="18"><Run Text="DESEJA CANCELAR "/><Run Text="O CADASTRO"/><Run Text="?"/></TextBlock>
-            <TextBlock FontSize="14"><Run Text="Se sim, clique e"/><Run Text="m"/><Run Text=" CANCELAR"/><Run Text=". Se não, clique em continuar."/></TextBlock>
+            <TextBlock FontSize="14"><Run Text="Se sim, clique e"/><Run Text="m"/><Run Text=" CONTINUAR"/><Run Text=". Se não, clique em CANCELAR."/></TextBlock>
         </StackPanel>
 
 

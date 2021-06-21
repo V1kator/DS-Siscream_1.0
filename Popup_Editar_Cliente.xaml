@@ -18,7 +18,7 @@
 
         <StackPanel Grid.Column="1" Margin="4,20,4,-2">
             <TextBlock Text="DESEJA ATUALIZAR OS DADOS DESSE CLIENTE?" Margin="-2,5,2,0" FontWeight="Bold" FontSize="18"/>
-            <TextBlock Text="Clique em EDITAR para atualizar os dados editados &#xD;&#xA;ou clique em CANCELAR para reverter as edições." FontSize="14"/>
+            <TextBlock Text="Clique em EDITAR para atualizar os dados editados &#xD;&#xA;ou clique em CANCELAR para sair das edições." FontSize="14"/>
         </StackPanel>
 
 
