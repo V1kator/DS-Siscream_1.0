@@ -124,7 +124,7 @@
 
         <!--LABEL CODIGO USER-->
         <TextBox x:Name="lbl_codigo_user" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="29,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" 
-            FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
+            FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" IsEnabled="False"/>
 
         <!--LABEL CEP-->
         <Label Content="CEP*" Grid.Column="1" HorizontalAlignment="Left" Margin="606,361,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
