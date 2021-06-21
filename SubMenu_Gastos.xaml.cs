@@ -65,6 +65,8 @@ namespace Siscream
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            AdicionarGastos ag = new AdicionarGastos();
+            ag.ShowDialog();
             this.Close();
         }
     }

@@ -20,13 +20,13 @@
 
         <!--ICONES MENU E LABELS-->
         <StackPanel Background="#FF139506" Margin="0,0,30,0" >
-            <Image Source="imagens/ICONE PRODUTOS.png" Height="100" Width="100"/>
+            <Image Source="imagens/icone_produtos.png" Height="100" Width="100"/>
             <Button Height="42" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_produtos_Click"/>
-            <Image Source="imagens/ICONE VENDAS.png" Height="100" Width="100"/>
+            <Image Source="imagens/icone_vendas.png" Height="100" Width="100"/>
             <Button x:Name="btn_vendas" Height="42" Background="#FF1ADA06" Content="VENDAS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_vendas_Click" />
-            <Image Source="imagens/ICONE GASTOS.png" Height="100" Width="100"/>
+            <Image Source="imagens/icone_gastos.png" Height="100" Width="100"/>
             <Button x:Name="btn_gastos" Height="42" Background="#FF1ADA06" Content="LANÇAR &#xD;&#xA;GASTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_gastos_Click" HorizontalAlignment="Left" Width="170" />
-            <Image Source="imagens/ICONE CADASTRAR.png" Height="100" Width="100"/>
+            <Image Source="imagens/icone_cadastrar.png" Height="100" Width="100"/>
             <Button x:Name="btn_cadastros" Height="42" Background="#FF1ADA06" Content="CADASTRAR" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_cadastros_Click"/>
         </StackPanel>
 

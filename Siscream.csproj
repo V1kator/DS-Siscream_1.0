@@ -85,6 +85,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Abrir_Caixa.xaml.cs">
+      <DependentUpon>Abrir_Caixa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarGastos.xaml.cs">
+      <DependentUpon>AdicionarGastos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Cadastrar_Cliente.xaml.cs">
       <DependentUpon>Cadastrar_Cliente.xaml</DependentUpon>
     </Compile>
@@ -96,6 +102,15 @@
     </Compile>
     <Compile Include="Iniciar_Venda.xaml.cs">
       <DependentUpon>Iniciar_Venda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LancarGastprod.xaml.cs">
+      <DependentUpon>LancarGastprod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp_Abrir_Caixa.xaml.cs">
+      <DependentUpon>PopUp_Abrir_Caixa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp_AdicionarGastProd.xaml.cs">
+      <DependentUpon>PopUp_AdicionarGastProd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Popup_Cadastrar_Cliente.xaml.cs">
       <DependentUpon>Popup_Cadastrar_Cliente.xaml</DependentUpon>
@@ -154,6 +169,14 @@
     <Compile Include="Tela_Pagamento.xaml.cs">
       <DependentUpon>Tela_Pagamento.xaml</DependentUpon>
     </Compile>
+    <Page Include="Abrir_Caixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdicionarGastos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Cadastrar_Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,6 +193,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="LancarGastprod.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -182,6 +209,14 @@
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PopUp_Abrir_Caixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopUp_AdicionarGastProd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Popup_Cadastrar_Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -300,10 +335,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="caixa_registradora.png" />
     <Content Include="imagens\adicionar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="imagens\adicionar2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="imagens\Atencao.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\caixa_registradora.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="imagens\chave.png">
@@ -312,22 +354,25 @@
     <Content Include="imagens\cracha.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\FOTO FUNCIONARIO.png">
+    <Content Include="imagens\deletar_icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\ICONE CADASTRAR.png">
+    <Content Include="imagens\foto_funcionario.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\ICONE GASTOS.png">
+    <Content Include="imagens\icone_produtos.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\ICONE PRODUTOS.png">
+    <Content Include="imagens\icone_gastos.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\ICONE VENDAS.png">
+    <Content Include="imagens\icone_cadastrar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="imagens\ICONE_SAIR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imagens\icone_vendas.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="imagens\lixeira1.png">
