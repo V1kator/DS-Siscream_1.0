@@ -65,5 +65,27 @@ namespace Siscream
             PopUp_Funcao_Disponivel_Futuramente fun_disp_futur = new PopUp_Funcao_Disponivel_Futuramente();
             fun_disp_futur.ShowDialog();
         }
+
+        private void bnt_cancelar_devolucao_produto_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bnt_ok_devolucao_produto_Click(object sender, RoutedEventArgs e)
+        {
+            string nome_produto_devol;
+            string quant_prod_devol, id_prod;
+            string preco_prod_devol;
+            string data_prod_devol;
+
+            nome_produto_devol = Textbox_nome_produto_devolucao_produto.Text;
+            quant_prod_devol = Textbox_quantidade_devolucao_produto.Text;
+            id_prod = Textbox_id_devolucao_produto.Text;
+            preco_prod_devol = Textbox_preco_devolucao_produto.Text;
+            data_prod_devol = Data_devolucao_produto.Text;
+
+            MessageBox.Show("Devolução efetuada com sucesso! O produto "+nome_produto_devol+" foi devolvido com sucesso na data: "+ data_prod_devol);
+
+        }
     }
 }

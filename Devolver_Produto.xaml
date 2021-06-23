@@ -44,8 +44,8 @@
         <TextBox x:Name="Textbox_preco_devolucao_produto" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="644,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" FontSize="20" FontWeight="Normal"/>
         <Label Content="ID PRODUTO: " Grid.Column="1" HorizontalAlignment="Left" Margin="108,478,0,0" VerticalAlignment="Top" FontSize="23" FontWeight="Normal"/>
         <TextBox x:Name="Textbox_id_devolucao_produto" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="113,530,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" FontSize="20" FontWeight="Normal"/>
-        <Button x:Name="bnt_cancelar_devolucao_produto" Content="CANCELAR" Grid.Column="1" HorizontalAlignment="Left" Margin="824,504,0,0" VerticalAlignment="Top" Width="190" Background="Red" Foreground="White" FontSize="30"/>
-        <Button x:Name="bnt_ok_devolucao_produto" Content="OK" Grid.Column="1" HorizontalAlignment="Left" Margin="578,504,0,0" VerticalAlignment="Top" Width="190" Background="#FF11BB38" Foreground="White" FontSize="30"/>
+        <Button x:Name="bnt_cancelar_devolucao_produto" Content="CANCELAR" Grid.Column="1" HorizontalAlignment="Left" Margin="784,574,0,0" VerticalAlignment="Top" Width="190" Background="Red" Foreground="White" FontSize="30" Grid.RowSpan="2" Click="bnt_cancelar_devolucao_produto_Click"/>
+        <Button x:Name="bnt_ok_devolucao_produto" Content="OK" Grid.Column="1" HorizontalAlignment="Left" Margin="538,574,0,0" VerticalAlignment="Top" Width="190" Background="#FF11BB38" Foreground="White" FontSize="30" Grid.RowSpan="2" Click="bnt_ok_devolucao_produto_Click"/>
 
     </Grid>
 </Window>
