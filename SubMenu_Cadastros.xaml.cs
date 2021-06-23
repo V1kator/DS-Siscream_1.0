@@ -84,6 +84,8 @@ namespace Siscream
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            Consultar_Cliente Consul_clien = new Consultar_Cliente();
+            Consul_clien.ShowDialog();
             this.Close();
         }
     }

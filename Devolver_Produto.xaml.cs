@@ -73,6 +73,7 @@ namespace Siscream
 
         private void bnt_ok_devolucao_produto_Click(object sender, RoutedEventArgs e)
         {
+            
             string nome_produto_devol;
             string quant_prod_devol, id_prod;
             string preco_prod_devol;
@@ -84,7 +85,7 @@ namespace Siscream
             preco_prod_devol = Textbox_preco_devolucao_produto.Text;
             data_prod_devol = Data_devolucao_produto.Text;
 
-            MessageBox.Show("Devolução efetuada com sucesso! O produto "+nome_produto_devol+" foi devolvido com sucesso na data: "+ data_prod_devol);
+            MessageBox.Show("Devolução efetuada com sucesso! O produto "+nome_produto_devol+" foi devolvido com sucesso na data: "+ data_prod_devol+". Total a ser reembolsado pelo cliente: "+preco_prod_devol);
 
         }
     }

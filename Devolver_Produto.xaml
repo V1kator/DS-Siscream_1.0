@@ -33,6 +33,7 @@
         <!--LABEL SAIR-->
         <Button x:Name="btn_close" Grid.Row ="1" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,0,30,0" Click="btn_close_Click"/>
         <Image Source="imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
+        
         <Label x:Name="Label_devolucao_produto" Content="DEVOLUÇÃO DE PRODUTOS" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="45"/>
         <Label Content="DATA DA DEVOLUÇÃO" Grid.Column="1" HorizontalAlignment="Left" Margin="108,160,0,0" VerticalAlignment="Top" FontSize="23" FontWeight="Normal"/>
         <DatePicker x:Name="Data_devolucao_produto" Grid.Column="1" HorizontalAlignment="Left" Margin="113,208,0,0" VerticalAlignment="Top" Width="220" Height="46" FontSize="20"/>
