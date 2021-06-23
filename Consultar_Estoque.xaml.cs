@@ -34,10 +34,10 @@ namespace Siscream
                 listaprodutos_consulta.Add(new Estoque_teste()
                 {
                     Id = 1+i,
-                    Nome = "Açai "+i,
-                    Preco = 22.90*i,
-                    Marca = "Indiana Jones "+i,
-                    Quantidade = 1*i
+                    Nome = "Açai "+(i+1),
+                    Preco = 22.90*(i+1),
+                    Marca = "Indiana Jones "+(i+1),
+                    Quantidade = 1*(i+1)
 
                 });
             }

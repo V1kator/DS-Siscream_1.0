@@ -48,7 +48,7 @@
             <Label Content="CONSULTAR" HorizontalAlignment="Left" Margin="428,47,0,0" VerticalAlignment="Top" FontSize="10"/>
         </Grid>
         <Button Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="777,128,0,0" VerticalAlignment="Top" Width="209" Foreground="White" Background="#FF5F5F5F" FontSize="30" Height="54"/>
-        <DataGrid x:Name="datagrid_consulta" Grid.Column="1" HorizontalAlignment="Left" Height="353" Margin="0,238,0,0" VerticalAlignment="Top" Width="1054" FontWeight="Normal" FontSize="25"/>
+        <DataGrid x:Name="datagrid_consulta" Grid.Column="1" HorizontalAlignment="Left" Height="353" Margin="0,238,0,0" VerticalAlignment="Top" Width="1054" FontWeight="Normal" FontSize="20" Background="White" BorderBrush="Black"/>
 
     </Grid>
 </Window>
