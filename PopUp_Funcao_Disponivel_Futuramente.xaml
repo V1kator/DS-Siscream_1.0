@@ -17,7 +17,7 @@
         <Image Grid.Column="0" Source="imagens/Atencao.png" Margin="14,-21,18,22"/>
 
         <StackPanel Grid.Column="1" Margin="4,20,-38,-2">
-            <TextBlock Margin="-2,5,2,0" FontWeight="Bold" FontSize="18"><Run Text="Olá, essa função estará disponível quando"/><LineBreak/><Run Text="houver um banco de dados conectado!"/><LineBreak/><Run Text="Agradecemos a compreenção!"/></TextBlock>
+            <TextBlock Margin="-2,5,2,0" FontWeight="Bold" FontSize="18"><Run Text="Olá, essa função estará disponível quando"/><LineBreak/><Run Text="houver um banco de dados conectado!"/><Run Text=","/><LineBreak/><Run Text="mas aproveite os dados demonstrativos!"/><LineBreak/><Run Text="Agradecemos a compreenção!"/></TextBlock>
 
         </StackPanel>
 

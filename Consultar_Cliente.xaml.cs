@@ -29,7 +29,7 @@ namespace Siscream
         {
             List<Consultar_Cliente_Teste> Consult_Cli = new List<Consultar_Cliente_Teste>();
 
-            for(int i=0; i<17; i++)
+            for(int i=0; i<37; i++)
             {
                 Consult_Cli.Add(new Consultar_Cliente_Teste()
                 {
@@ -72,6 +72,28 @@ namespace Siscream
             this.Close();
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PopUp_Funcao_Disponivel_Futuramente fun_di_futu = new PopUp_Funcao_Disponivel_Futuramente();
+            fun_di_futu.ShowDialog();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            PopUp_Funcao_Disponivel_Futuramente fun_di_futu = new PopUp_Funcao_Disponivel_Futuramente();
+            fun_di_futu.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            PopUp_excluir_cliente_consulta exc_cli_con = new PopUp_excluir_cliente_consulta();
+            exc_cli_con.ShowDialog();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            PopUp_Funcao_Disponivel_Futuramente fun_di_futu = new PopUp_Funcao_Disponivel_Futuramente();
+            fun_di_futu.ShowDialog();
+        }
     }
 }
