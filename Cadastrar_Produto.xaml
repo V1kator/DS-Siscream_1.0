@@ -21,7 +21,7 @@
         <!--ICONES MENU E LABELS-->
         <StackPanel Background="#FF139506" Margin="0,0,30,0" >
             <Image Source="imagens/icone_produtos.png" Height="100" Width="100"/>
-            <Button Height="42" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_produtos_Click"/>
+            <Button Height="42" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_produtos_Click" HorizontalAlignment="Right" Width="170"/>
             <Image Source="imagens/icone_vendas.png" Height="100" Width="100"/>
             <Button x:Name="btn_vendas" Height="42" Background="#FF1ADA06" Content="VENDAS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_vendas_Click" />
             <Image Source="imagens/icone_gastos.png" Height="100" Width="100"/>

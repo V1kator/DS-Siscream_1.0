@@ -100,6 +100,9 @@
     <Compile Include="Cadastrar_Produto.xaml.cs">
       <DependentUpon>Cadastrar_Produto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Consultar_Estoque.xaml.cs">
+      <DependentUpon>Consultar_Estoque.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Iniciar_Venda.xaml.cs">
       <DependentUpon>Iniciar_Venda.xaml</DependentUpon>
     </Compile>
@@ -186,6 +189,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Cadastrar_Produto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Consultar_Estoque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -375,6 +382,10 @@
     <Content Include="imagens\icone_vendas.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="imagens\icon_busca.png" />
+    <Resource Include="imagens\icon_cancelar.png" />
+    <Resource Include="imagens\icon_editar.png" />
+    <Resource Include="imagens\icon_estoque.png" />
     <Content Include="imagens\lixeira1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

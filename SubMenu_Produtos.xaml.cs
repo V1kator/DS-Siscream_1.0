@@ -64,11 +64,6 @@ namespace Siscream
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -76,6 +71,13 @@ namespace Siscream
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Consultar_Estoque cons_estoque = new Consultar_Estoque();
+            cons_estoque.ShowDialog();
             this.Close();
         }
     }
