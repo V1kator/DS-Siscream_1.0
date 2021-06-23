@@ -103,6 +103,7 @@
     <Compile Include="Consultar_Cliente.xaml.cs">
       <DependentUpon>Consultar_Cliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Consultar_Cliente_Teste.cs" />
     <Compile Include="Consultar_Estoque.xaml.cs">
       <DependentUpon>Consultar_Estoque.xaml</DependentUpon>
     </Compile>
