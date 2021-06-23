@@ -22,6 +22,27 @@ namespace Siscream
         public Consultar_Estoque()
         {
             InitializeComponent();
+            Loaded += Consultar_Estoque_Loaded;
+        }
+
+        private void Consultar_Estoque_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<Estoque_teste> listaprodutos_consulta = new List<Estoque_teste>();
+
+            for (int i = 0; i < 15; i++) 
+            {
+                listaprodutos_consulta.Add(new Estoque_teste()
+                {
+                    Id = 1+i,
+                    Nome = "Açai "+i,
+                    Preco = 22.90*i,
+                    Marca = "Indiana Jones "+i,
+                    Quantidade = 1*i
+
+                });
+            }
+            
+            datagrid_consulta.ItemsSource = listaprodutos_consulta;
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)

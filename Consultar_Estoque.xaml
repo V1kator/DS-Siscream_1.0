@@ -33,11 +33,22 @@
         <!--LABEL SAIR-->
         <Button x:Name="btn_close" Grid.Row ="1" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,0,30,0" Click="btn_close_Click"/>
         <Image Source="imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
-        
+
         <Grid Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="1054">
             <Label Content="CONSULTAR ESTOQUE" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="522" Height="100" FontSize="40" FontWeight="Bold"/>
             <Image Source="imagens/icon_estoque.png" HorizontalAlignment="Left" Height="50" Margin="457,10,0,-10" VerticalAlignment="Top" Width="100"/>
         </Grid>
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="0,115,0,0" VerticalAlignment="Top" Width="506">
+            <TextBox HorizontalAlignment="Left" Height="53" Margin="10,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372" BorderBrush="Black" FontSize="30"/>
+            <Button x:Name="bnt_consultar_estoque_interno" Content="" HorizontalAlignment="Left" Margin="411,1,0,0" VerticalAlignment="Top" Width="68" Height="60" BorderBrush="White" Foreground="White" Cursor="None" AutomationProperties.HelpText="Clique Para Pesquisar">
+                <Button.Background>
+                    <ImageBrush ImageSource="imagens/icon_busca.png"/>
+                </Button.Background>
+            </Button>
+            <Label Content="CONSULTAR" HorizontalAlignment="Left" Margin="428,47,0,0" VerticalAlignment="Top" FontSize="10"/>
+        </Grid>
+        <Button Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="777,128,0,0" VerticalAlignment="Top" Width="209" Foreground="White" Background="#FF5F5F5F" FontSize="30" Height="54"/>
+        <DataGrid x:Name="datagrid_consulta" Grid.Column="1" HorizontalAlignment="Left" Height="353" Margin="0,238,0,0" VerticalAlignment="Top" Width="1054" FontWeight="Normal" FontSize="25"/>
 
     </Grid>
 </Window>
