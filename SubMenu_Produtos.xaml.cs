@@ -66,6 +66,8 @@ namespace Siscream
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            Devolver_Produto Devol_prod = new Devolver_Produto();
+            Devol_prod.ShowDialog();
             this.Close();
         }
 

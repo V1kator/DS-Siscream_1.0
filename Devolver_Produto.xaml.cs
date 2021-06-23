@@ -15,34 +15,13 @@ using System.Windows.Shapes;
 namespace Siscream
 {
     /// <summary>
-    /// Lógica interna para Consultar_Estoque.xaml
+    /// Lógica interna para Devolver_Produto.xaml
     /// </summary>
-    public partial class Consultar_Estoque : Window
+    public partial class Devolver_Produto : Window
     {
-        public Consultar_Estoque()
+        public Devolver_Produto()
         {
             InitializeComponent();
-            Loaded += Consultar_Estoque_Loaded;
-        }
-
-        private void Consultar_Estoque_Loaded(object sender, RoutedEventArgs e)
-        {
-            List<Estoque_teste> listaprodutos_consulta = new List<Estoque_teste>();
-
-            for (int i = 0; i < 25; i++) 
-            {
-                listaprodutos_consulta.Add(new Estoque_teste()
-                {
-                    Id = 1+i,
-                    Nome = "Açai "+(i+1),
-                    Preco = 22.90*(i+1),
-                    Marca = "Indiana Jones "+(i+1),
-                    Quantidade = 1*(i+1)
-
-                });
-            }
-            
-            datagrid_consulta.ItemsSource = listaprodutos_consulta;
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
@@ -86,7 +65,5 @@ namespace Siscream
             PopUp_Funcao_Disponivel_Futuramente fun_disp_futur = new PopUp_Funcao_Disponivel_Futuramente();
             fun_disp_futur.ShowDialog();
         }
-
-        
     }
 }

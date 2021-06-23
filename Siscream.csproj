@@ -103,6 +103,9 @@
     <Compile Include="Consultar_Estoque.xaml.cs">
       <DependentUpon>Consultar_Estoque.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Devolver_Produto.xaml.cs">
+      <DependentUpon>Devolver_Produto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Estoque_teste.cs" />
     <Compile Include="Iniciar_Venda.xaml.cs">
       <DependentUpon>Iniciar_Venda.xaml</DependentUpon>
@@ -197,6 +200,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Consultar_Estoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Devolver_Produto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
