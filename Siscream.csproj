@@ -149,6 +149,9 @@
     <Compile Include="Popup_Excluir_Produto.xaml.cs">
       <DependentUpon>Popup_Excluir_Produto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PopUp_Funcao_Disponivel_Futuramente.xaml.cs">
+      <DependentUpon>PopUp_Funcao_Disponivel_Futuramente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Popup_Venda_Realizada.xaml.cs">
       <DependentUpon>Popup_Venda_Realizada.xaml</DependentUpon>
     </Compile>
@@ -266,6 +269,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Popup_Excluir_Produto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopUp_Funcao_Disponivel_Futuramente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

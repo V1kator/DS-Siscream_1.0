@@ -29,7 +29,7 @@ namespace Siscream
         {
             List<Estoque_teste> listaprodutos_consulta = new List<Estoque_teste>();
 
-            for (int i = 0; i < 15; i++) 
+            for (int i = 0; i < 25; i++) 
             {
                 listaprodutos_consulta.Add(new Estoque_teste()
                 {
@@ -73,6 +73,18 @@ namespace Siscream
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PopUp_Funcao_Disponivel_Futuramente fun_disp_futur = new PopUp_Funcao_Disponivel_Futuramente();
+            fun_disp_futur.ShowDialog();
+        }
+
+        private void bnt_consultar_estoque_interno_Click(object sender, RoutedEventArgs e)
+        {
+            PopUp_Funcao_Disponivel_Futuramente fun_disp_futur = new PopUp_Funcao_Disponivel_Futuramente();
+            fun_disp_futur.ShowDialog();
         }
     }
 }
