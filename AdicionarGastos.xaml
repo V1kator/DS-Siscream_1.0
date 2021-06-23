@@ -39,27 +39,27 @@
                 FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,589,30,0" Grid.RowSpan="2" Click="btn_close_Click"/>
         <Image Source="/imagens/icone_sair.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
 
-        <StackPanel Grid.Column="3" Grid.Row="0">
+        <StackPanel Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Margin="6,30,4,32">
             <Label Content="PRODUTO" FontSize="40" Height="48" Padding="0 0 0 0" Margin="-30,0,0,0" Background="#FA8072" HorizontalContentAlignment="Center"></Label>
             <Label Content="Sorvete bão d+ hmmmm" FontSize="30" Height="48" Padding="0 0 0 0" Margin="-30 0 0 0" Background="#FA8072" HorizontalContentAlignment="Center"></Label>
         </StackPanel>
 
-        <StackPanel Grid.Column="5" Grid.Row="0">
+        <StackPanel Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2" Margin="6,30,4,32">
             <Label Content="DATA" FontSize="40" Height="48" Padding="0 0 0 0" Margin="-30,0,0,0" Background="#FA8072" HorizontalContentAlignment="Center"></Label>
             <Label Content="20/06/2021" FontSize="30" Height="48" Padding="0 0 0 0" Margin="-30,0,0,0" Background="#FA8072" HorizontalContentAlignment="Center"></Label>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="0">
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Margin="196,30,4,32">
             <Label Content="GASTO" FontSize="40" Height="48" Padding="0 0 0 0" Background="#FA8072" HorizontalContentAlignment="Center"/>
             <Label Content="R$ 2.000" FontSize="30" Height="48" Padding="0 0 0 0" Background="#FA8072" HorizontalContentAlignment="Center"/>
         </StackPanel>
 
         <Button x:Name="botao_adg" Background="#FF139506" Content="ADICIONAR GASTOS" FontSize="30" 
                 HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Grid.Column="3" 
-                Grid.Row="2" Padding="190 0 0 0" Click="botao_adg_Click">
+                Grid.Row="1" Padding="190 0 0 0" Click="botao_adg_Click" Margin="0,0,0,12">
         </Button>
 
-        <Image Source="imagens/adicionar2.png" Grid.Column="3" Grid.Row="1" Margin="0 20 300 20"></Image>
+        <Image Source="imagens/adicionar2.png" Grid.Column="1" Grid.Row="1" Margin="183,15,317,25" Grid.ColumnSpan="3"></Image>
 
         <Button x:Name="botao_excluir" FontSize="30" Background="Red" 
                 HorizontalAlignment="Stretch" Grid.Column="6" 

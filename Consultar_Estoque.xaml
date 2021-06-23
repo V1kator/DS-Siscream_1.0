@@ -35,10 +35,10 @@
         <Image Source="imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
 
         <Grid Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="1054">
-            <Label Content="CONSULTAR ESTOQUE" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="522" Height="100" FontSize="40" FontWeight="Bold"/>
-            <Image Source="imagens/icon_estoque.png" HorizontalAlignment="Left" Height="50" Margin="457,10,0,-10" VerticalAlignment="Top" Width="100"/>
+            <Label Content="CONSULTAR ESTOQUE" HorizontalAlignment="Left" Margin="25,32,0,-32" VerticalAlignment="Top" Width="631" Height="100" FontSize="50" FontWeight="Bold" FontFamily="Arial Black"/>
+            <Image Source="imagens/icon_estoque.png" HorizontalAlignment="Left" Height="50" Margin="662,35,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.094,0.416"/>
         </Grid>
-        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="85" Margin="0,115,0,0" VerticalAlignment="Top" Width="506">
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="85" Margin="32,113,0,0" VerticalAlignment="Top" Width="506">
             <TextBox HorizontalAlignment="Left" Height="53" Margin="13,16,0,16" TextWrapping="Wrap" VerticalAlignment="Center" Width="372" BorderBrush="Black" FontSize="25" FontWeight="Normal" Padding="2,0,0,0"/>
             <Button x:Name="bnt_consultar_estoque_interno" Content="" HorizontalAlignment="Left" Margin="411,6,0,0" VerticalAlignment="Top" Width="68" Height="60" BorderBrush="White" Foreground="White" Cursor="None" AutomationProperties.HelpText="Clique Para Pesquisar" FontSize="0.01" FontWeight="Thin" RenderTransformOrigin="0.794,0.45" Click="bnt_consultar_estoque_interno_Click">
                 <Button.OpacityMask>
@@ -51,8 +51,8 @@
             <Label Content="CONSULTAR" HorizontalAlignment="Left" Margin="428,53,0,0" VerticalAlignment="Top" FontSize="10"/>
         </Grid>
         <Button x:Name="bnt_editar_consulta_estoque" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="809,128,0,0" VerticalAlignment="Top" Width="209" Foreground="White" Background="#FF5F5F5F" FontSize="30" Height="54" Click="Button_Click"/>
-        <DataGrid x:Name="datagrid_consulta" Grid.Column="1" HorizontalAlignment="Left" Height="390" Margin="15,272,0,0" VerticalAlignment="Top" Width="1004" FontWeight="Normal" FontSize="18" Background="White" BorderBrush="Black" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Label Content="Resultados:" Grid.Column="1" HorizontalAlignment="Left" Margin="16,230,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <DataGrid x:Name="datagrid_consulta" Grid.Column="1" HorizontalAlignment="Left" Height="390" Margin="47,272,0,0" VerticalAlignment="Top" Width="972" FontWeight="Normal" FontSize="18" Background="White" BorderBrush="Black" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Resultados:" Grid.Column="1" HorizontalAlignment="Left" Margin="48,232,0,0" VerticalAlignment="Top" FontSize="24" RenderTransformOrigin="0.632,0.503"/>
 
     </Grid>
 </Window>
