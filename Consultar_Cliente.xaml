@@ -54,10 +54,10 @@
         <RadioButton Content="NOME" Grid.Column="1" HorizontalAlignment="Left" Margin="360,181,0,0" VerticalAlignment="Top" FontSize="20"/>
         <RadioButton x:Name="Radio_CNPJ" Content="CNPJ" Grid.Column="1" HorizontalAlignment="Left" Margin="479,182,0,0" VerticalAlignment="Top" FontSize="20" IsChecked="True"/>
 
-        <Button Content="RELATÓRIO" Grid.Column="1" HorizontalAlignment="Left" Margin="822,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF27D600" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_1"/>
-        <Button Content="EXCLUIR" Grid.Column="1" HorizontalAlignment="Left" Margin="595,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FFD60000" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_2"/>
-        <Button Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="367,10,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF685A5A" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_3"/>
-        <DataGrid x:Name="Datagrid_consulta_cliente" Grid.Column="1" HorizontalAlignment="Left" Height="321" Margin="32,260,0,0" VerticalAlignment="Top" Width="1011" FontSize="20"/>
+        <Button Content="RELATÓRIO" Grid.Column="1" HorizontalAlignment="Left" Margin="668,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF27D600" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_1"/>
+        <Button Content="EXCLUIR" Grid.Column="1" HorizontalAlignment="Left" Margin="441,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FFD60000" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_2"/>
+        <Button Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="213,10,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF685A5A" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_3"/>
+        <DataGrid x:Name="Datagrid_consulta_cliente" Grid.Column="1" HorizontalAlignment="Left" Height="321" Margin="32,250,0,0" VerticalAlignment="Top" Width="1000" FontSize="20"/>
 
     </Grid>
 </Window>
