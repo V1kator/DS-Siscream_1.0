@@ -66,7 +66,7 @@ namespace Siscream
         {
             PopUp_Cancelar_Reposicao_Estoque popUp = new PopUp_Cancelar_Reposicao_Estoque();
             popUp.ShowDialog();
-            this.Close();
+           
         }
 
         private void nome_prod_TextChanged(object sender, TextChangedEventArgs e)
