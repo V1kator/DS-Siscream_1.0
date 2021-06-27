@@ -26,8 +26,7 @@ namespace Siscream
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Repor_Estoque tela = new Repor_Estoque();
-            tela.ShowDialog();
+           
             this.Close();
                                  
         }
