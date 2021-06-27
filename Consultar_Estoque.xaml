@@ -1,0 +1,58 @@
+﻿<Window x:Class="Siscream.Consultar_Estoque"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Siscream"
+        mc:Ignorable="d"
+        Title="CONSULTAR ESTOQUE" WindowStartupLocation="CenterScreen" 
+        Height="720" Width="1280" ResizeMode="NoResize" FontSize="48" FontWeight="Bold">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <!--ICONES MENU E LABELS-->
+        <StackPanel Background="#FF139506" Margin="0,0,30,0" >
+            <Image Source="imagens/icone_produtos.png" Height="100" Width="100"/>
+            <Button Height="42" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_produtos_Click"/>
+            <Image Source="imagens/icone_vendas.png" Height="100" Width="100"/>
+            <Button x:Name="btn_vendas" Height="42" Background="#FF1ADA06" Content="VENDAS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_vendas_Click" />
+            <Image Source="imagens/icone_gastos.png" Height="100" Width="100"/>
+            <Button x:Name="btn_gastos" Height="42" Background="#FF1ADA06" Content="LANÇAR &#xD;&#xA;GASTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_gastos_Click" />
+            <Image Source="imagens/icone_cadastrar.png" Height="100" Width="100"/>
+            <Button x:Name="btn_cadastros" Height="42" Background="#FF1ADA06" Content="CADASTRAR" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_cadastros_Click"/>
+        </StackPanel>
+
+        <!--LABEL SAIR-->
+        <Button x:Name="btn_close" Grid.Row ="1" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,0,30,0" Click="btn_close_Click"/>
+        <Image Source="imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
+
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="1054">
+            <Label Content="CONSULTAR ESTOQUE" HorizontalAlignment="Left" Margin="25,32,0,-32" VerticalAlignment="Top" Width="631" Height="100" FontSize="50" FontWeight="Bold" FontFamily="Arial Black"/>
+            <Image Source="imagens/icon_estoque.png" HorizontalAlignment="Left" Height="50" Margin="662,35,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.094,0.416"/>
+        </Grid>
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="85" Margin="32,113,0,0" VerticalAlignment="Top" Width="506">
+            <TextBox HorizontalAlignment="Left" Height="53" Margin="13,16,0,16" TextWrapping="Wrap" VerticalAlignment="Center" Width="372" BorderBrush="Black" FontSize="25" FontWeight="Normal" Padding="2,0,0,0"/>
+            <Button x:Name="bnt_consultar_estoque_interno" Content="" HorizontalAlignment="Left" Margin="411,6,0,0" VerticalAlignment="Top" Width="68" Height="60" BorderBrush="White" Foreground="White" Cursor="None" AutomationProperties.HelpText="Clique Para Pesquisar" FontSize="0.01" FontWeight="Thin" RenderTransformOrigin="0.794,0.45" Click="bnt_consultar_estoque_interno_Click">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="imagens/icon_busca.png"/>
+                </Button.OpacityMask>
+                <Button.Background>
+                    <ImageBrush ImageSource="imagens/icon_busca.png"/>
+                </Button.Background>
+            </Button>
+            <Label Content="CONSULTAR" HorizontalAlignment="Left" Margin="428,53,0,0" VerticalAlignment="Top" FontSize="10"/>
+        </Grid>
+        <Button x:Name="bnt_editar_consulta_estoque" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="809,128,0,0" VerticalAlignment="Top" Width="209" Foreground="White" Background="#FF5F5F5F" FontSize="30" Height="54" Click="Button_Click"/>
+        <DataGrid x:Name="datagrid_consulta" Grid.Column="1" HorizontalAlignment="Left" Height="390" Margin="47,272,0,0" VerticalAlignment="Top" Width="972" FontWeight="Normal" FontSize="18" Background="White" BorderBrush="Black" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Resultados:" Grid.Column="1" HorizontalAlignment="Left" Margin="48,232,0,0" VerticalAlignment="Top" FontSize="24" RenderTransformOrigin="0.632,0.503"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siscream", "Siscream.csproj", "{B0C5B509-8182-4636-ABA9-6F6094C3AA9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0C5B509-8182-4636-ABA9-6F6094C3AA9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C5B509-8182-4636-ABA9-6F6094C3AA9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C5B509-8182-4636-ABA9-6F6094C3AA9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C5B509-8182-4636-ABA9-6F6094C3AA9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFC87188-981A-4B73-99D0-A5783931C108}
+	EndGlobalSection
+EndGlobal
