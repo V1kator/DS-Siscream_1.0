@@ -70,7 +70,7 @@ namespace Siscream
         {
             Popup_Excluir_Produto popup = new Popup_Excluir_Produto();
             popup.ShowDialog();
-            this.Close();
+           
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
