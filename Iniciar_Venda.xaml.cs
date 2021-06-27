@@ -56,7 +56,8 @@ namespace Siscream
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Cadastrar_Produto cadastrar = new Cadastrar_Produto();
+            cadastrar.ShowDialog();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -66,7 +67,8 @@ namespace Siscream
 
         private void btn_cadastrarnovo_Click(object sender, RoutedEventArgs e)
         {
-
+            Cadastrar_Produto cadastrar = new Cadastrar_Produto();
+            cadastrar.ShowDialog();
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
