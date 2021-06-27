@@ -16,8 +16,8 @@
 
         <Image Grid.Column="0" Source="imagens/Atencao.png" Margin="14,-21,18,22"/>
 
-        <StackPanel Grid.Column="1" Margin="10,43,54,58">
-            <TextBlock Margin="-2,5,2,0" FontSize="16"><Run Text="Volte quando houver um banco de dados "/><LineBreak/><Run Text="conectado, mas aproveite a demonstração!"/></TextBlock>
+        <StackPanel Grid.Column="1" Margin="10,43,54,22">
+            <TextBlock Margin="10,5,2,0" FontSize="16" Height="74"><Run Text="Volte quando houver um banco de dados "/><LineBreak/><Run Text="conectado, mas aproveite a demonstração"/><Run Text=" feita"/><LineBreak/><Run Text="EXCLUSIVAMENTE"/><Run Text=" para você"/><Run Text="!"/></TextBlock>
 
 
         </StackPanel>
