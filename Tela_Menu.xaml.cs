@@ -46,7 +46,9 @@ namespace Siscream
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Login Loginback = new Login();
+            Loginback.Show();
+
         }
 
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
