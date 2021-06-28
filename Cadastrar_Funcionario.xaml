@@ -55,7 +55,7 @@
                  Width="183" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
         <!--IMAGEM FUNCIONARIO-->
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="161" Margin="828,138,0,0" VerticalAlignment="Top" Width="177" Source="imagens/FOTO FUNCIONARIO.png"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="161" Margin="828,138,0,0" VerticalAlignment="Top" Width="177" Source="imagens/foto_funcionario.png"/>
 
         <!--LABEL DATA DE NASCIMENTO-->
         <Label Content="DATA DE NASCIMENTO" Grid.Column="1" HorizontalAlignment="Left" Margin="344,224,0,0" VerticalAlignment="Top" Height="34" Width="243" FontSize="18"/>
@@ -167,7 +167,7 @@
         <TextBox x:Name="lbl_id" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="28,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" 
                  FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" IsEnabled="False"/>
 
-        <!--BOTOES DE ACOES-->
+        <!--BTN DE ACOES-->
         <Button x:Name="btn_demitir" Content="DEMITIR" Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="334,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25" Background="#fc3c4c" Foreground="White" FontWeight="Normal" Click="btn_demitir_Click"/>
         <Button x:Name="btn_editar" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Height="54" Margin="508,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25" Background="#646464" Foreground="White" FontWeight="Normal" Click="btn_editar_Click"/>
         <Button x:Name="btn_cancelar" Content="CANCELAR" Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="684,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25"  Background="#fc3c4c" Foreground="White" FontWeight="Normal" Click="btn_cancelar_Click"/>
