@@ -27,6 +27,7 @@ namespace Siscream
         {
             Selecionar_Vendedor Selec = new Selecionar_Vendedor();
             Selec.Show();
+            this.Close();
         }
     }
 }
