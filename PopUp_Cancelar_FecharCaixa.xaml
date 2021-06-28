@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:Siscream"
         mc:Ignorable="d"
        Title="Aviso" Height="171" Width="445" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    
-        <Grid Margin="0,0,0,1" Background="Gainsboro">
 
-         <Grid.ColumnDefinitions>
+    <Grid Margin="0,0,0,1" Background="Gainsboro">
+
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="87"/>
             <ColumnDefinition Width="19"/>
             <ColumnDefinition/>
-         </Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
 
         <Image Grid.Column="0" Source="imagens/Atencao.png" Margin="-3,0,325,34" Grid.ColumnSpan="3"/>
 
@@ -22,17 +22,9 @@
         </StackPanel>
 
 
-        <Button x:Name="F1" Content="Sim" Grid.Column="2" HorizontalAlignment="Left" Margin="50,86,0,0" VerticalAlignment="Top" Width="85" Height="31" FontWeight="Bold" Background="Lime" Click="Button_Click_F1" Foreground="Black" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.962"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.277"/>
-                </TransformGroup>
-            </Button.RenderTransform>
+        <Button x:Name="F1" Content="Sim" Grid.Column="2" HorizontalAlignment="Left" Margin="57,86,0,0" VerticalAlignment="Top" Width="78" Height="31" FontWeight="Bold" Background="Lime" Click="Button_Click_F1" Foreground="Black" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
         </Button>
-        <Button x:Name="F2" Content="Não" Grid.Column="2" HorizontalAlignment="Left" Margin="174,86,0,0" VerticalAlignment="Top" Width="85" Height="31" FontWeight="Bold" Background="red" Click="Button_Click_F2" Foreground="Black" RenderTransformOrigin="-0.4,0.303" BorderBrush="Black"/>
+        <Button x:Name="F2" Content="Não" Grid.Column="2" HorizontalAlignment="Left" Margin="178,86,0,0" VerticalAlignment="Top" Width="81" Height="32" FontWeight="Bold" Background="red" Click="Button_Click_F2" Foreground="Black" RenderTransformOrigin="-0.4,0.303" BorderBrush="Black"/>
 
 
     </Grid>

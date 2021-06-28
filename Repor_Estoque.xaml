@@ -63,8 +63,8 @@
 
         <Label Content="PREÇO POR UNIDADE" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontFamily="Roboto" Margin="430,447,370,0" Width="274"/>
         <TextBox x:Name="preco" FontSize="20" FontFamily="Roboto" TextWrapping="Wrap" Background="White" Text="R$" Grid.Column="1" Margin="198,492,194,57" Foreground="#FF16720D" TextChanged="preco_TextChanged" BorderBrush="Black"/>
-        <Button x:Name="But_salvar" Content="Salvar" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" FontSize="20" FontFamily="Roboto" Background="Green" Margin="712,20,0,0" Grid.Row="1" Height="50" Width="127" Foreground="#FFF1EBEB" Click="But_salvar_Click"/>
-        <Button x:Name="But_cancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" FontSize="20" FontFamily="Roboto" Background="Maroon" Margin="874,20,0,0" Grid.Row="1" Height="50" Width="128" Foreground="#FFF1EBEB" Click="But_cancelar_Click"/>
+        <Button x:Name="But_salvar" Content="Salvar" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" FontSize="20" FontFamily="Roboto" Background="Green" Margin="712,20,0,0" Grid.Row="1" Height="50" Width="127" Foreground="#FFF1EBEB" Click="But_salvar_Click" BorderBrush="Black"/>
+        <Button x:Name="But_cancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" FontSize="20" FontFamily="Roboto" Background="Maroon" Margin="874,20,0,0" Grid.Row="1" Height="50" Width="128" Foreground="#FFF1EBEB" Click="But_cancelar_Click" BorderBrush="Black"/>
 
 
 
