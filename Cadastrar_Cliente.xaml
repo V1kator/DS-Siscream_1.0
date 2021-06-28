@@ -112,7 +112,7 @@
                  Width="83" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
 
         <!--LABEL EMAIL-->
-        <Label Content="EMAIL*" Grid.Column="1" HorizontalAlignment="Left" Margin="26,464,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
+        <Label Content="E-MAIL*" Grid.Column="1" HorizontalAlignment="Left" Margin="26,464,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
         <TextBox x:Name="lbl_email" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="29,501,0,0" TextWrapping="Wrap" 
                  VerticalAlignment="Top" Width="547" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
