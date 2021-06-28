@@ -28,12 +28,14 @@ namespace Siscream
         {
             SubMenu_Gastos submenu_gastos = new SubMenu_Gastos();
             submenu_gastos.Show();
+            this.Close();
         }
 
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Cadastros submenu_cadastrar = new SubMenu_Cadastros();
             submenu_cadastrar.Show();
+            this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -52,6 +54,7 @@ namespace Siscream
         {
             SubMenu_Vendas submenu_vendas = new SubMenu_Vendas();
             submenu_vendas.Show();
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
