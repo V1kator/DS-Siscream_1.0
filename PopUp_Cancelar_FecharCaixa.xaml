@@ -22,8 +22,17 @@
         </StackPanel>
 
 
-        <Button x:Name="F1" Content="Sim" Grid.Column="2" HorizontalAlignment="Left" Margin="50,86,0,0" VerticalAlignment="Top" Width="85" Height="33" FontWeight="Bold" Background="Lime" Click="Button_Click_F1" Foreground="Black"/>
-        <Button x:Name="F2" Content="Não" Grid.Column="2" HorizontalAlignment="Left" Margin="176,86,0,0" VerticalAlignment="Top" Width="85" Height="33" FontWeight="Bold" Background="red" Click="Button_Click_F2" Foreground="Black" RenderTransformOrigin="-0.4,0.303"/>
+        <Button x:Name="F1" Content="Sim" Grid.Column="2" HorizontalAlignment="Left" Margin="50,86,0,0" VerticalAlignment="Top" Width="85" Height="31" FontWeight="Bold" Background="Lime" Click="Button_Click_F1" Foreground="Black" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.962"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.277"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="F2" Content="Não" Grid.Column="2" HorizontalAlignment="Left" Margin="174,86,0,0" VerticalAlignment="Top" Width="85" Height="31" FontWeight="Bold" Background="red" Click="Button_Click_F2" Foreground="Black" RenderTransformOrigin="-0.4,0.303" BorderBrush="Black"/>
 
 
     </Grid>

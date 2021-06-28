@@ -50,7 +50,7 @@
         <Label Content="Fechado:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="699,103,0,0" FontSize="18" RenderTransformOrigin="1.149,0.299" Height="34" Width="85"/>
         <TextBox HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" Margin="699,142,0,0" BorderBrush="Black"/>
         <Label Content="Saldo inicial:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="67,195,0,0" FontSize="18" Height="34" Width="117"/>
-        <TextBox HorizontalAlignment="Left" Background="White" FontSize="18" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Grid.Column="1" Margin="76,234,0,0" BorderBrush="Black"/>
+        <TextBox HorizontalAlignment="Left" Background="White" FontSize="18" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Grid.Column="1" Margin="67,234,0,0" BorderBrush="Black"/>
         <Label Content="Suprimento:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="448,195,0,0" FontSize="18" RenderTransformOrigin="1.149,0.299" Height="34" Width="114"/>
         <TextBox HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" Margin="448,240,0,0" BorderBrush="Black"/>
 
@@ -69,7 +69,7 @@
         <!--Saídas Caixa-->
         <Separator HorizontalAlignment="Left" Height="88" Margin="96,413,0,0" VerticalAlignment="Top" Width="968" Grid.Column="1" Background="#FF13A426" RenderTransformOrigin="0.504,0.356"/>
         <Label Content="SAÍDAS CAIXA" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,441,0,0" FontSize="16" Height="29" Width="126" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Grid.Column="1" Margin="76,516,0,0" BorderBrush="Black"/>
+        <TextBox HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Grid.Column="1" Margin="67,516,0,0" BorderBrush="Black"/>
         <Label Content="Valor de retirada" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="67,477,0,0" FontSize="18" Height="34" Width="151"/>
         <Label Content="Especificações" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="317,477,0,0" FontSize="18" Height="34" Width="130"/>
         <TextBox HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="641" Grid.Column="1" Margin="317,516,0,0" BorderBrush="Black"/>
@@ -77,13 +77,13 @@
         <!--Saldo final-->
         <Separator HorizontalAlignment="Left" Height="51" Margin="90,545,0,0" VerticalAlignment="Top" Width="984" Grid.Column="1" Background="#FF13A426" RenderTransformOrigin="0.504,0.356"/>
         <Label Content="SALDO FINAL" HorizontalAlignment="Left" Margin="170,552,0,12" FontSize="16" Width="120" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Background="White" FontSize="18" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Grid.Column="1" Margin="62,10,0,0" BorderBrush="#FF0D9914" Grid.Row="1"/>
-        <Label Content="R$" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="59,579,0,0" FontSize="18" Height="34" Width="151" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Background="White" FontSize="18" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Grid.Column="1" Margin="67,10,0,0" BorderBrush="#FF0D9914" Grid.Row="1"/>
+        <Label Content="R$" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="67,579,0,0" FontSize="18" Height="34" Width="151" Grid.RowSpan="2"/>
 
         <!--Botões-->
-        <Button x:Name="Editar" Content="Editar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="598,25,0,0" Grid.Row="1" Background="#FF686868" FontSize="20" Height="41" Foreground="#FFF7EDED" Click="Editar_Click"/>
-        <Button x:Name="Cancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="757,25,0,0" Grid.Row="1" Background="#FFCF0909" FontSize="20" Height="41" Foreground="#FFF3E7E7" Click="Cancelar_Click"/>
-        <Button x:Name="Salvar" Content="Salvar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="918,25,0,0" Grid.Row="1" Background="Lime" FontSize="20" Height="41" Foreground="#FFF0F7ED" Click="Salvar_Click"/>
+        <Button x:Name="Editar" Content="Editar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="598,25,0,0" Grid.Row="1" Background="#FF686868" FontSize="20" Height="41" Foreground="#FFF7EDED" Click="Editar_Click" BorderBrush="Black"/>
+        <Button x:Name="Cancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="757,25,0,0" Grid.Row="1" Background="#FFCF0909" FontSize="20" Height="41" Foreground="#FFF3E7E7" Click="Cancelar_Click" BorderBrush="Black"/>
+        <Button x:Name="Salvar" Content="Salvar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="918,25,0,0" Grid.Row="1" Background="Lime" FontSize="20" Height="41" Foreground="#FFF0F7ED" Click="Salvar_Click" BorderBrush="Black"/>
 
 
 

@@ -21,7 +21,7 @@
         </StackPanel>
 
 
-        <Button Content="OK" Grid.Column="2" HorizontalAlignment="Left" Margin="114,92,0,0" VerticalAlignment="Top" Width="85" Height="33" FontWeight="Bold" Background="Lime" Click="Button_Click" Foreground="White"/>
+        <Button Content="OK" Grid.Column="2" HorizontalAlignment="Left" Margin="118,91,0,0" VerticalAlignment="Top" Width="81" Height="33" FontWeight="Bold" Background="Lime" Click="Button_Click" Foreground="White"/>
 
     </Grid>
 </Window>

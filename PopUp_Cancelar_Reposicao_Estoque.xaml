@@ -17,12 +17,12 @@
         <Image Grid.Column="0" Source="imagens/Atencao.png" Margin="-3,0,10,34"/>
 
         <StackPanel Grid.Column="1" Margin="4,20,4,-2">
-            <TextBlock x:Name="text_alerta" Text="Cancelar Reposição de estoque em andamento?" Margin="0,5,0,0" FontWeight="Bold" Height="58" FontSize="14" RenderTransformOrigin="0.502,0.808"/>
+            <TextBlock x:Name="text_alerta" Text="Cancelar Reposição de Estoque em andamento?" Margin="0,5,0,0" FontWeight="Bold" Height="55" FontSize="14" RenderTransformOrigin="0.502,0.808"/>
         </StackPanel>
 
 
-        <Button Content="Sim" Grid.Column="1" HorizontalAlignment="Left" Margin="167,82,0,0" VerticalAlignment="Top" Width="85" Height="33" FontWeight="Bold" Background="Green" Click="Button_Click" Foreground="#FFF1EBEB"/>
-        <Button Content="Não" Grid.Column="1" HorizontalAlignment="Left" Margin="42,82,0,0" VerticalAlignment="Top" Width="85" Height="33" FontWeight="Bold" Background="Maroon" Click="Button_Click_1" Foreground="#FFF1EBEB"/>
+        <Button Content="Sim" Grid.Column="1" HorizontalAlignment="Left" Margin="167,87,0,0" VerticalAlignment="Top" Width="85" Height="28" FontWeight="Bold" Background="Green" Click="Button_Click" Foreground="#FFF1EBEB" BorderBrush="Black"/>
+        <Button Content="Não" Grid.Column="1" HorizontalAlignment="Left" Margin="42,87,0,0" VerticalAlignment="Top" Width="85" Height="28" FontWeight="Bold" Background="Maroon" Click="Button_Click_1" Foreground="#FFF1EBEB" BorderBrush="Black"/>
 
     </Grid>
 </Window>

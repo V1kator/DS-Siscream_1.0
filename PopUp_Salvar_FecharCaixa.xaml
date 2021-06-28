@@ -6,22 +6,22 @@
         xmlns:local="clr-namespace:Siscream"
         mc:Ignorable="d"
         Title="Aviso" Height="171" Width="445" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-        <Grid Margin="0,0,0,1" Background="Gainsboro">
+    <Grid Margin="0,0,0,1" Background="Gainsboro">
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="87"/>
-                <ColumnDefinition Width="19"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="87"/>
+            <ColumnDefinition Width="19"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
-            <Image Grid.Column="0" Source="imagens/Atencao.png" Margin="-3,0,325,34" Grid.ColumnSpan="3"/>
+        <Image Grid.Column="0" Source="imagens/Atencao.png" Margin="-3,0,325,34" Grid.ColumnSpan="3"/>
 
-            <StackPanel Grid.Column="2" Margin="22,30,10,-2">
-                <TextBlock Text="Fechamento de Caixa salvo com sucesso!" Margin="-18,5,0,0" FontWeight="Bold" FontSize="16" Height="25"/>
-            </StackPanel>
+        <StackPanel Grid.Column="2" Margin="22,30,10,-2">
+            <TextBlock Text="Fechamento de Caixa salvo com sucesso!" Margin="-16,5,0,0" FontWeight="Bold" FontSize="16" Height="25"/>
+        </StackPanel>
 
 
-            <Button Content="OK" Grid.Column="2" HorizontalAlignment="Left" Margin="114,86,0,0" VerticalAlignment="Top" Width="85" Height="33" FontWeight="Bold" Background="Lime" Click="Button_Click" Foreground="White"/>
+        <Button Content="OK" Grid.Column="2" HorizontalAlignment="Left" Margin="114,88,0,0" VerticalAlignment="Top" Width="85" Height="31" FontWeight="Bold" Background="Lime" Click="Button_Click" Foreground="White"/>
 
-        </Grid>
+    </Grid>
 </Window>
