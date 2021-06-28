@@ -72,7 +72,8 @@ namespace Siscream
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Abrir_Caixa Abrir = new Abrir_Caixa();
+            Abrir.Show();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

@@ -25,7 +25,8 @@ namespace Siscream
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Selecionar_Vendedor Selec = new Selecionar_Vendedor();
+            Selec.Show();
         }
     }
 }
