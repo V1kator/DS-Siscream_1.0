@@ -31,6 +31,11 @@ namespace Siscream
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
+=======
+            Tela_Menu tela = new Tela_Menu();
+            tela.ShowDialog();
+>>>>>>> main
             this.Close();
         }
     }

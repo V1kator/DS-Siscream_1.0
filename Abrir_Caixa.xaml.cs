@@ -24,6 +24,10 @@ namespace Siscream
             InitializeComponent();
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
         private void vai_tela_subproduto(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos subproduto = new SubMenu_Produtos();
@@ -60,14 +64,27 @@ namespace Siscream
 
         private void botao_abrir_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
            // PopUp_Abrir_Caixa PupUp = new PopUp_Abrir_Caixa();
            // PupUp.ShowDialog();
+=======
+           PopUp_Abrir_Caixa PupUp = new PopUp_Abrir_Caixa();
+           PupUp.ShowDialog();
+>>>>>>> main
         }
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+<<<<<<< HEAD
+=======
+
+        private void Funcionario_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+>>>>>>> main
     }
 }
 

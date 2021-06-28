@@ -72,12 +72,24 @@ namespace Siscream
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
+=======
+            Abrir_Caixa A_Caixa = new Abrir_Caixa();
+            A_Caixa.ShowDialog();
+>>>>>>> main
             this.Close();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             this.Close();
+=======
+            Fechar_Caixa F_caixa = new Fechar_Caixa();
+            F_caixa.ShowDialog();
+            this.Close();
+           
+>>>>>>> main
         }
     }
 }
