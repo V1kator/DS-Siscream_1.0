@@ -27,20 +27,20 @@ namespace Siscream
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos submenu_produtos = new SubMenu_Produtos();
-            submenu_produtos.ShowDialog();
+            submenu_produtos.Show();
         }
 
         private void btn_gastos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Gastos submenu_gastos = new SubMenu_Gastos();
-            submenu_gastos.ShowDialog();
+            submenu_gastos.Show();
             this.Close();
         }
 
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Cadastros submenu_cadastrar = new SubMenu_Cadastros();
-            submenu_cadastrar.ShowDialog();
+            submenu_cadastrar.Show();
             this.Close();
         }
 
@@ -52,21 +52,21 @@ namespace Siscream
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Selecionar_Vendedor selecione = new Selecionar_Vendedor();
-            selecione.ShowDialog();
+            selecione.Show();
             this.Close();
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos produto = new SubMenu_Produtos();
-            produto.ShowDialog();
+            produto.Show();
             this.Close();
         }
 
         private void btn_vendas_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Vendas venda = new SubMenu_Vendas();
-            venda.ShowDialog();
+            venda.Show();
             this.Close();
         }
 
