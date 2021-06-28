@@ -35,6 +35,7 @@ namespace Siscream
         {
             SubMenu_Produtos submenu_produtos = new SubMenu_Produtos();
             submenu_produtos.Show();
+            this.Close();
         }
 
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
