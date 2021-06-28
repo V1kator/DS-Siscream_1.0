@@ -73,11 +73,6 @@ namespace Siscream
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-=======
-            Repor_Estoque estoque = new Repor_Estoque();
-            estoque.ShowDialog();
->>>>>>> main
             this.Close();
         }
 

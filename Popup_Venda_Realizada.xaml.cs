@@ -26,12 +26,7 @@ namespace Siscream
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
             this.Close();
-=======
-            Iniciar_Venda iniciar = new Iniciar_Venda();
-            iniciar.ShowDialog();
->>>>>>> main
         }
     }
 }
