@@ -39,7 +39,7 @@
 
         <!--combobox vendedores-->
         <Label Content="VENDEDOR:" Grid.Column="1" HorizontalAlignment="Left" Margin="296,278,0,0" VerticalAlignment="Top" Height="43" Width="126" FontSize="20" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
-        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="303,317,0,0" VerticalAlignment="Top" Width="487" Height="48" SelectionChanged="ComboBox_SelectionChanged">
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="303,317,0,0" VerticalAlignment="Top" Width="487" Height="48" SelectionChanged="ComboBox_SelectionChanged" FontSize="18">
             <ComboBoxItem Content="Paulo Santos"/>
         </ComboBox>
         <Button Content="INICIAR VENDA" Grid.Column="1" HorizontalAlignment="Left" Margin="303,424,0,0" VerticalAlignment="Top" Width="487" Height="70" FontSize="40" Background="#FF139506" Foreground="White" FontFamily="Yu Gothic UI" Click="Button_Iniciar_Click"/>
