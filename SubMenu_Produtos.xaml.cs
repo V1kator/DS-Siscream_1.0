@@ -32,42 +32,42 @@ namespace Siscream
         private void btn_gastos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Gastos submenu_gastos = new SubMenu_Gastos();
-            submenu_gastos.ShowDialog();
+            submenu_gastos.Show();
             this.Close();
         }
 
         private void btn_vendas_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Vendas submenu_vendas = new SubMenu_Vendas();
-            submenu_vendas.ShowDialog();
+            submenu_vendas.Show();
             this.Close();
         }
 
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Cadastros submenu_cadastrar = new SubMenu_Cadastros();
-            submenu_cadastrar.ShowDialog();
+            submenu_cadastrar.Show();
             this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Cadastrar_Produto cad_Produto = new Cadastrar_Produto();
-            cad_Produto.ShowDialog();
+            cad_Produto.Show();
             this.Close();
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos produto = new SubMenu_Produtos();
-            produto.ShowDialog();
+            produto.Show();
             this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Devolver_Produto Devol_prod = new Devolver_Produto();
-            Devol_prod.ShowDialog();
+            Devol_prod.Show();
             this.Close();
         }
 
@@ -79,7 +79,7 @@ namespace Siscream
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Consultar_Estoque cons_estoque = new Consultar_Estoque();
-            cons_estoque.ShowDialog();
+            cons_estoque.Show();
             this.Close();
         }
     }
