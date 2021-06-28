@@ -28,6 +28,7 @@ namespace Siscream
         {
             SubMenu_Produtos submenu_produtos = new SubMenu_Produtos();
             submenu_produtos.Show();
+            this.Close();
         }
 
         private void btn_gastos_Click(object sender, RoutedEventArgs e)
@@ -74,6 +75,7 @@ namespace Siscream
         {
             Abrir_Caixa Abrir = new Abrir_Caixa();
             Abrir.Show();
+            this.Close();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
