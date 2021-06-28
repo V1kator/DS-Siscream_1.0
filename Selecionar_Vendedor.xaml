@@ -34,10 +34,10 @@
         <Button x:Name="btn_close" Grid.Row ="1" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,0,30,0" Click="btn_close_Click"/>
         <Image Source="imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
 
-        <!--texto caixa aberto-->
+        <!--LABEL CAIXA ABERTO-->
         <Label Content="CAIXA ABERTO" Grid.Column="1" HorizontalAlignment="Left" Margin="292,115,0,0" VerticalAlignment="Top" Height="96" Width="517" FontSize="70" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
 
-        <!--combobox vendedores-->
+        <!--CBO VENDEDORES-->
         <Label Content="VENDEDOR:" Grid.Column="1" HorizontalAlignment="Left" Margin="296,278,0,0" VerticalAlignment="Top" Height="43" Width="126" FontSize="20" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
         <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="303,317,0,0" VerticalAlignment="Top" Width="487" Height="48" SelectionChanged="ComboBox_SelectionChanged" FontSize="18">
             <ComboBoxItem Content="Paulo Santos"/>
