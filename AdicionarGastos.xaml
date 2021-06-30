@@ -56,7 +56,7 @@
 
         <Button x:Name="botao_adg" Background="#FF139506" Content="ADICIONAR GASTOS" FontSize="30" 
                 HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Grid.Column="3" 
-                Grid.Row="1" Padding="190 0 0 0" Click="botao_adg_Click" Margin="0,0,0,12">
+                Grid.Row="1" Padding="190 1 0 0" Click="botao_adg_Click" Margin="0,0,0,12">
         </Button>
 
         <Image Source="imagens/adicionar2.png" Grid.Column="1" Grid.Row="1" Margin="183,15,317,25" Grid.ColumnSpan="3"></Image>

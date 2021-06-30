@@ -65,12 +65,12 @@
 
         <Button x:Name="botao_cancelar" Background="#fc3c4c" HorizontalContentAlignment="Center" FontFamily="Arial Black" 
                  FontSize="25" Foreground="White" Grid.RowSpan="2" Content="CANCELAR" Grid.Column="1" HorizontalAlignment="Left" 
-                Margin="580 0 0 0" Grid.Row="1" VerticalAlignment="Center" 
+                Margin="580 1 0 0" Grid.Row="1" VerticalAlignment="Center" 
                 Height="60" Width="200" Click="botao_cancelar_Click"/>
 
         <Button x:Name="botao_abrir" Background="#FF1ADA06" HorizontalContentAlignment="Center" FontFamily="Arial Black" 
                  FontSize="25"  Foreground="White" Grid.RowSpan="2" Content="ABRIR" Grid.Column="1" HorizontalAlignment="Left" 
-                Margin="830 0 0 0" Grid.Row="1" VerticalAlignment="Center" 
+                Margin="830 1 0 0" Grid.Row="1" VerticalAlignment="Center" 
                 Height="60" Width="200" Click="botao_abrir_Click"/>
 
     </Grid>
