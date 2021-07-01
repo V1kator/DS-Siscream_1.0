@@ -41,11 +41,7 @@
         <!--LABEL NOME DO PRODUTO-->
         <Label Content="NOME DO PRODUTO*" Grid.Column="1" HorizontalAlignment="Left" Margin="26,143,0,0" VerticalAlignment="Top" Height="34" Width="258" FontSize="18"/>
         <TextBox x:Name="lbl_nome" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="29,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
-<<<<<<< HEAD
                  Width="274" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
-=======
-                 Width="274" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" TextChanged="lbl_nome_TextChanged"/>
->>>>>>> main
 
         <!--UNIDADE DE MEDIDA-->
         <Label Content="UNIDADE DE MEDIDA*" Grid.Column="1" HorizontalAlignment="Left" Margin="344,143,0,0" VerticalAlignment="Top" Height="34" Width="226" FontSize="18"/>

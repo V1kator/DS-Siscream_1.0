@@ -91,13 +91,5 @@ namespace Siscream
             produto.Show();
             this.Close();
         }
-<<<<<<< HEAD
-=======
-
-        private void lbl_nome_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
->>>>>>> main
     }
 }

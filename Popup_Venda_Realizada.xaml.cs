@@ -26,17 +26,9 @@ namespace Siscream
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
             Selecionar_Vendedor Select = new Selecionar_Vendedor();
             Select.Show();
-=======
-<<<<<<< HEAD
->>>>>>> parent of 4aac66c... Revert "Atualizacao window 2"
             this.Close();
-=======
-            Iniciar_Venda iniciar = new Iniciar_Venda();
-            iniciar.ShowDialog();
->>>>>>> main
         }
     }
 }
