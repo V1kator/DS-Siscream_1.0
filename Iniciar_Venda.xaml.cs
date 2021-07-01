@@ -27,21 +27,19 @@ namespace Siscream
         private void btn_gastos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Gastos submenu_gastos = new SubMenu_Gastos();
-            submenu_gastos.Show();
-            this.Close();
+            submenu_gastos.ShowDialog();
         }
 
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Cadastros submenu_cadastrar = new SubMenu_Cadastros();
-            submenu_cadastrar.Show();
-            this.Close();
+            submenu_cadastrar.ShowDialog();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Tela_Pagamento horadepagar = new Tela_Pagamento();
-            horadepagar.Show();
+            horadepagar.ShowDialog();
             this.Close();
         }
 
@@ -53,13 +51,13 @@ namespace Siscream
         private void btn_vendas_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Vendas submenu_vendas = new SubMenu_Vendas();
-            submenu_vendas.Show();
-            this.Close();
+            submenu_vendas.ShowDialog();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Cadastrar_Produto cadastrar = new Cadastrar_Produto();
+            cadastrar.ShowDialog();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -69,13 +67,14 @@ namespace Siscream
 
         private void btn_cadastrarnovo_Click(object sender, RoutedEventArgs e)
         {
-
+            Cadastrar_Produto cadastrar = new Cadastrar_Produto();
+            cadastrar.ShowDialog();
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos produto = new SubMenu_Produtos();
-            produto.Show();
+            produto.ShowDialog();
             this.Close();
         }
     }

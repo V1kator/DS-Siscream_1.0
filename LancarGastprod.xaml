@@ -35,11 +35,11 @@
 
         <Button x:Name="botao_ok" Background="#FF139506" Content="Confirmar" FontSize="27" 
                 HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Grid.Column="2" 
-                Grid.Row="1" Padding="1 0 0 0" Click="botao_confim_Click" Foreground="white" Margin="7,0,23,23"/>
+                Grid.Row="1" Padding="0 0 0 0" Click="botao_confim_Click" Foreground="white" Margin="7,0,23,23"/>
 
         <Button x:Name="botao_can" Background="red" Content="Cancelar" FontSize="27" 
                 HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" 
-                Grid.Row="1" Padding="1 0 0 0" Click="botao_cancelr_Click" Foreground="White" Margin="309,0,37,24" Grid.ColumnSpan="2"/>
+                Grid.Row="1" Padding="0 0 0 0" Click="botao_cancelr_Click" Foreground="White" Margin="309,0,37,24" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

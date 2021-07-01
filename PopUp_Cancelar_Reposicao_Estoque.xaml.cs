@@ -15,19 +15,27 @@ using System.Windows.Shapes;
 namespace Siscream
 {
     /// <summary>
-    /// Lógica interna para Popup_Venda_Realizada.xaml
+    /// Lógica interna para PopUp_Cancelar_Reposicao_Estoque.xaml
     /// </summary>
-    public partial class Popup_Venda_Realizada : Window
+    public partial class PopUp_Cancelar_Reposicao_Estoque : Window
     {
-        public Popup_Venda_Realizada()
+        public PopUp_Cancelar_Reposicao_Estoque()
         {
             InitializeComponent();
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+           
+            this.Close();
+                                 
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Iniciar_Venda iniciar = new Iniciar_Venda();
-            iniciar.ShowDialog();
+            Tela_Menu tela = new Tela_Menu();
+            tela.ShowDialog();
+            this.Close();
         }
     }
 }

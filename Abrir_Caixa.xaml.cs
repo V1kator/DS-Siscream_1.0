@@ -24,10 +24,11 @@ namespace Siscream
             InitializeComponent();
         }
 
+
         private void vai_tela_subproduto(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos subproduto = new SubMenu_Produtos();
-            subproduto.Show();
+            subproduto.ShowDialog();
         }
 
         private void botao_sair_Click(object sender, RoutedEventArgs e)
@@ -38,19 +39,19 @@ namespace Siscream
         private void botao_vendas_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Vendas subvendas = new SubMenu_Vendas();
-            subvendas.Show();
+            subvendas.ShowDialog();
         }
 
         private void botaos_gastos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Gastos subgastos = new SubMenu_Gastos();
-            subgastos.Show();
+            subgastos.ShowDialog();
         }
 
         private void botao_escravos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Cadastros subcdastro = new SubMenu_Cadastros();
-            subcdastro.Show();
+            subcdastro.ShowDialog();
         }
 
         private void botao_cancelar_Click(object sender, RoutedEventArgs e)
@@ -67,6 +68,11 @@ namespace Siscream
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Funcionario_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -33,16 +33,16 @@
         <Button x:Name="btn_close" Grid.Row ="1" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,0,30,0" Click="btn_close_Click"/>
         <Image Source="imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
 
-        <!--TEXTO FORMA DE PAGAMENTO-->
+        <!--texto FORMA DE PAGAMENTO-->
         <Label Content="FORMA DE PAGAMENTO" Grid.Column="1" HorizontalAlignment="Left" Margin="288,142,0,0" VerticalAlignment="Top" Height="68" Width="481" FontSize="40" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
 
         <DockPanel Margin="10"/>
 
-        <!--BOTAO VALOT FINAL-->
+        <!--Botao valor final-->
         <Label Content="R$80,00" Grid.Column="1" HorizontalAlignment="Left" Margin="881,489,-71,0" VerticalAlignment="Top" Height="88" Width="264" FontSize="45" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Foreground="White"/>
         <Rectangle Grid.Column="1" Fill="#FFC3C2C0" HorizontalAlignment="Left" Height="31" Margin="135,59,0,0" Stroke="Black" VerticalAlignment="Top" Width="776"/>
 
-        <!--BOTAO CONFIRMAR E BORDAS-->
+        <!--Botao confirmar e bordas-->
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="509" Margin="135,59,0,0" VerticalAlignment="Top" Width="776" Grid.Column="1">
             <Button Content="CONFIRMAR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="186" Height="40" FontSize="20" Background="#FF139506" Foreground="White" FontFamily="Yu Gothic UI" Click="Button_Click" Margin="436,456,0,0"/>
         </Border>
@@ -55,7 +55,7 @@
             <ComboBoxItem Content="DINHEIRO"/>
         </ComboBox>
 
-        <!--TEXTO MIDDLE VALOR PAGO E PREÇO-->
+        <!--texto valor e preco-->
         <Label Content="VALOR PAGO:" Grid.Column="1" HorizontalAlignment="Left" Margin="288,336,0,0" VerticalAlignment="Top" Height="58" Width="281" FontSize="35" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
         <Label Content="R$80,00" Grid.Column="1" HorizontalAlignment="Left" Margin="288,378,0,0" VerticalAlignment="Top" Height="74" Width="281" FontSize="40" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
             <Label.Background>
@@ -63,7 +63,7 @@
             </Label.Background>
         </Label>
 
-        <!--LABEL FORMA DE PAGAMENTO E FORMA SELECIONA APARECENDO INFERIOR-->
+        <!--label pagamento e forma inferior-->
         <Label Content="PAGAMENTO" Grid.Column="1" HorizontalAlignment="Left" Margin="288,502,0,0" VerticalAlignment="Top" Height="39" Width="272" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
         <Label Content="R$80,00 | " Grid.Column="1" HorizontalAlignment="Left" Margin="288,527,0,0" VerticalAlignment="Top" Height="43" Width="94" FontSize="18" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
             <Label.Background>

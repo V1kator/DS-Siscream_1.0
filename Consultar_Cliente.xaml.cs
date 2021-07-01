@@ -45,29 +45,26 @@ namespace Siscream
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos produto = new SubMenu_Produtos();
-            produto.Show();
+            produto.ShowDialog();
             this.Close();
         }
 
         private void btn_vendas_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Vendas submenu_vendas = new SubMenu_Vendas();
-            submenu_vendas.Show();
-            this.Close();
+            submenu_vendas.ShowDialog();
         }
 
         private void btn_gastos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Gastos submenu_gastos = new SubMenu_Gastos();
-            submenu_gastos.Show();
-            this.Close();
+            submenu_gastos.ShowDialog();
         }
 
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Cadastros submenu_cadastrar = new SubMenu_Cadastros();
-            submenu_cadastrar.Show();
-            this.Close();
+            submenu_cadastrar.ShowDialog();
         }
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
@@ -79,28 +76,24 @@ namespace Siscream
         {
             PopUp_Funcao_Disponivel_Futuramente fun_di_futu = new PopUp_Funcao_Disponivel_Futuramente();
             fun_di_futu.ShowDialog();
-            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             PopUp_Funcao_Disponivel_Futuramente fun_di_futu = new PopUp_Funcao_Disponivel_Futuramente();
             fun_di_futu.ShowDialog();
-            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             PopUp_excluir_cliente_consulta exc_cli_con = new PopUp_excluir_cliente_consulta();
             exc_cli_con.ShowDialog();
-            this.Close();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             PopUp_Funcao_Disponivel_Futuramente fun_di_futu = new PopUp_Funcao_Disponivel_Futuramente();
             fun_di_futu.ShowDialog();
-            this.Close();
         }
     }
 }

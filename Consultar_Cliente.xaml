@@ -33,8 +33,8 @@
         <!--LABEL SAIR-->
         <Button x:Name="btn_close" Grid.Row ="1" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,0,30,0" Click="btn_close_Click"/>
         <Image Source="imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
-        <Label Content="CONSULTAR CLIENTE" Grid.Column="1" HorizontalAlignment="Left" Margin="22,35,0,0" VerticalAlignment="Top" FontSize="50" RenderTransformOrigin="0.071,-0.396" FontFamily="Arial Black"/>
-        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="54" Margin="30,108,0,0" VerticalAlignment="Top" Width="424">
+        <Label Content="CONSULTAR CLIENTE" Grid.Column="1" HorizontalAlignment="Left" Margin="188,14,0,0" VerticalAlignment="Top" FontSize="50" RenderTransformOrigin="0.071,-0.396" FontFamily="Arial Black"/>
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="54" Margin="296,123,0,0" VerticalAlignment="Top" Width="424">
             <TextBox x:Name="Textbox_consultar_cliente" HorizontalAlignment="Left" Height="38" Margin="0,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="331" FontSize="20" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" BorderBrush="Black">
                 <TextBox.RenderTransform>
                     <TransformGroup>
@@ -45,19 +45,19 @@
                     </TransformGroup>
                 </TextBox.RenderTransform>
             </TextBox>
-            <Button Content="" HorizontalAlignment="Left" Margin="349,4,0,0" VerticalAlignment="Top" Width="45" Height="43" FontSize="0.01" BorderBrush="White" Foreground="White" Click="Button_Click">
+            <Button Content="" HorizontalAlignment="Left" Margin="355,4,0,0" VerticalAlignment="Top" Width="45" Height="43" FontSize="0.01" BorderBrush="White" Foreground="White" Click="Button_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="imagens/icon_busca.png"/>
                 </Button.Background>
             </Button>
         </Grid>
-        <RadioButton Content="NOME" Grid.Column="1" HorizontalAlignment="Left" Margin="33,176,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <RadioButton x:Name="Radio_CNPJ" Content="CNPJ" Grid.Column="1" HorizontalAlignment="Left" Margin="186,177,0,0" VerticalAlignment="Top" FontSize="20" IsChecked="True"/>
+        <RadioButton Content="NOME" Grid.Column="1" HorizontalAlignment="Left" Margin="360,181,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="Radio_CNPJ" Content="CNPJ" Grid.Column="1" HorizontalAlignment="Left" Margin="479,182,0,0" VerticalAlignment="Top" FontSize="20" IsChecked="True"/>
 
-        <Button Content="RELATÓRIO" Grid.Column="1" HorizontalAlignment="Left" Margin="822,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF27D600" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_1"/>
-        <Button Content="EXCLUIR" Grid.Column="1" HorizontalAlignment="Left" Margin="595,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FFD60000" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_2"/>
-        <Button Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="367,10,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF685A5A" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_3"/>
-        <DataGrid x:Name="Datagrid_consulta_cliente" Grid.Column="1" HorizontalAlignment="Left" Height="321" Margin="32,260,0,0" VerticalAlignment="Top" Width="1011" FontSize="20"/>
+        <Button Content="RELATÓRIO" Grid.Column="1" HorizontalAlignment="Left" Margin="668,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF27D600" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_1"/>
+        <Button Content="EXCLUIR" Grid.Column="1" HorizontalAlignment="Left" Margin="441,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FFD60000" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_2"/>
+        <Button Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="213,10,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF685A5A" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_3"/>
+        <DataGrid x:Name="Datagrid_consulta_cliente" Grid.Column="1" HorizontalAlignment="Left" Height="321" Margin="32,250,0,0" VerticalAlignment="Top" Width="1000" FontSize="20"/>
 
     </Grid>
 </Window>

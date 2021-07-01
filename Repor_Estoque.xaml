@@ -1,0 +1,72 @@
+﻿<Window x:Class="Siscream.Repor_Estoque"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Siscream"
+        mc:Ignorable="d"
+        Title="Repor Estoque" WindowStartupLocation="CenterScreen" Height="720" Width="1280" ResizeMode="NoResize" FontSize="48" FontWeight="Bold">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <!--ICONES MENU E LABELS-->
+        <StackPanel Background="#FF139506" Margin="0,0,30,0" >
+            <Image Source="imagens/icone_produtos.png" Height="100" Width="100"/>
+            <Button Height="51" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_produtos_Click"/>
+            <Image Source="imagens/icone_vendas.png" Height="100" Width="100"/>
+            <Button x:Name="btn_vendas" Height="48" Background="#FF1ADA06" Content="VENDAS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_vendas_Click" />
+            <Image Source="imagens/icone_gastos.png" Height="100" Width="100"/>
+            <Button x:Name="btn_gastos" Height="42" Background="#FF1ADA06" Content="LANÇAR &#xD;&#xA;GASTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_gastos_Click" />
+            <Image Source="imagens/icone_cadastrar.png" Height="100" Width="100"/>
+            <Button x:Name="btn_cadastros" Height="46" Background="#FF1ADA06" Content="CADASTRAR" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_cadastros_Click"/>
+        </StackPanel>
+
+        <!--LABEL SAIR-->
+        <Button x:Name="btn_close" Grid.Row ="1" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,0,30,0" Click="btn_close_Click"/>
+        <Image Source="imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
+
+        <Label x:Name="Repor_Estoque1" Content="REPOR ESTOQUE" Grid.Column="1" HorizontalAlignment="Left" Margin="22,35,0,0" VerticalAlignment="Top" FontSize="35" RenderTransformOrigin="0.071,-0.396" FontFamily="Arial Black" Background="#00000000" Foreground="#FF030A02" FontWeight="Normal"/>
+        <Label x:Name="Nome_produto" Content="NOME DO PRODUTO" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontFamily="Roboto" Margin="430,148,370,0" Width="274" Foreground="Black"></Label>
+        <TextBox x:Name="nome_prod" Background="White" FontFamily="Roboto" FontSize="20" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" Grid.Column="1" Margin="198,188,0,0" Foreground="#FF16720D" TextChanged="nome_prod_TextChanged" BorderBrush="Black"/>
+
+        <Label Content="QUANTIDADE" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontFamily="Roboto" Margin="460,297,370,0" Width="244"></Label>
+        <ListBox x:Name="Quant" FontSize="20" FontFamily="Roboto" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="682" Grid.Column="1" Background="White" Margin="198,342,0,0" SelectionChanged="Quant_SelectionChanged" Foreground="#FF16720D" BorderBrush="Black">
+            <ListBoxItem x:Name="Quant1" Content="1" Height="36" Width="644" Selected="ListBoxItem_Selected" BorderBrush="White"/>
+            <ListBoxItem Content="2" Height="40"/>
+            <ListBoxItem Content="3"/>
+            <ListBoxItem Content="4"/>
+            <ListBoxItem Content="5"/>
+            <ListBoxItem Content="6"/>
+            <ListBoxItem Content="7"/>
+            <ListBoxItem Content="8"/>
+            <ListBoxItem Content="9"/>
+            <ListBoxItem Content="10"/>
+            <ListBoxItem Content="15"/>
+            <ListBoxItem Content="20"/>
+            <ListBoxItem Content="25"/>
+            <ListBoxItem Content="30"/>
+            <ListBoxItem Content="35"/>
+            <ListBoxItem Content="40"/>
+            <ListBoxItem Content="45"/>
+            <ListBoxItem Content="50"/>
+            <ListBoxItem Content="55"/>
+
+        </ListBox>
+
+        <Label Content="PREÇO POR UNIDADE" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontFamily="Roboto" Margin="430,447,370,0" Width="274"/>
+        <TextBox x:Name="preco" FontSize="20" FontFamily="Roboto" TextWrapping="Wrap" Background="White" Text="R$" Grid.Column="1" Margin="198,492,194,57" Foreground="#FF16720D" TextChanged="preco_TextChanged" BorderBrush="Black"/>
+        <Button x:Name="But_salvar" Content="Salvar" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" FontSize="20" FontFamily="Roboto" Background="Green" Margin="712,20,0,0" Grid.Row="1" Height="50" Width="127" Foreground="#FFF1EBEB" Click="But_salvar_Click" BorderBrush="Black"/>
+        <Button x:Name="But_cancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" FontSize="20" FontFamily="Roboto" Background="Maroon" Margin="874,20,0,0" Grid.Row="1" Height="50" Width="128" Foreground="#FFF1EBEB" Click="But_cancelar_Click" BorderBrush="Black"/>
+
+
+
+    </Grid>
+</Window>

@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace Siscream
 {
     /// <summary>
-    /// Lógica interna para Tela_Pagamento.xaml
+    /// Lógica interna para Fechar_Caixa.xaml
     /// </summary>
-    public partial class Tela_Pagamento : Window
+    public partial class Fechar_Caixa : Window
     {
-        public Tela_Pagamento()
+        public Fechar_Caixa()
         {
             InitializeComponent();
-        }
-
-        private void lbl_pagamento_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
@@ -34,6 +29,7 @@ namespace Siscream
             SubMenu_Produtos produto = new SubMenu_Produtos();
             produto.ShowDialog();
             this.Close();
+
         }
 
         private void btn_vendas_Click(object sender, RoutedEventArgs e)
@@ -59,20 +55,30 @@ namespace Siscream
             this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Popup_Venda_Realizada popup = new Popup_Venda_Realizada();
-            popup.ShowDialog();
+
+        }
+
+        private void Salvar_Click(object sender, RoutedEventArgs e)
+        {
+            PopUp_Salvar_FecharCaixa caixa = new PopUp_Salvar_FecharCaixa();
+            caixa.ShowDialog();
             this.Close();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Editar_Click(object sender, RoutedEventArgs e)
         {
-            string pagamento;
+            Fechar_Caixa tela = new Fechar_Caixa();
+            tela.ShowDialog();
+            this.Close();
+        }
 
-            pagamento = lbl_pagamento.Text;
-
-            forma_de_pagamento.Text = pagamento;
+        private void Cancelar_Click(object sender, RoutedEventArgs e)
+        {
+            PopUp_Cancelar_FecharCaixa caixa = new PopUp_Cancelar_FecharCaixa();
+            caixa.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -27,21 +27,20 @@ namespace Siscream
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos submenu_produtos = new SubMenu_Produtos();
-            submenu_produtos.Show();
-            this.Close();
+            submenu_produtos.ShowDialog();
         }
 
         private void btn_gastos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Gastos submenu_gastos = new SubMenu_Gastos();
-            submenu_gastos.Show();
+            submenu_gastos.ShowDialog();
             this.Close();
         }
 
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Cadastros submenu_cadastrar = new SubMenu_Cadastros();
-            submenu_cadastrar.Show();
+            submenu_cadastrar.ShowDialog();
             this.Close();
         }
 
@@ -53,34 +52,37 @@ namespace Siscream
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Selecionar_Vendedor selecione = new Selecionar_Vendedor();
-            selecione.Show();
+            selecione.ShowDialog();
             this.Close();
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos produto = new SubMenu_Produtos();
-            produto.Show();
+            produto.ShowDialog();
             this.Close();
         }
 
         private void btn_vendas_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Vendas venda = new SubMenu_Vendas();
-            venda.Show();
+            venda.ShowDialog();
             this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Abrir_Caixa Abrir = new Abrir_Caixa();
-            Abrir.Show();
+            Abrir_Caixa A_Caixa = new Abrir_Caixa();
+            A_Caixa.ShowDialog();
             this.Close();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            Fechar_Caixa F_caixa = new Fechar_Caixa();
+            F_caixa.ShowDialog();
             this.Close();
+           
         }
     }
 }

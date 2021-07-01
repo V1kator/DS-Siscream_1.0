@@ -26,11 +26,11 @@
         <wpftool:WatermarkPasswordBox x:Name="text_senha_login_" Watermark="SENHA" Grid.Column="2" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Background="{x:Null}" BorderBrush="#FF0B94E2" Foreground="Black" BorderThickness="2,2,2,2" CaretBrush="Black" Height="52" FontFamily="Bookman Old Style" FontSize="45" TextAlignment="Left" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Margin="0,282.3,61,0" Text="     " Opacity="0.5" Grid.Row="1" />
 
         <Grid Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Margin="27,194.3,0,0" Grid.Row="1">
-            <Image Source="imagens/perfil.png" Stretch="UniformToFill" Margin="0,8,10,2"/>
+            <Image Source="perfil.png" Stretch="UniformToFill" Margin="0,8,10,2"/>
         </Grid>
 
         <Grid Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" Margin="27,286.3,0,307" Grid.Row="1">
-            <Image Source="imagens/chave.png" Margin="0,13,10,-7"/>
+            <Image Source="chave.png" Margin="0,13,10,-7"/>
         </Grid>
 
         <Button x:Name="btn_login" Content="ENTRAR" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="469" Margin="87,0,65,149" FontFamily="Bookman Old Style" FontSize="45" FontWeight="Bold" FontStyle="Normal" Background="#FF11CD08" BorderThickness="1,1,1,1" FlowDirection="LeftToRight" ScrollViewer.VerticalScrollBarVisibility="Visible" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="btn_login_Click" Grid.Row="1"/>
