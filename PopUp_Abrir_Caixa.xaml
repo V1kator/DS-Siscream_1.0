@@ -28,9 +28,13 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Button Content="OK" Grid.Column="1" Margin="295,100,-20,0" VerticalAlignment="Top" Height="33" FontWeight="Bold" Background="#FF139506" Foreground="White" Click="Button_Click" HorizontalAlignment="Left" Width="85"/>
 =======
         <Button Content="OK" Grid.Column="1" Margin="124,101,0,0" VerticalAlignment="Top" Height="33" FontWeight="Bold" Background="#FF139506" Foreground="White" Click="Button_Click" HorizontalAlignment="Left" Width="85"/>
+>>>>>>> main
+=======
+        <Button Content="OK" Grid.Column="1" Margin="295,100,-20,1" VerticalAlignment="Top" Height="33" FontWeight="Bold" Background="#FF139506" Foreground="White" Click="Button_Click" HorizontalAlignment="Left" Width="85"/>
 >>>>>>> main
 
     </Grid>
