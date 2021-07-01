@@ -38,7 +38,11 @@
 
         <StackPanel Margin="196,29,44,11" Grid.ColumnSpan="2">
             <Label Content=" Funcionário" FontSize="18" HorizontalAlignment="Left" Margin="0 100 0 0" />
+<<<<<<< HEAD
             <ComboBox x:Name="Funcionario" Grid.Column="1" Margin="0 0 800 0" BorderThickness="3" FontSize="20">
+=======
+            <ComboBox x:Name="Funcionario" Grid.Column="1" Margin="0 0 800 0" BorderThickness="3" FontSize="20" SelectionChanged="Funcionario_SelectionChanged">
+>>>>>>> main
                 <ComboBoxItem Content="Paulo Santos"/>
             </ComboBox>
         </StackPanel>

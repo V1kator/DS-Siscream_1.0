@@ -16,14 +16,24 @@
 
         <Image Grid.Column="0" Source="imagens/Atencao.png" Margin="14,-21,18,22"/>
 
+<<<<<<< HEAD
         <StackPanel Grid.Column="1" Margin="4,20,-38,-2">
             <TextBlock Margin="-2,5,2,0" FontWeight="Bold" FontSize="18"><Run Text="Olá, essa função estará disponível quando"/><LineBreak/><Run Text="houver um banco de dados conectado!"/><Run Text=","/><LineBreak/><Run Text="mas aproveite os dados demonstrativos!"/><LineBreak/><Run Text="Agradecemos a compreenção!"/></TextBlock>
+=======
+        <StackPanel Grid.Column="1" Margin="10,43,54,22">
+            <TextBlock Margin="10,5,2,0" FontSize="16" Height="74"><Run Text="Volte quando houver um banco de dados "/><LineBreak/><Run Text="conectado, mas aproveite a demonstração"/><Run Text=" feita"/><LineBreak/><Run Text="EXCLUSIVAMENTE"/><Run Text=" para você"/><Run Text="!"/></TextBlock>
+
+>>>>>>> main
 
         </StackPanel>
 
 
 
         <Button Content="OK" Grid.Column="1" HorizontalAlignment="Left" Margin="293,103,0,0" VerticalAlignment="Top" Width="85" Height="33" FontWeight="Bold" Background="#FF139506" Foreground="White" Click="Button_Click"/>
+<<<<<<< HEAD
+=======
+        <TextBlock Margin="9,9,55,104" FontWeight="Bold" FontSize="16" Grid.Column="1" Text="FUNÇÃO INDISPONÍVEL TEMPORARIAMENTE!"/>
+>>>>>>> main
 
     </Grid>
 </Window>

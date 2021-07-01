@@ -111,6 +111,12 @@
       <DependentUpon>Devolver_Produto.xaml</DependentUpon>
     </Compile>
     <Compile Include="Estoque_teste.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Fechar_Caixa.xaml.cs">
+      <DependentUpon>Fechar_Caixa.xaml</DependentUpon>
+    </Compile>
+>>>>>>> main
     <Compile Include="Iniciar_Venda.xaml.cs">
       <DependentUpon>Iniciar_Venda.xaml</DependentUpon>
     </Compile>
@@ -135,9 +141,21 @@
     <Compile Include="Popup_Cancelar_Cliente.xaml.cs">
       <DependentUpon>Popup_Cancelar_Cliente.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Popup_Cancelar_Funcionario.xaml.cs">
       <DependentUpon>Popup_Cancelar_Funcionario.xaml</DependentUpon>
     </Compile>
+=======
+    <Compile Include="PopUp_Cancelar_FecharCaixa.xaml.cs">
+      <DependentUpon>PopUp_Cancelar_FecharCaixa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popup_Cancelar_Funcionario.xaml.cs">
+      <DependentUpon>Popup_Cancelar_Funcionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp_Cancelar_Reposicao_Estoque.xaml.cs">
+      <DependentUpon>PopUp_Cancelar_Reposicao_Estoque.xaml</DependentUpon>
+    </Compile>
+>>>>>>> main
     <Compile Include="Popup_ConfirmaExcluir_Cliente.xaml.cs">
       <DependentUpon>Popup_ConfirmaExcluir_Cliente.xaml</DependentUpon>
     </Compile>
@@ -162,9 +180,24 @@
     <Compile Include="PopUp_Funcao_Disponivel_Futuramente.xaml.cs">
       <DependentUpon>PopUp_Funcao_Disponivel_Futuramente.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Popup_Venda_Realizada.xaml.cs">
       <DependentUpon>Popup_Venda_Realizada.xaml</DependentUpon>
     </Compile>
+=======
+    <Compile Include="PopUp_Salvar_FecharCaixa.xaml.cs">
+      <DependentUpon>PopUp_Salvar_FecharCaixa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp_Salvar_Reposicao.xaml.cs">
+      <DependentUpon>PopUp_Salvar_Reposicao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popup_Venda_Realizada.xaml.cs">
+      <DependentUpon>Popup_Venda_Realizada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Repor_Estoque.xaml.cs">
+      <DependentUpon>Repor_Estoque.xaml</DependentUpon>
+    </Compile>
+>>>>>>> main
     <Compile Include="Selecionar_Vendedor.xaml.cs">
       <DependentUpon>Selecionar_Vendedor.xaml</DependentUpon>
     </Compile>
@@ -218,6 +251,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
+=======
+    <Page Include="Fechar_Caixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+>>>>>>> main
     <Page Include="Iniciar_Venda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -262,10 +302,24 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
+=======
+    <Page Include="PopUp_Cancelar_FecharCaixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+>>>>>>> main
     <Page Include="Popup_Cancelar_Funcionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
+=======
+    <Page Include="PopUp_Cancelar_Reposicao_Estoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+>>>>>>> main
     <Page Include="Popup_ConfirmaExcluir_Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -298,10 +352,28 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
+=======
+    <Page Include="PopUp_Salvar_FecharCaixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopUp_Salvar_Reposicao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+>>>>>>> main
     <Page Include="Popup_Venda_Realizada.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
+=======
+    <Page Include="Repor_Estoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+>>>>>>> main
     <Page Include="Selecionar_Vendedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -372,7 +444,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+<<<<<<< HEAD
     <Resource Include="caixa_registradora.png" />
+=======
+>>>>>>> main
     <Content Include="imagens\adicionar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

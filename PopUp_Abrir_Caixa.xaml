@@ -16,13 +16,22 @@
 
         <Image Grid.Column="0" Source="imagens/Atencao.png" Margin="14,-21,18,22"/>
 
+<<<<<<< HEAD
         <StackPanel Grid.Column="1" Margin="4,20,-38,-2">
             <TextBlock Text="CAIXA ABERTO COM SUCESSO!" Margin="-2,5,2,0" FontWeight="Bold" FontSize="18"/>
+=======
+        <StackPanel Grid.Column="1" Margin="4,27,-38,-2">
+            <TextBlock Text="CAIXA ABERTO COM SUCESSO!" Margin="21,5,2,0" FontWeight="Bold" FontSize="18"/>
+>>>>>>> main
 
         </StackPanel>
 
 
+<<<<<<< HEAD
         <Button Content="OK" Grid.Column="1" Margin="295,100,-20,0" VerticalAlignment="Top" Height="33" FontWeight="Bold" Background="#FF139506" Foreground="White" Click="Button_Click" HorizontalAlignment="Left" Width="85"/>
+=======
+        <Button Content="OK" Grid.Column="1" Margin="124,101,0,0" VerticalAlignment="Top" Height="33" FontWeight="Bold" Background="#FF139506" Foreground="White" Click="Button_Click" HorizontalAlignment="Left" Width="85"/>
+>>>>>>> main
 
     </Grid>
 </Window>
