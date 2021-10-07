@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Siscream
+namespace Siscream.Models
 {
     public class Estoque_teste
     {
