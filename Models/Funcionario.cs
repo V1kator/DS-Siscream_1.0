@@ -19,8 +19,8 @@ namespace Siscream.Models
         cod_end_fk -- Codigo_end*/
 
         public int Codigo { get; set; }
-        public string Cpf { get; set; }
         public string Nome { get; set; }
+        public string Cpf { get; set; }  
         public string Cargo { get; set; }
         public string Contrato { get; set; }
         public string Senha { get; set; }

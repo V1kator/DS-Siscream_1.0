@@ -175,6 +175,10 @@
     <Compile Include="LancarGastprod.xaml.cs">
       <DependentUpon>LancarGastprod.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\Funcionario_DAO.cs" />
+    <Compile Include="Models\Venda.cs" />
+    <Compile Include="Models\Venda_DAO.cs" />
     <Compile Include="PopUp_Abrir_Caixa.xaml.cs">
       <DependentUpon>PopUp_Abrir_Caixa.xaml</DependentUpon>
     </Compile>

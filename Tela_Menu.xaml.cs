@@ -47,14 +47,14 @@ namespace Siscream
         {
             SubMenu_Vendas submenu_vendas = new SubMenu_Vendas();
             submenu_vendas.ShowDialog();
-            
+
         }
 
         private void btn_gastos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Gastos submenu_gastos = new SubMenu_Gastos();
             submenu_gastos.ShowDialog();
-            
+
         }
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
@@ -66,14 +66,40 @@ namespace Siscream
         {
             SubMenu_Cadastros submenu_cadastros = new SubMenu_Cadastros();
             submenu_cadastros.ShowDialog();
-            
+
+            Insert_teste();
+
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos produto = new SubMenu_Produtos();
             produto.ShowDialog();
-            
+
+        }
+
+        private void Insert_teste()
+        {
+            try
+            {
+                Funcionario Funcionario = new Funcionario();
+                Funcionario.Nome = "Geraldo da Silva";
+                Funcionario.Cpf = "045-653-586-89";
+                Funcionario.Cargo = "Assitente de produção";
+                Funcionario.Contrato = "Carteira assinada";
+                Funcionario.Senha = "123456780;";
+                Funcionario.Admissao = DateTime.Now;
+                Funcionario.Codigo_end = 2;
+
+                Funcionario_DAO funcionario_DAO = new Funcionario_DAO();
+                funcionario_DAO.Insert(Funcionario);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+           
+
         }
     }
 }
