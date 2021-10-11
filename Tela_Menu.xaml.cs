@@ -24,18 +24,9 @@ namespace Siscream
         public Tela_Menu()
         {
             InitializeComponent();
+            
         }
 
-        private void Tela_Menu_loaded(object sender, RoutedEvent e)
-        {
-            try
-            {
-                var conexao = new Conexao();
-            } catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

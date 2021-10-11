@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Siscream.Models;
+using FluentValidation;
+using MySql.Data.MySqlClient;
+using Siscream.Interfaces;
+using Siscream.DataBese;
 
 namespace Siscream
 {
@@ -24,13 +28,43 @@ namespace Siscream
         public Login()
         {
             InitializeComponent();
+            Loaded += Login_Loaded;
         }
+
+        private void Login_Loaded(object sender, RoutedEventArgs e)
+        {
+            _ = text_cpf_login.Focus();
+
+            try
+            {
+                var conexao = new Conexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            Tela_Menu menu_inicial = new Tela_Menu();
-            menu_inicial.ShowDialog();
-            this.Close();
+            string usuario = text_cpf_login.Text;
+            string senha = text_senha_login.Password.ToString();
+
+            if (Usuario.Login(usuario, senha))
+            {
+                var main = new Tela_Menu();
+                main.Show();    
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("CPF e/ou senha incorretos, por favor tente novamente!!!");
+                _ = text_cpf_login.Focus();
+
+
+            }
         }
     }
 }

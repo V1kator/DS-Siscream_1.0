@@ -5,15 +5,16 @@ using System.Text;
 using System.Data;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Siscream.DataBese
 {
     class Conexao
     {
         private string host = "localhost";
-        private string port = "3306";
+        private string port = "3308";
         private string user = "root";
-        private string password = "root";
+        private string password = "victor";
         private string dbname = "siscream";
         private static MySqlConnection connection;
         private static MySqlCommand command;
@@ -41,14 +42,12 @@ namespace Siscream.DataBese
                 command.CommandType = CommandType.Text;
 
                 return command;
-            }
-            catch (Exception)
+
+            }catch (Exception)
             {
                 throw;
             }
         }
-
-        
 
         public void Close()
         {
