@@ -100,8 +100,8 @@ CREATE TABLE tb_gasto (
 CREATE TABLE tb_login(
 	cod_log int not null primary key auto_increment,
     cod_func_fk int not null,
-    nome_log varchar(100),
-    data_log date,
+    cpf_log varchar(100),
+    senha_log varchar(100),
 	foreign key (cod_func_fk) references tb_funcionario (cod_func) 
 );
 
@@ -122,12 +122,6 @@ CREATE TABLE tb_devolver_produto (
 	foreign key (cod_prod_fk) references tb_produto (cod_prod)
 ); 
 
-
-
-
-############################ GATILHOS E PROCEDIMENTOS ###########################
-
-############################## GATILHO CAIXA ###############################
 DELIMITER $$
 CREATE TRIGGER GastoAtualizarCaixa AFTER INSERT ON tb_gasto
 FOR EACH ROW
@@ -777,3 +771,4 @@ BEGIN
 END $$ DELIMITER ;
 
 CALL pr_devolver_produto(2, '2021-08-28', 2, 1.5);
+
