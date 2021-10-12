@@ -14,7 +14,11 @@ namespace Siscream.DataBese
         private string host = "localhost";
         private string port = "3308";
         private string user = "root";
+<<<<<<< Updated upstream
         private string password = "victor";
+=======
+        private string password = "1234";
+>>>>>>> Stashed changes
         private string dbname = "siscream";
         private static MySqlConnection connection;
         private static MySqlCommand command;
