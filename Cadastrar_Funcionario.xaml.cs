@@ -59,8 +59,6 @@ namespace Siscream
             Popup_Cadastrar_Funcionario popup = new Popup_Cadastrar_Funcionario();
             popup.ShowDialog();
 
-
-            Insert_teste();
         }
 
         private void btn_cancelar_Click(object sender, RoutedEventArgs e)
