@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-namespace Siscream.Databese;
+namespace Siscream.Databese
 {
     class Conexao
     {
         private string host = "localhost";
         private string port = "3308";
         private string user = "root";
-        private string password = "victor";
+        private string password = "root";
         private string dbname = "siscream";
         private static MySqlConnection connection;
         private static MySqlCommand command;
