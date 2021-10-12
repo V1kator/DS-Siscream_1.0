@@ -5,7 +5,6 @@ using System.Text;
 using System.Data;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using System.Data;
 
 namespace Siscream.Databese
 {
