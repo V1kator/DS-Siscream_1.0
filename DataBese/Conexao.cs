@@ -5,20 +5,15 @@ using System.Text;
 using System.Data;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using System.Data;
 
-namespace Siscream.DataBese
+namespace Siscream.Databese
 {
     class Conexao
     {
         private string host = "localhost";
         private string port = "3308";
         private string user = "root";
-<<<<<<< Updated upstream
-        private string password = "victor";
-=======
-        private string password = "1234";
->>>>>>> Stashed changes
+        private string password = "root";
         private string dbname = "siscream";
         private static MySqlConnection connection;
         private static MySqlCommand command;
