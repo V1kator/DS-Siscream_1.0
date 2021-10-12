@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-namespace Siscream.DataBese
+namespace Siscream.Databese;
 {
     class Conexao
     {
