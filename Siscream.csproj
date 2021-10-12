@@ -159,6 +159,7 @@
     </Compile>
     <Compile Include="Interfaces\IDAO.cs" />
     <Compile Include="Models\Abstract_DAO.cs" />
+    <Compile Include="Models\CaixaDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Cliente_DAO.cs" />
     <Compile Include="Models\Consultar_Cliente_Teste.cs" />
@@ -181,6 +182,7 @@
     <Compile Include="LancarGastprod.xaml.cs">
       <DependentUpon>LancarGastprod.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Caixa.cs" />
     <Compile Include="Models\Funcionario_DAO.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Produto_DAO.cs" />

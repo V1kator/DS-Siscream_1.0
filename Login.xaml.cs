@@ -66,5 +66,10 @@ namespace Siscream
 
             }
         }
+
+        private void text_cpf_login_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
