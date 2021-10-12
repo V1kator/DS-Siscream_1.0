@@ -5,32 +5,31 @@ using System.Text;
 using System.Threading.Tasks;
 using Siscream.Interfaces;
 
-
 namespace Siscream.Models
 {
-    class Fechar_Caixa_DAO : IDAO<Fechar_Caixa>
+    class CaixaDAO : IDAO<Caixa>
     {
-        public void Delete(Fechar_Caixa t)
+        public void Delete(Caixa t)
         {
             throw new NotImplementedException();
         }
 
-        public Fechar_Caixa GetByID(int id)
+        public Caixa GetByID(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Insert(Fechar_Caixa t)
+        public void Insert(Caixa t)
         {
             throw new NotImplementedException();
         }
 
-        public List<Fechar_Caixa> List()
+        public List<Caixa> List()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Fechar_Caixa t)
+        public void Update(Caixa t)
         {
             throw new NotImplementedException();
         }
