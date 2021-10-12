@@ -12,7 +12,7 @@ namespace Siscream.Models
         public string Cpf { get; set; }
         public string Cnpj { get; set; }
         public string Tipo { get; set; }
-        public string Endereco { get; set; }
+        public int Endereco { get; set; }
     }
 
 }
