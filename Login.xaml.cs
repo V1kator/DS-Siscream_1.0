@@ -16,7 +16,7 @@ using Siscream.Models;
 using FluentValidation;
 using MySql.Data.MySqlClient;
 using Siscream.Interfaces;
-using Siscream.Databese;
+using Siscream.DataBase;
 
 namespace Siscream
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Siscream.Interfaces;
-using Siscream.DataBese;
+using Siscream.Databese;
 
 
 namespace Siscream.Models
@@ -46,7 +46,7 @@ namespace Siscream.Models
                 query.Parameters.AddWithValue("@marca", t.Marca);
                 query.Parameters.AddWithValue("@barras", t.Barras);
                 query.Parameters.AddWithValue("@comissao", t.Comissao);
-                query.Parameters.AddWithValue("@preco", t.Preo);
+                query.Parameters.AddWithValue("@preco", t.Preco);
                 query.Parameters.AddWithValue("@custo", t.Custo);
                 query.Parameters.AddWithValue("@descricao", t.Descricao);
 
