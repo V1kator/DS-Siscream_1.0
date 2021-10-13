@@ -75,8 +75,7 @@ namespace Siscream
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            PopUp_Funcao_Disponivel_Futuramente fun_di_futu = new PopUp_Funcao_Disponivel_Futuramente();
-            fun_di_futu.ShowDialog();
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
