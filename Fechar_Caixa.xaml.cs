@@ -81,5 +81,33 @@ namespace Siscream
             caixa.ShowDialog();
             this.Close();
         }
+
+        private void Insert_Teste()
+        {
+            try
+            {
+                Caixa FecharCaixa = new Caixa();
+                FecharCaixa.nome_func = "Thallia";
+                FecharCaixa.aberto = "11:00 Hrs";
+                FecharCaixa.fechado = "22:00 Hrs";
+                FecharCaixa.valorAbertura = 150.00;
+                FecharCaixa.suprimento = 0;
+                FecharCaixa.dinheiroCX = 300.00;
+                FecharCaixa.creditoCX = 230.00;
+                FecharCaixa.debitoCX = 750.00;
+                FecharCaixa.totalCX = 1280.00;
+                FecharCaixa.valorRetirado = 125.50;
+                FecharCaixa.especif = "Pagamento de 30L de leite";
+                FecharCaixa.saldoFinal = 1154.5;
+
+                FecharCaixaDAO FecharCaixaDAO = new FecharCaixaDAO();
+                FecharCaixaDAO.Insert(FecharCaixa);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Náo executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+                     
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace Siscream
     /// Interação lógica para Login.xam
     /// </summary>
     public partial class Login : Window
-    {
+    { 
         public Login()
         {
             InitializeComponent();
@@ -47,7 +47,7 @@ namespace Siscream
 
 
 
-        private void btn_login_Click(object sender, RoutedEventArgs e)
+       private void btn_login_Click(object sender, RoutedEventArgs e)
         {
             string usuario = text_cpf_login.Text;
             string senha = text_senha_login.Password.ToString();
@@ -69,7 +69,6 @@ namespace Siscream
 
         private void text_cpf_login_TextChanged(object sender, TextChangedEventArgs e)
         {
-
         }
     }
 }

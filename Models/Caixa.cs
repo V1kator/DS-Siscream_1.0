@@ -11,8 +11,8 @@ namespace Siscream.Models
         public string nome_func { get; set; }
         public double saldo { get; set; }
         public int senha { get; set; }
-        public DateTime aberto { get; set; }
-        public DateTime fechado { get; set; }
+        public string aberto { get; set; }
+        public string fechado { get; set; }
         public double valorAbertura { get; set; }
         public double suprimento { get; set; }
         public double dinheiroCX { get; set; }

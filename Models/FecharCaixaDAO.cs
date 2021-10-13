@@ -29,10 +29,11 @@ namespace Siscream.Models
 
                 query.Parameters.AddWithValue("@nome_func", t.nome_func);
                 query.Parameters.AddWithValue("@aberto", t.aberto);
+                query.Parameters.AddWithValue("@fechado", t.fechado);
                 query.Parameters.AddWithValue("@valorAbertura", t.valorAbertura);
                 query.Parameters.AddWithValue("@suprimento", t.suprimento);
                 query.Parameters.AddWithValue("@dinheiroCX", t.dinheiroCX);
-                query.Parameters.AddWithValue("@creditoCX", t.dinheiroCX);
+                query.Parameters.AddWithValue("@creditoCX", t.creditoCX);
                 query.Parameters.AddWithValue("@debitoCX", t.debitoCX);
                 query.Parameters.AddWithValue("@totalCX", t.totalCX);
                 query.Parameters.AddWithValue("@valorRetirado", t.valorRetirado);
