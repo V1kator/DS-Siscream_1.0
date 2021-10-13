@@ -159,6 +159,8 @@
     </Compile>
     <Compile Include="DataBase\Conexao.cs" />
     <Compile Include="Interfaces\IDAO.cs" />
+    <Compile Include="Models\AbrirCaixa.cs" />
+    <Compile Include="Models\AbrirCaixa_DAO.cs" />
     <Compile Include="Models\Abstract_DAO.cs" />
     <Compile Include="Models\FecharCaixaDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -184,6 +186,8 @@
     </Compile>
     <Compile Include="Models\Caixa.cs" />
     <Compile Include="Models\Funcionario_DAO.cs" />
+    <Compile Include="Models\LancarGastos.cs" />
+    <Compile Include="Models\LancarGastos_DAO.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Produto_DAO.cs" />
     <Compile Include="Models\Venda.cs" />
