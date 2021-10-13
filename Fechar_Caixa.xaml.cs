@@ -105,7 +105,7 @@ namespace Siscream
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Náo executado", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
             }
                      
         }

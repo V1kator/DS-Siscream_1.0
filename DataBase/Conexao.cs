@@ -11,9 +11,9 @@ namespace Siscream.DataBase
     class Conexao
     {
         private string host = "localhost";
-        private string port = "3308";
+        private string port = "3306";
         private string user = "root";
-        private string password = "root";
+        private string password = "13x27x41";
         private string dbname = "siscream";
         private static MySqlConnection connection;
         private static MySqlCommand command;

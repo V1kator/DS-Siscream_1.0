@@ -50,10 +50,17 @@ CREATE TABLE tb_caixa (
     funcionario_caixa varchar (100),
     senha_caixa varchar(20),
     data_caixa date,
-    periodo_caixa varchar (100),
-    valorAbertura_caixa double,
+	periodo_caixa varchar (100),
+	valorAbertura_caixa double,
+    caixa_aberto datetime,
+    caixa_fechado datetime,
+    suprimento double,
+    dinheiro_caixa double,
 	credito_caixa double,
 	debito_caixa double,
+    total_caixa double,
+    valor_retirado_caixa double,
+    especificacoes varchar(500),
     saldofinal_caixa double
 );
 
@@ -100,8 +107,8 @@ CREATE TABLE tb_gasto (
 CREATE TABLE tb_login(
 	cod_log int not null primary key auto_increment,
     cod_func_fk int not null,
-    cpf_log varchar(100),
-    senha_log varchar(100),
+    nome_log varchar(100),
+    data_log date,
 	foreign key (cod_func_fk) references tb_funcionario (cod_func) 
 );
 
@@ -113,15 +120,28 @@ CREATE TABLE tb_Venda_Produto (
 );
 
 CREATE TABLE tb_devolver_produto (
-	cod_dev_prod int not null PRIMARY KEY auto_increment,
+	cod_dev_pro int not null PRIMARY KEY auto_increment,
 	cod_prod_fk int not null,
-    data_dev_prod date,
-    valor_dev_prod FLOAT,
+    data_dev_pro date,
+    valor_dev_pro FLOAT,
     valor_total_dev_prod FLOAT,
-    quant_dev_prod INT,
 	foreign key (cod_prod_fk) references tb_produto (cod_prod)
 ); 
 
+CREATE TABLE tb_devolucao_produtos (
+	cod_dev_produtos int not null PRIMARY KEY auto_increment,
+    quant_dev_produtos int,
+    cod_prod_fk int,
+    cod_dev_fk int,
+	foreign key (cod_prod_fk) references tb_produto (cod_prod),
+    foreign key (cod_dev_fk) references tb_devolver_produto (cod_dev_pro)
+); 
+
+
+
+############################ GATILHOS E PROCEDIMENTOS ###########################
+
+############################## GATILHO CAIXA ###############################
 DELIMITER $$
 CREATE TRIGGER GastoAtualizarCaixa AFTER INSERT ON tb_gasto
 FOR EACH ROW
@@ -340,8 +360,8 @@ CALL pr_CadastrarProduto ('Pote de açai 2L', 'lt', '2022-08-25',
 'Açai', 50,'Skimo Ltda', 'skimo', 1243264210, 25, 25, 26, 'Ingredientes:
 açucar, leite em pó, , polpa de açai, xarope de guarana, água,
 amido de milho. Contem gluten. Contem sacarose');
-
-
+select*from tb_produto;
+select*from tb_caixa;
 ############################## CADASTRAR ENDERECO ###############################
 
 DELIMITER $$
@@ -744,31 +764,46 @@ END $$ DELIMITER ;
 
 call pr_repor_estoque (1, 25);
 
+
 ############################## DEVOLVER PRODUTO ###############################
 
 DELIMITER $$ 
-CREATE PROCEDURE pr_devolver_produto (codigo_produto INT, data_devolução DATE, quantidade_devolvida INT, valor_por_produto FLOAT)
+CREATE PROCEDURE pr_devolver_produto (codigo_produto INT, data_devolução DATE, quantidade_devolvida INT, valor_por_produto FLOAT, codigo_dev INT)
 BEGIN 
 	DECLARE valortotaldadevolucao FLOAT;
     DECLARE verificar_caixa INT;
-    DECLARE testeexistenciadeproduto VARCHAR(100);
+    DECLARE testeexistencia VARCHAR(100);
+    DECLARE testeexistencia2 VARCHAR(100);
     
-    SET testeexistenciadeproduto = (SELECT cod_prod FROM tb_produto WHERE cod_prod = codigo_produto);
+    SET testeexistencia = (SELECT cod_prod FROM tb_produto WHERE cod_prod = codigo_produto);
+    SET testeexistencia2 = (SELECT cod_dev_pro FROM tb_devolver_produto WHERE cod_dev_pro = codigo_dev);
     SET valortotaldadevolucao = quantidade_devolvida * valor_por_produto;
     SET verificar_caixa = (SELECT cod_caixa FROM tb_caixa WHERE cod_caixa = (SELECT MAX(cod_caixa) FROM tb_caixa));
     
+    IF (testeexistencia2 IS NULL) THEN
+		SET	testeexistencia2 = 1;
+    END IF;
     
-    IF (testeexistenciadeproduto IS NULL) THEN
-		SELECT 'Hum... Não achei esse produto, dá uma conferida e tenta de novo ;)' AS ERRO;
-    ELSE
-		UPDATE tb_produto SET estoque_prod = estoque_prod + quantidade_devolvida WHERE cod_prod = codigo_produto;
-		UPDATE tb_caixa SET debito_caixa = debito_caixa + valortotaldadevolucao WHERE cod_caixa = verificar_caixa;
+    IF (testeexistencia = codigo_produto) THEN
+		IF (testeexistencia2 = codigo_dev) THEN
+			UPDATE tb_produto SET estoque_prod = estoque_prod + quantidade_devolvida WHERE cod_prod = codigo_produto;
+			UPDATE tb_caixa SET debito_caixa = debito_caixa + valortotaldadevolucao WHERE cod_caixa = verificar_caixa;
 			
-		INSERT INTO tb_devolver_produto (cod_prod_fk, data_dev_prod, valor_dev_prod, valor_total_dev_prod, quant_dev_prod) 
-		VALUES (codigo_produto, data_devolução, valor_por_produto,valortotaldadevolucao,quantidade_devolvida );
-        SELECT 'Sua devolução foi processada com sucesso OK ;)' AS MENSAGEM;
+			INSERT INTO tb_devolver_produto (cod_prod_fk, data_dev_pro, valor_dev_pro, valor_total_dev_prod) 
+			VALUES (codigo_produto, data_devolução, valor_por_produto,valortotaldadevolucao);
+			
+			INSERT INTO tb_devolucao_produtos VALUES (null, quantidade_devolvida, codigo_produto, codigo_dev);
+			
+			SELECT 'Seus dados foram atualizados com sucesso ;)' AS Mensagem;
+        ELSE
+			SELECT 'A Devolução inserida não existe, informe outro' AS ERRO;
+        END IF;
+    ELSE
+		SELECT 'O Produto inserido não existe, informe outro' AS ERRO;
     END IF;
 END $$ DELIMITER ;
 
-CALL pr_devolver_produto(2, '2021-08-28', 2, 1.5);
-
+CALL pr_devolver_produto(2, '2021-08-28', 2, 1.5, 2);
+SELECT * FROM tb_caixa;
+SELECT * FROM tb_devolver_produto;
+SELECT * FROM tb_devolucao_produtos;
