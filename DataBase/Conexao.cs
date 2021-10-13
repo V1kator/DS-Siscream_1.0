@@ -26,7 +26,7 @@ namespace Siscream.DataBase
                 connection.Open();
 
 
-            }catch (Exception)
+            }catch (Exception e)
             {
                 throw;
             }
