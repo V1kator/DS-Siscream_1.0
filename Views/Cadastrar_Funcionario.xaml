@@ -1,0 +1,177 @@
+﻿<Window x:Class="Siscream.Views.Cadastrar_Funcionario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Siscream.Views"
+        mc:Ignorable="d"
+        Title="CADASTRAR FUNCIONARIO" WindowStartupLocation="CenterScreen" Height="720" Width="1280" ResizeMode="NoResize" FontSize="48" FontWeight="Bold">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <!--ICONES MENU E LABELS-->
+        <StackPanel Background="#FF139506" Margin="0,0,30,0" >
+            <Image Source="imagens/icone_produtos.png" Height="100" Width="100"/>
+            <Button Height="42" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_produtos_Click"/>
+            <Image Source="imagens/icone_vendas.png" Height="100" Width="100"/>
+            <Button x:Name="btn_vendas" Height="42" Background="#FF1ADA06" Content="VENDAS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_vendas_Click" />
+            <Image Source="imagens/icone_gastos.png" Height="100" Width="100"/>
+            <Button x:Name="btn_gastos" Height="42" Background="#FF1ADA06" Content="LANÇAR &#xD;&#xA;GASTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_gastos_Click" />
+            <Image Source="imagens/icone_cadastrar.png" Height="100" Width="100"/>
+            <Button x:Name="btn_cadastros" Height="42" Background="#FF1ADA06" Content="CADASTRAR" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="btn_cadastros_Click"/>
+        </StackPanel>
+
+        <!--LABEL SAIR-->
+        <Button x:Name="btn_close" Grid.Row ="1" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,0,30,0" Click="btn_close_Click"/>
+        <Image Source="imagens/ICONE_SAIR.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
+
+
+        <!--TITULO TOPO-->
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24,33,0,0" TextWrapping="Wrap" Text="CADASTRO DE FUNCIONÁRIO" VerticalAlignment="Top"
+                   Height="61" Width="886" FontSize="50" FontWeight="Bold" FontFamily="Arial Black"/>
+
+        <!--LABEL NOME-->
+        <Label Content="NOME*" Grid.Column="1" HorizontalAlignment="Left" Margin="139,129,0,0" VerticalAlignment="Top" Height="34" Width="196" FontSize="18"/>
+        <TextBox x:Name="lbl_nome" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="142,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="290" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
+
+        <!--LABEL RG-->
+        <Label Content="RG*" Grid.Column="1" HorizontalAlignment="Left" Margin="477,129,0,0" VerticalAlignment="Top" Height="34" Width="97" FontSize="18"/>
+        <TextBox x:Name="lbl_cpf" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="477,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="98" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
+
+        <!--LABEL CPF-->
+        <Label Content="CPF*" Grid.Column="1" HorizontalAlignment="Left" Margin="608,129,0,0" VerticalAlignment="Top" Height="34" Width="137" FontSize="18"/>
+        <TextBox x:Name="lbl_rg" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="608,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="183" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
+
+        <!--IMAGEM FUNCIONARIO-->
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="161" Margin="828,138,0,0" VerticalAlignment="Top" Width="177" Source="imagens/foto_funcionario.png"/>
+
+        <!--LABEL DATA DE NASCIMENTO-->
+        <Label Content="DATA DE NASCIMENTO" Grid.Column="1" HorizontalAlignment="Left" Margin="344,224,0,0" VerticalAlignment="Top" Height="34" Width="243" FontSize="18"/>
+        <DatePicker x:Name="lbl_nascimento" Grid.Column="1" HorizontalAlignment="Left" Margin="347,261,0,0" VerticalAlignment="Top"
+                    FontSize="18" RenderTransformOrigin="0.389,0.114" Width="225" Height="37" BorderThickness="3"/>
+
+        <!--LABEL TELEFONE-->
+        <Label Content="TELEFONE" Grid.Column="1" HorizontalAlignment="Left" Margin="602,224,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
+        <TextBox x:Name="lbl_telefone" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="605,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="186" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
+
+        <!--LABEL SEXO-->
+        <Label Content="SEXO" Grid.Column="1" HorizontalAlignment="Left" Margin="26,227,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
+        <RadioButton Content="MASCULINO" Grid.Column="1" HorizontalAlignment="Left" Margin="31,270,0,0" VerticalAlignment="Top" FontSize="18" BorderThickness="3"/>
+        <RadioButton Content="FEMININO" Grid.Column="1" HorizontalAlignment="Left" Margin="193,270,0,0" VerticalAlignment="Top" FontSize="18" BorderThickness="3"/>
+
+        <!--LABEL ENDERECO-->
+        <!--RUA-->
+        <Label Content="LOGRADOURO" Grid.Column="1" HorizontalAlignment="Left" Margin="26,399,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
+        <TextBox x:Name="lbl_rua" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="29,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+                 Width="275" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
+
+        <!--BAIRRO-->
+        <Label Content="BAIRRO" Grid.Column="1" HorizontalAlignment="Left" Margin="471,399,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
+        <TextBox x:Name="lbl_bairro" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="474,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+                 Width="212" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
+
+        <!--CIDADE-->
+        <Label Content="CIDADE" Grid.Column="1" HorizontalAlignment="Left" Margin="721,399,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
+        <TextBox x:Name="lbl_cidade" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="724,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+                 Width="186" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
+
+        <!--ESTADO-->
+        <Label Content="UF" Grid.Column="1" HorizontalAlignment="Left" Margin="935,401,0,0" VerticalAlignment="Top" Height="34" Width="109" FontSize="18"/>
+        <ComboBox x:Name="lbl_uf" Grid.Column="1" Margin="938,436,49,107" BorderThickness="3" FontSize="18">
+            <ComboBoxItem Content="AC"/>
+            <ComboBoxItem Content="AL"/>
+            <ComboBoxItem Content="AP"/>
+            <ComboBoxItem Content="AM"/>
+            <ComboBoxItem Content="BA"/>
+            <ComboBoxItem Content="CE"/>
+            <ComboBoxItem Content="DF"/>
+            <ComboBoxItem Content="ES"/>
+            <ComboBoxItem Content="GO"/>
+            <ComboBoxItem Content="MA"/>
+            <ComboBoxItem Content="MT"/>
+            <ComboBoxItem Content="MS"/>
+            <ComboBoxItem Content="MG"/>
+            <ComboBoxItem Content="PA"/>
+            <ComboBoxItem Content="PB"/>
+            <ComboBoxItem Content="PR"/>
+            <ComboBoxItem Content="PE"/>
+            <ComboBoxItem Content="PI"/>
+            <ComboBoxItem Content="RJ"/>
+            <ComboBoxItem Content="RN"/>
+            <ComboBoxItem Content="RS"/>
+            <ComboBoxItem Content="RO"/>
+            <ComboBoxItem Content="RR"/>
+            <ComboBoxItem Content="SC"/>
+            <ComboBoxItem Content="SP"/>
+            <ComboBoxItem Content="SE"/>
+            <ComboBoxItem Content="TO"/>
+        </ComboBox>
+
+        <!--NUMERO-->
+        <Label Content="Nº" Grid.Column="1" HorizontalAlignment="Left" Margin="346,399,0,0" VerticalAlignment="Top" Height="34" Width="89" FontSize="18"/>
+        <TextBox x:Name="lbl_numero" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="347,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+                 Width="85" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
+
+        <!--LABEL DATA DE NASCIMENTO-->
+        <Label Content="DATA DE ADMISSÃO*" Grid.Column="1" HorizontalAlignment="Left" Margin="825,311,0,0" VerticalAlignment="Top" Height="34" Width="242" FontSize="18"/>
+        <DatePicker x:Name="lbl_admissao" Grid.Column="1" HorizontalAlignment="Left" Margin="827,346,0,0" VerticalAlignment="Top" FontSize="18"
+                    RenderTransformOrigin="0.389,0.114" Width="202" Height="37" BorderThickness="3"/>
+
+        <!--LABEL EMAIL-->
+        <Label Content="EMAIL" Grid.Column="1" HorizontalAlignment="Left" Margin="29,308,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
+        <TextBox x:Name="lbl_email" Grid.Column="1" HorizontalAlignment="Left" Height="36" Margin="29,346,0,0" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="274" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
+
+        <!--LABEL SENHA DE ACESSO-->
+        <Label Content="SENHA DE ACESSO" Grid.Column="1" HorizontalAlignment="Left" Margin="29,496,0,0" VerticalAlignment="Top" Height="34" Width="203" FontSize="18"/>
+        <PasswordBox x:Name="lbl_senha" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="29,533,0,0" 
+                 VerticalAlignment="Top" Width="194" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
+
+        <!--LABEL TIPO DE CONTRATO-->
+        <Label Content="TIPO DE CONTRATO" Grid.Column="1" HorizontalAlignment="Left" Margin="607,311,0,0" VerticalAlignment="Top" 
+               Height="34" Width="291" FontSize="18"/>
+
+        <!--COMBOBOX CONTRATO-->
+        <ComboBox x:Name="lbl_contrato" Grid.Column="1" HorizontalAlignment="Left" Margin="605,346,0,0" VerticalAlignment="Top" Width="186" Height="37" BorderThickness="3" FontSize="18" RenderTransformOrigin="0.749,0.486">
+            <ComboBoxItem Content="CARTEIRA ASSINADA"/>
+            <ComboBoxItem Content="DIARISTA"/>
+        </ComboBox>
+
+        <!--LABEL CARGO-->
+        <Label Content="CARGO EXERCIDO*" Grid.Column="1" HorizontalAlignment="Left" Margin="352,309,0,0" VerticalAlignment="Top" Height="34" Width="218" FontSize="18"/>
+        <ComboBox x:Name="lbl_cargo" Grid.Column="1" HorizontalAlignment="Left" Margin="347,346,0,0" VerticalAlignment="Top" Width="225" Height="37" BorderThickness="3" FontSize="18">
+            <ComboBoxItem Content="PROPRIETARIO DA EMPRESA"/>
+            <ComboBoxItem Content="GERENTE"/>
+            <ComboBoxItem Content="ATENDENTE DE CAIXA"/>
+            <ComboBoxItem Content="AUXILIAR DE PRODUÇÃO"/>
+            <ComboBoxItem Content="ENTREGADOR"/>
+
+        </ComboBox>
+
+
+        <!--LABEL ID-->
+        <Label Content="ID" Grid.Column="1" HorizontalAlignment="Left" Margin="27,129,0,0" VerticalAlignment="Top" Height="34" Width="77" FontSize="18"/>
+        <TextBox x:Name="lbl_id" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="28,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" 
+                 FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" IsEnabled="False"/>
+
+        <!--BOTOES DE ACOES-->
+        <Button x:Name="btn_demitir" Content="DEMITIR" Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="334,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25" Background="#fc3c4c" Foreground="White" FontWeight="Normal" Click="btn_demitir_Click"/>
+        <Button x:Name="btn_editar" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Height="54" Margin="508,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25" Background="#646464" Foreground="White" FontWeight="Normal" Click="btn_editar_Click"/>
+        <Button x:Name="btn_cancelar" Content="CANCELAR" Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="684,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25"  Background="#fc3c4c" Foreground="White" FontWeight="Normal" Click="btn_cancelar_Click"/>
+        <Button x:Name="btn_cadastrar" Content="CADASTRAR" Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="858,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25" Background="#FF139506" Foreground="White" FontWeight="Normal" Click="btn_cadastrar_Click_1"/>
+
+    </Grid>
+</Window>

@@ -17,6 +17,7 @@ using FluentValidation;
 using MySql.Data.MySqlClient;
 using Siscream.Interfaces;
 using Siscream.DataBase;
+using Siscream.Views;
 
 namespace Siscream
 {
@@ -67,12 +68,12 @@ namespace Siscream
              }
              else
              {
-                 MessageBox.Show(ex.Message, "CPF e/ou senha incorretos, por favor tente novamente!", MessageBoxButton.OK, MessageBoxImage.Error);
+                 MessageBox.Show( "CPF e/ou senha incorretos, por favor tente novamente!");
                  _ = text_cpf_login.Focus();
 
 
-             }
-         }*/
-
+             }*/
     }
+
 }
+

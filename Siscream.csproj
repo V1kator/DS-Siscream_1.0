@@ -135,26 +135,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <ApplicationDefinition Include="Views\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Abrir_Caixa.xaml.cs">
+    <Compile Include="Views\Abrir_Caixa.xaml.cs">
       <DependentUpon>Abrir_Caixa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdicionarGastos.xaml.cs">
+    <Compile Include="Views\AdicionarGastos.xaml.cs">
       <DependentUpon>AdicionarGastos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cadastrar_Cliente.xaml.cs">
+    <Compile Include="Views\Cadastrar_Cliente.xaml.cs">
       <DependentUpon>Cadastrar_Cliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cadastrar_Funcionario.xaml.cs">
+    <Compile Include="Views\Cadastrar_Funcionario.xaml.cs">
       <DependentUpon>Cadastrar_Funcionario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cadastrar_Produto.xaml.cs">
+    <Compile Include="Views\Cadastrar_Produto.xaml.cs">
       <DependentUpon>Cadastrar_Produto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Consultar_Cliente.xaml.cs">
+    <Compile Include="Views\Consultar_Cliente.xaml.cs">
       <DependentUpon>Consultar_Cliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Conexao.cs" />
@@ -166,22 +166,22 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Cliente_DAO.cs" />
     <Compile Include="Models\Consultar_Cliente_Teste.cs" />
-    <Compile Include="Consultar_Estoque.xaml.cs">
+    <Compile Include="Views\Consultar_Estoque.xaml.cs">
       <DependentUpon>Consultar_Estoque.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Devolver_Produto.xaml.cs">
+    <Compile Include="Views\Devolver_Produto.xaml.cs">
       <DependentUpon>Devolver_Produto.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Consulta_Cliente_DAO.cs" />
     <Compile Include="Models\Estoque_DAO.cs" />
     <Compile Include="Models\Estoque_teste.cs" />
-    <Compile Include="Fechar_Caixa.xaml.cs">
+    <Compile Include="Views\Fechar_Caixa.xaml.cs">
       <DependentUpon>Fechar_Caixa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Iniciar_Venda.xaml.cs">
+    <Compile Include="Views\Iniciar_Venda.xaml.cs">
       <DependentUpon>Iniciar_Venda.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LancarGastprod.xaml.cs">
+    <Compile Include="Views\LancarGastprod.xaml.cs">
       <DependentUpon>LancarGastprod.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Caixa.cs" />
@@ -195,131 +195,131 @@
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Usuario_DAO.cs" />
     <Compile Include="Models\Funcionario.cs" />
-    <Compile Include="PopUp_Abrir_Caixa.xaml.cs">
+    <Compile Include="Views\PopUp_Abrir_Caixa.xaml.cs">
       <DependentUpon>PopUp_Abrir_Caixa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopUp_AdicionarGastProd.xaml.cs">
+    <Compile Include="Views\PopUp_AdicionarGastProd.xaml.cs">
       <DependentUpon>PopUp_AdicionarGastProd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Cadastrar_Cliente.xaml.cs">
+    <Compile Include="Views\Popup_Cadastrar_Cliente.xaml.cs">
       <DependentUpon>Popup_Cadastrar_Cliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Cadastrar_Funcionario.xaml.cs">
+    <Compile Include="Views\Popup_Cadastrar_Funcionario.xaml.cs">
       <DependentUpon>Popup_Cadastrar_Funcionario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Cadastrar_Produto.xaml.cs">
+    <Compile Include="Views\Popup_Cadastrar_Produto.xaml.cs">
       <DependentUpon>Popup_Cadastrar_Produto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Cancelar_Cliente.xaml.cs">
+    <Compile Include="Views\Popup_Cancelar_Cliente.xaml.cs">
       <DependentUpon>Popup_Cancelar_Cliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopUp_Cancelar_FecharCaixa.xaml.cs">
+    <Compile Include="Views\PopUp_Cancelar_FecharCaixa.xaml.cs">
       <DependentUpon>PopUp_Cancelar_FecharCaixa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Cancelar_Funcionario.xaml.cs">
+    <Compile Include="Views\Popup_Cancelar_Funcionario.xaml.cs">
       <DependentUpon>Popup_Cancelar_Funcionario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopUp_Cancelar_Reposicao_Estoque.xaml.cs">
+    <Compile Include="Views\PopUp_Cancelar_Reposicao_Estoque.xaml.cs">
       <DependentUpon>PopUp_Cancelar_Reposicao_Estoque.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_ConfirmaExcluir_Cliente.xaml.cs">
+    <Compile Include="Views\Popup_ConfirmaExcluir_Cliente.xaml.cs">
       <DependentUpon>Popup_ConfirmaExcluir_Cliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Demitir_Funcionario.xaml.cs">
+    <Compile Include="Views\Popup_Demitir_Funcionario.xaml.cs">
       <DependentUpon>Popup_Demitir_Funcionario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Editar_Cliente.xaml.cs">
+    <Compile Include="Views\Popup_Editar_Cliente.xaml.cs">
       <DependentUpon>Popup_Editar_Cliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Editar_Funcionario.xaml.cs">
+    <Compile Include="Views\Popup_Editar_Funcionario.xaml.cs">
       <DependentUpon>Popup_Editar_Funcionario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Editar_Produto.xaml.cs">
+    <Compile Include="Views\Popup_Editar_Produto.xaml.cs">
       <DependentUpon>Popup_Editar_Produto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopUp_excluir_cliente_consulta.xaml.cs">
+    <Compile Include="Views\PopUp_excluir_cliente_consulta.xaml.cs">
       <DependentUpon>PopUp_excluir_cliente_consulta.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Excluir_Produto.xaml.cs">
+    <Compile Include="Views\Popup_Excluir_Produto.xaml.cs">
       <DependentUpon>Popup_Excluir_Produto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopUp_Funcao_Disponivel_Futuramente.xaml.cs">
+    <Compile Include="Views\PopUp_Funcao_Disponivel_Futuramente.xaml.cs">
       <DependentUpon>PopUp_Funcao_Disponivel_Futuramente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopUp_Salvar_FecharCaixa.xaml.cs">
+    <Compile Include="Views\PopUp_Salvar_FecharCaixa.xaml.cs">
       <DependentUpon>PopUp_Salvar_FecharCaixa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopUp_Salvar_Reposicao.xaml.cs">
+    <Compile Include="Views\PopUp_Salvar_Reposicao.xaml.cs">
       <DependentUpon>PopUp_Salvar_Reposicao.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Popup_Venda_Realizada.xaml.cs">
+    <Compile Include="Views\Popup_Venda_Realizada.xaml.cs">
       <DependentUpon>Popup_Venda_Realizada.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Repor_Estoque.xaml.cs">
+    <Compile Include="Views\Repor_Estoque.xaml.cs">
       <DependentUpon>Repor_Estoque.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Selecionar_Vendedor.xaml.cs">
+    <Compile Include="Views\Selecionar_Vendedor.xaml.cs">
       <DependentUpon>Selecionar_Vendedor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SubMenu_Cadastros.xaml.cs">
+    <Compile Include="Views\SubMenu_Cadastros.xaml.cs">
       <DependentUpon>SubMenu_Cadastros.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SubMenu_Gastos.xaml.cs">
+    <Compile Include="Views\SubMenu_Gastos.xaml.cs">
       <DependentUpon>SubMenu_Gastos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SubMenu_Produtos.xaml.cs">
+    <Compile Include="Views\SubMenu_Produtos.xaml.cs">
       <DependentUpon>SubMenu_Produtos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SubMenu_Vendas.xaml.cs">
+    <Compile Include="Views\SubMenu_Vendas.xaml.cs">
       <DependentUpon>SubMenu_Vendas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Tela_Menu.xaml.cs">
+    <Compile Include="Views\Tela_Menu.xaml.cs">
       <DependentUpon>Tela_Menu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Tela_Pagamento.xaml.cs">
+    <Compile Include="Views\Tela_Pagamento.xaml.cs">
       <DependentUpon>Tela_Pagamento.xaml</DependentUpon>
     </Compile>
-    <Page Include="Abrir_Caixa.xaml">
+    <Page Include="Views\Abrir_Caixa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AdicionarGastos.xaml">
+    <Page Include="Views\AdicionarGastos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cadastrar_Cliente.xaml">
+    <Page Include="Views\Cadastrar_Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cadastrar_Funcionario.xaml">
+    <Page Include="Views\Cadastrar_Funcionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cadastrar_Produto.xaml">
+    <Page Include="Views\Cadastrar_Produto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Consultar_Cliente.xaml">
+    <Page Include="Views\Consultar_Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Consultar_Estoque.xaml">
+    <Page Include="Views\Consultar_Estoque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Devolver_Produto.xaml">
+    <Page Include="Views\Devolver_Produto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Fechar_Caixa.xaml">
+    <Page Include="Views\Fechar_Caixa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Iniciar_Venda.xaml">
+    <Page Include="Views\Iniciar_Venda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LancarGastprod.xaml">
+    <Page Include="Views\LancarGastprod.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -327,7 +327,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
+    <Compile Include="Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -335,115 +335,115 @@
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PopUp_Abrir_Caixa.xaml">
+    <Page Include="Views\PopUp_Abrir_Caixa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopUp_AdicionarGastProd.xaml">
+    <Page Include="Views\PopUp_AdicionarGastProd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Cadastrar_Cliente.xaml">
+    <Page Include="Views\Popup_Cadastrar_Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Cadastrar_Funcionario.xaml">
+    <Page Include="Views\Popup_Cadastrar_Funcionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Cadastrar_Produto.xaml">
+    <Page Include="Views\Popup_Cadastrar_Produto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Cancelar_Cliente.xaml">
+    <Page Include="Views\Popup_Cancelar_Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopUp_Cancelar_FecharCaixa.xaml">
+    <Page Include="Views\PopUp_Cancelar_FecharCaixa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Cancelar_Funcionario.xaml">
+    <Page Include="Views\Popup_Cancelar_Funcionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopUp_Cancelar_Reposicao_Estoque.xaml">
+    <Page Include="Views\PopUp_Cancelar_Reposicao_Estoque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_ConfirmaExcluir_Cliente.xaml">
+    <Page Include="Views\Popup_ConfirmaExcluir_Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Demitir_Funcionario.xaml">
+    <Page Include="Views\Popup_Demitir_Funcionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Editar_Cliente.xaml">
+    <Page Include="Views\Popup_Editar_Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Editar_Funcionario.xaml">
+    <Page Include="Views\Popup_Editar_Funcionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Editar_Produto.xaml">
+    <Page Include="Views\Popup_Editar_Produto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopUp_excluir_cliente_consulta.xaml">
+    <Page Include="Views\PopUp_excluir_cliente_consulta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Excluir_Produto.xaml">
+    <Page Include="Views\Popup_Excluir_Produto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopUp_Funcao_Disponivel_Futuramente.xaml">
+    <Page Include="Views\PopUp_Funcao_Disponivel_Futuramente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopUp_Salvar_FecharCaixa.xaml">
+    <Page Include="Views\PopUp_Salvar_FecharCaixa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopUp_Salvar_Reposicao.xaml">
+    <Page Include="Views\PopUp_Salvar_Reposicao.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Popup_Venda_Realizada.xaml">
+    <Page Include="Views\Popup_Venda_Realizada.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Repor_Estoque.xaml">
+    <Page Include="Views\Repor_Estoque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Selecionar_Vendedor.xaml">
+    <Page Include="Views\Selecionar_Vendedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SubMenu_Cadastros.xaml">
+    <Page Include="Views\SubMenu_Cadastros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SubMenu_Gastos.xaml">
+    <Page Include="Views\SubMenu_Gastos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SubMenu_Produtos.xaml">
+    <Page Include="Views\SubMenu_Produtos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SubMenu_Vendas.xaml">
+    <Page Include="Views\SubMenu_Vendas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Tela_Menu.xaml">
+    <Page Include="Views\Tela_Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Tela_Pagamento.xaml">
+    <Page Include="Views\Tela_Pagamento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -466,14 +466,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="Views\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Views\App.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -487,63 +487,61 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="imagens\adicionar.png">
+    <Content Include="Views\imagens\adicionar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\adicionar2.png">
+    <Content Include="Views\imagens\adicionar2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\Atencao.png">
+    <Content Include="Views\imagens\Atencao.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\caixa_registradora.png">
+    <Content Include="Views\imagens\caixa_registradora.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\chave.png">
+    <Content Include="Views\imagens\chave.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\cracha.png">
+    <Content Include="Views\imagens\cracha.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\deletar_icon.png">
+    <Content Include="Views\imagens\deletar_icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\foto_funcionario.png">
+    <Content Include="Views\imagens\foto_funcionario.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\icone_produtos.png">
+    <Content Include="Views\imagens\icone_produtos.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\icone_gastos.png">
+    <Content Include="Views\imagens\icone_gastos.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\icone_cadastrar.png">
+    <Content Include="Views\imagens\icone_cadastrar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\ICONE_SAIR.png">
+    <Content Include="Views\imagens\ICONE_SAIR.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\icone_vendas.png">
+    <Content Include="Views\imagens\icone_vendas.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="imagens\icon_busca.png" />
-    <Resource Include="imagens\icon_cancelar.png" />
-    <Resource Include="imagens\icon_editar.png" />
-    <Resource Include="imagens\icon_estoque.png" />
-    <Content Include="imagens\lixeira1.png">
+    <Resource Include="Views\imagens\icon_busca.png" />
+    <Resource Include="Views\imagens\icon_cancelar.png" />
+    <Resource Include="Views\imagens\icon_editar.png" />
+    <Resource Include="Views\imagens\icon_estoque.png" />
+    <Content Include="Views\imagens\lixeira1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\logo.png">
+    <Content Include="Views\imagens\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\perfil.png">
+    <Content Include="Views\imagens\perfil.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="imagens\search.png">
+    <Content Include="Views\imagens\search.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
