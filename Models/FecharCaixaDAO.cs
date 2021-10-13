@@ -41,6 +41,9 @@ namespace Siscream.Models
                 query.Parameters.AddWithValue("@saldoFinal", t.saldoFinal);
 
                 var result = query.ExecuteNonQuery();
+
+                if (result == 0)
+                    throw new Exception("O registro não foi inserido. verifique e tente novamente.");
             }
             catch (Exception e)
             {
