@@ -157,16 +157,16 @@
     <Compile Include="Consultar_Cliente.xaml.cs">
       <DependentUpon>Consultar_Cliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataBase\Conexao.cs" />
     <Compile Include="Interfaces\IDAO.cs" />
     <Compile Include="Models\Abstract_DAO.cs" />
-    <Compile Include="Models\CaixaDAO.cs" />
+    <Compile Include="Models\FecharCaixaDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Cliente_DAO.cs" />
     <Compile Include="Models\Consultar_Cliente_Teste.cs" />
     <Compile Include="Consultar_Estoque.xaml.cs">
       <DependentUpon>Consultar_Estoque.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataBese\Conexao.cs" />
     <Compile Include="Devolver_Produto.xaml.cs">
       <DependentUpon>Devolver_Produto.xaml</DependentUpon>
     </Compile>
