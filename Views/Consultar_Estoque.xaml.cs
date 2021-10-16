@@ -28,23 +28,34 @@ namespace Siscream.Views
 
         private void Consultar_Estoque_Loaded(object sender, RoutedEventArgs e)
         {
-            List<Estoque_teste> listaprodutos_consulta = new List<Estoque_teste>();
+            LoadList();
 
-            for (int i = 0; i < 25; i++) 
+
+        }
+
+        private void LoadList()
+        {
+            try
             {
-                listaprodutos_consulta.Add(new Estoque_teste()
-                {
-                    Id = 1+i,
-                    Nome = "Açai "+(i+1),
-                    Preco = 22.90*(i+1),
-                    Marca = "Indiana Jones "+(i+1),
-                    Quantidade = 1*(i+1)
+                var dao = new Consultar_Estoque_DAO();
 
-                });
+                datagrid_consulta.ItemsSource = dao.List();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
-            datagrid_consulta.ItemsSource = listaprodutos_consulta;
         }
+
+
+
+
+
+
+
+
+
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
