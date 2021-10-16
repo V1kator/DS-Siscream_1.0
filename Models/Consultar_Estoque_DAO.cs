@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Siscream.Interfaces;
 using Siscream.DataBase;
+using MySql.Data.MySqlClient;
 
 
 namespace Siscream.Models
@@ -40,9 +41,32 @@ namespace Siscream.Models
             {
                 List<Consultar_Estoque> list = new List<Consultar_Estoque>();
 
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM tb_produto";
 
+                MySqlDataReader reader = query.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    list.Add(new Consultar_Estoque()
+                    {
 
+                        cod_prod = reader.GetInt32("cod_prod"),
+                        nome_prod = reader.GetString("nome_prod"),
+                        unidademed_prod = reader.GetString("unidademed_prod"),
+                        datavalidade_prod = reader.GetDateTime("datavalidade_prod"),
+                        tipo_prod = reader.GetString("tipo_prod"),
+                        estoque_prod = reader.GetInt32("estoque_prod"),
+                        fabricante_prod = reader.GetString("fabricante_prod"),
+                        marca_prod = reader.GetString("marca_prod"),
+                        codbarras_prod = reader.GetString("codbarras_prod"),
+                        comissao_prod = reader.GetInt32("comissao_prod"),
+                        preco_prod = reader.GetFloat("preco_prod"),
+                        custo_prod = reader.GetFloat("custo_prod"),
+                        descricao_prod = reader.GetString("descricao_prod"),
+
+                    });
+                }
 
                 return list;
             }
