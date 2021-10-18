@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Siscream.Interfaces;
 using Siscream.DataBase;
+using MySql.Data.MySqlClient;
+
 
 
 namespace Siscream.Models
@@ -66,7 +68,47 @@ namespace Siscream.Models
 
         public List<Produto> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Produto> list = new List<Produto>();
+
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM tb_produto";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Produto()
+                    {
+
+                        Id = reader.GetInt32("cod_prod"),
+                        Nome = reader.GetString("nome_prod"),
+                        Unidade = reader.GetString("unidademed_prod"),
+                        Validade = reader.GetDateTime("datavalidade_prod"),
+                        Tipo = reader.GetString("tipo_prod"),
+                        Estoque = reader.GetInt32("estoque_prod"),
+                        Fabricante = reader.GetString("fabricante_prod"),
+                        Marca = reader.GetString("marca_prod"),
+                        Barras = reader.GetString("codbarras_prod"),
+                        Comissao = reader.GetInt32("comissao_prod"),
+                        Preco = reader.GetFloat("preco_prod"),
+                        Custo = reader.GetFloat("custo_prod"),
+                        Descricao = reader.GetString("descricao_prod"),
+
+                    });
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void Update(Produto t)
