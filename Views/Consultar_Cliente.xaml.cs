@@ -23,26 +23,9 @@ namespace Siscream.Views
         public Consultar_Cliente()
         {
             InitializeComponent();
-            Loaded += Consultar_Cliente_Loaded;
         }
 
-        private void Consultar_Cliente_Loaded(object sender, RoutedEventArgs e)
-        {
-            List<Consultar_Cliente_Teste> Consult_Cli = new List<Consultar_Cliente_Teste>();
-
-            for(int i=0; i<37; i++)
-            {
-                Consult_Cli.Add(new Consultar_Cliente_Teste()
-                {
-                    Id = i+1,
-                    Nome = "Empresa "+(1+i),
-                    CNPJ = 15 * 150* i
-                });
-            }
-           
-            Datagrid_consulta_cliente.ItemsSource = Consult_Cli;
-        }
-
+       
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos produto = new SubMenu_Produtos();
