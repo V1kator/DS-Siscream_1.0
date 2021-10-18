@@ -39,7 +39,7 @@
         </Grid>
         <Grid Grid.Column="1" HorizontalAlignment="Left" Height="85" Margin="29,93,0,0" VerticalAlignment="Top" Width="506">
             <TextBox HorizontalAlignment="Left" Height="53" Margin="13,16,0,16" TextWrapping="Wrap" VerticalAlignment="Center" Width="372" BorderBrush="Black" FontSize="25" FontWeight="Normal" Padding="2,0,0,0"/>
-            <Button x:Name="bnt_consultar_estoque_interno" Content="" HorizontalAlignment="Left" Margin="411,6,0,0" VerticalAlignment="Top" Width="68" Height="60" BorderBrush="White" Foreground="White" Cursor="None" AutomationProperties.HelpText="Clique Para Pesquisar" FontSize="0.01" FontWeight="Thin" RenderTransformOrigin="0.794,0.45" Click="bnt_consultar_estoque_interno_Click">
+            <Button x:Name="bnt_consultar_estoque_interno" Content="" HorizontalAlignment="Left" Margin="418,16,0,0" VerticalAlignment="Top" Width="64" Height="53" BorderBrush="White" Foreground="#FFC91616" Cursor="None" AutomationProperties.HelpText="Clique Para Pesquisar" FontSize="0.01" FontWeight="Thin" RenderTransformOrigin="0.794,0.45" Click="bnt_consultar_estoque_interno_Click">
                 <Button.OpacityMask>
                     <ImageBrush ImageSource="imagens/icon_busca.png"/>
                 </Button.OpacityMask>
@@ -47,7 +47,6 @@
                     <ImageBrush ImageSource="imagens/icon_busca.png"/>
                 </Button.Background>
             </Button>
-            <Label Content="CONSULTAR" HorizontalAlignment="Left" Margin="428,53,0,0" VerticalAlignment="Top" FontSize="10"/>
         </Grid>
         <Button x:Name="bnt_editar_consulta_estoque" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="811,28,0,0" VerticalAlignment="Top" Width="209" Foreground="White" Background="#FF5F5F5F" FontSize="30" Height="54" Click="Button_Click" Grid.Row="1"/>
         <DataGrid x:Name="datagrid_consulta" Grid.Column="1" HorizontalAlignment="Left" Height="319" Margin="47,272,0,0" VerticalAlignment="Top" Width="972" FontWeight="Normal" FontSize="18" Background="White" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
