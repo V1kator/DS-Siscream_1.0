@@ -20,6 +20,10 @@ namespace Siscream.Views
     /// </summary>
     public partial class Consultar_Estoque : Window
     {
+
+        private List<Consultar_Estoque> produtosList = new List<Consultar_Estoque>();
+        List<Consultar_Estoque> list = new List<Consultar_Estoque>();
+
         public Consultar_Estoque()
         {
             InitializeComponent();
@@ -37,19 +41,23 @@ namespace Siscream.Views
         {
             try
             {
-                var dao = new Consultar_Estoque_DAO();
 
+                var dao = new Consultar_Estoque_DAO();
+               
                 datagrid_consulta.ItemsSource = dao.List();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
         }
 
 
+        private void bnt_consultar_estoque_interno_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
 
 
 
@@ -93,11 +101,7 @@ namespace Siscream.Views
             fun_disp_futur.ShowDialog();
         }
 
-        private void bnt_consultar_estoque_interno_Click(object sender, RoutedEventArgs e)
-        {
-            PopUp_Funcao_Disponivel_Futuramente fun_disp_futur = new PopUp_Funcao_Disponivel_Futuramente();
-            fun_disp_futur.ShowDialog();
-        }
+       
 
         
     }

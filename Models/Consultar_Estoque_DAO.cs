@@ -51,19 +51,19 @@ namespace Siscream.Models
                     list.Add(new Consultar_Estoque()
                     {
 
-                        cod_prod = reader.GetInt32("cod_prod"),
-                        nome_prod = reader.GetString("nome_prod"),
-                        unidademed_prod = reader.GetString("unidademed_prod"),
-                        datavalidade_prod = reader.GetDateTime("datavalidade_prod"),
-                        tipo_prod = reader.GetString("tipo_prod"),
-                        estoque_prod = reader.GetInt32("estoque_prod"),
-                        fabricante_prod = reader.GetString("fabricante_prod"),
-                        marca_prod = reader.GetString("marca_prod"),
-                        codbarras_prod = reader.GetString("codbarras_prod"),
-                        comissao_prod = reader.GetInt32("comissao_prod"),
-                        preco_prod = reader.GetFloat("preco_prod"),
-                        custo_prod = reader.GetFloat("custo_prod"),
-                        descricao_prod = reader.GetString("descricao_prod"),
+                        Id = reader.GetInt32("cod_prod"),
+                        Nome = reader.GetString("nome_prod"),
+                        Unidade = reader.GetString("unidademed_prod"),
+                        Validade = reader.GetDateTime("datavalidade_prod"),
+                        Tipo = reader.GetString("tipo_prod"),
+                        Estoque = reader.GetInt32("estoque_prod"),
+                        Fabricante = reader.GetString("fabricante_prod"),
+                        Marca = reader.GetString("marca_prod"),
+                        Barras = reader.GetString("codbarras_prod"),
+                        Comissao = reader.GetInt32("comissao_prod"),
+                        Preco = reader.GetFloat("preco_prod"),
+                        Custo = reader.GetFloat("custo_prod"),
+                        Descricao = reader.GetString("descricao_prod"),
 
                     });
                 }
