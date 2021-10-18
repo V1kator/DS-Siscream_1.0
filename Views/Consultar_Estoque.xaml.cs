@@ -21,8 +21,6 @@ namespace Siscream.Views
     public partial class Consultar_Estoque : Window
     {
 
-        private List<Consultar_Estoque> produtosList = new List<Consultar_Estoque>();
-        List<Consultar_Estoque> list = new List<Consultar_Estoque>();
 
         public Consultar_Estoque()
         {
@@ -42,8 +40,7 @@ namespace Siscream.Views
             try
             {
 
-                var dao = new Consultar_Estoque_DAO();
-               
+                var dao = new Produto_DAO();
                 datagrid_consulta.ItemsSource = dao.List();
             }
             catch (Exception ex)
