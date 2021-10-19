@@ -20,12 +20,49 @@ namespace Siscream.Views
     /// </summary>
     public partial class Consultar_Cliente : Window
     {
+
+        private List<Cliente> clienteList = new List<Cliente>();
+
         public Consultar_Cliente()
         {
             InitializeComponent();
+            Loaded += Consultar_Cliente_Loaded;
         }
 
-       
+        private void Consultar_Cliente_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadList();
+        }
+        private void LoadList()
+        {
+            try
+            {
+                clienteList = new Cliente_DAO().List();
+                Datagrid_consulta_cliente.ItemsSource = clienteList;
+
+
+                //var dao = new Produto_DAO();
+                //datagrid_consulta.ItemsSource = dao.List();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void bnt_consultar_cliente_interno_Click(object sender, RoutedEventArgs e)
+        {
+            var text = Textbox_consultar_cliente.Text;
+            var filteredList = clienteList.Where(i => i.Nome.ToLower().Contains(text));
+            Datagrid_consulta_cliente.ItemsSource = filteredList;
+        }
+
+
+
+
+
+
+
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos produto = new SubMenu_Produtos();
@@ -56,10 +93,7 @@ namespace Siscream.Views
             this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+      
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {

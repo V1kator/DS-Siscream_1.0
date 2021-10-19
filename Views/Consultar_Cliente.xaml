@@ -45,14 +45,12 @@
                     </TransformGroup>
                 </TextBox.RenderTransform>
             </TextBox>
-            <Button Content="" HorizontalAlignment="Left" Margin="355,4,0,0" VerticalAlignment="Top" Width="45" Height="43" FontSize="0.01" BorderBrush="White" Foreground="White" Click="Button_Click">
+            <Button x:Name="bnt_consultar_cliente_interno" Content="" HorizontalAlignment="Left" Margin="355,0,0,7" Width="45" FontSize="0.01" BorderBrush="White" Foreground="White" Click="bnt_consultar_cliente_interno_Click" Height="43" VerticalAlignment="Bottom">
                 <Button.Background>
                     <ImageBrush ImageSource="imagens/icon_busca.png"/>
                 </Button.Background>
             </Button>
         </Grid>
-        <RadioButton Content="NOME" Grid.Column="1" HorizontalAlignment="Left" Margin="36,163,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <RadioButton x:Name="Radio_CNPJ" Content="CNPJ" Grid.Column="1" HorizontalAlignment="Left" Margin="155,164,0,0" VerticalAlignment="Top" FontSize="20" IsChecked="True"/>
 
         <Button Content="RELATÓRIO" Grid.Column="1" HorizontalAlignment="Left" Margin="668,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF27D600" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_1"/>
         <Button Content="EXCLUIR" Grid.Column="1" HorizontalAlignment="Left" Margin="441,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FFD60000" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_2"/>

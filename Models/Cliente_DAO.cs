@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Siscream.Interfaces;
 using Siscream.DataBase;
+using MySql.Data.MySqlClient;
+
 
 
 namespace Siscream.Models
@@ -59,8 +61,43 @@ namespace Siscream.Models
 
         public List<Cliente> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Cliente> list = new List<Cliente>();
+
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM tb_cliente";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Cliente()
+                    {
+
+                        Id = reader.GetInt32("cod_cli"),
+                        Nome = reader.GetString("nome_cli"),
+                        Cpf = reader.GetString("cpf_cli"),
+                        Cnpj = reader.GetString("cnpj_cli"),
+                        Tipo = reader.GetString("tipo_pessoa_cli"),
+                        Endereco = reader.GetInt32("cod_end_fk"),
+                       
+
+                    });
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
+    
 
         public void Update(Cliente t)
         {
