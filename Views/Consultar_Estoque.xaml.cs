@@ -21,6 +21,7 @@ namespace Siscream.Views
     public partial class Consultar_Estoque : Window
     {
 
+        private List<Produto> produtosList = new List<Produto>();
 
         public Consultar_Estoque()
         {
@@ -39,9 +40,12 @@ namespace Siscream.Views
         {
             try
             {
+                produtosList = new Produto_DAO().List();
+                datagrid_consulta.ItemsSource = produtosList;
 
-                var dao = new Produto_DAO();
-                datagrid_consulta.ItemsSource = dao.List();
+
+                //var dao = new Produto_DAO();
+                //datagrid_consulta.ItemsSource = dao.List();
             }
             catch (Exception ex)
             {
@@ -53,7 +57,9 @@ namespace Siscream.Views
 
         private void bnt_consultar_estoque_interno_Click(object sender, RoutedEventArgs e)
         {
-
+            var text = txtSearch.Text;
+            var filteredList = produtosList.Where(i=> i.Nome.ToLower().Contains(text));
+            datagrid_consulta.ItemsSource = filteredList;
         }
 
 
