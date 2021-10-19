@@ -45,9 +45,25 @@
                 </Button.Background>
             </Button>
         </Grid>
-        <Button x:Name="bnt_editar_consulta_estoque" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="811,28,0,0" VerticalAlignment="Top" Width="209" Foreground="White" Background="#FF5F5F5F" FontSize="30" Height="54" Click="Button_Click" Grid.Row="1"/>
-        <DataGrid x:Name="datagrid_consulta" Grid.Column="1" HorizontalAlignment="Left" Height="319" Margin="47,272,0,0" VerticalAlignment="Top" Width="972" FontWeight="Normal" FontSize="18" Background="White" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Button x:Name="bnt_editar_consulta_estoque" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="811,28,0,0" VerticalAlignment="Top" Width="209" Foreground="White" Background="#FF5F5F5F" FontSize="30" Height="54" Click="bnt_editar_consulta_estoque_Click" Grid.Row="1"/>
         <Label Content="Resultados:" Grid.Column="1" HorizontalAlignment="Left" Margin="45,225,0,0" VerticalAlignment="Top" FontSize="24" RenderTransformOrigin="0.632,0.503"/>
+        <DataGrid  Margin="45,272,10,0" x:Name="datagrid_consulta" CanUserAddRows="False" CanUserDeleteRows="False" 
+                       AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2"
+                       ColumnWidth="*" Grid.Column="1" SelectionChanged="datagrid_consulta_SelectionChanged" FontSize="24" Background="White" BorderBrush="White">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Produto" IsReadOnly="True" Binding="{Binding Nome}"/>
+                <DataGridTextColumn Header="Estoque" IsReadOnly="True" Binding="{Binding Estoque}"/>
+                <DataGridTextColumn Header="Valor" IsReadOnly="True" Binding="{Binding ValorCompra, ConverterCulture='pt-BR', StringFormat=C}"/>
 
+                <DataGridTemplateColumn Header="Adicionar?">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Siscream.Models
 {
-    class Produto
+    public class Produto
     {
 
         public int Id { get; set; }
@@ -22,5 +22,19 @@ namespace Siscream.Models
         public float Preco { get; set; }
         public float Custo { get; set; }
         public string Descricao { get; set; }
+
+        private bool selected = false;
+
+        public bool IsSelected
+        {
+            get
+            {
+                return selected;
+            }
+            set
+            {
+                selected = value;
+            }
+        }
     }
 }

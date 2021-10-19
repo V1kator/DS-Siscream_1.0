@@ -23,6 +23,8 @@ namespace Siscream.Views
 
         private List<Produto> produtosList = new List<Produto>();
 
+        public List<Produto> ProdutosSelecionados { get; private set; } = new List<Produto>();
+
         public Consultar_Estoque()
         {
             InitializeComponent();
@@ -62,6 +64,25 @@ namespace Siscream.Views
             datagrid_consulta.ItemsSource = filteredList;
         }
 
+        private void bnt_editar_consulta_estoque_Click(object sender, RoutedEventArgs e)
+        {
+            /*
+            var itens = datagrid_consulta.Items;
+
+            foreach (Produto produto in itens)
+            {
+                if (produto.IsSelected)
+                    MessageBox.Show (produto.Nome);
+
+                if (ProdutosSelecionados.Count == 0)
+                    MessageBox.Show("Nenhum produto foi selecionado!", "", MessageBoxButton.OK, MessageBoxImage.Information);
+
+               
+
+                 if (produto.IsSelected)
+                     ProdutosSelecionados.Add(produto);
+            }*/
+        }
 
 
 
@@ -98,14 +119,10 @@ namespace Siscream.Views
             this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            PopUp_Funcao_Disponivel_Futuramente fun_disp_futur = new PopUp_Funcao_Disponivel_Futuramente();
-            fun_disp_futur.ShowDialog();
-        }
-
-       
-
         
+        private void datagrid_consulta_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
