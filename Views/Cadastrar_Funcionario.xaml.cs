@@ -77,7 +77,7 @@ namespace Siscream.Views
                 Funcionario_DAO funcionario_DAO = new Funcionario_DAO();
                 funcionario_DAO.Insert(funcionario);
 
-                MessageBox.Show("Funcionario adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information)
+                MessageBox.Show("Funcionario adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
 
 
             }

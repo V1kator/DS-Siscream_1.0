@@ -165,16 +165,12 @@
     <Compile Include="Models\FecharCaixaDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Cliente_DAO.cs" />
-    <Compile Include="Models\Consultar_Cliente_Teste.cs" />
     <Compile Include="Views\Consultar_Estoque.xaml.cs">
       <DependentUpon>Consultar_Estoque.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Devolver_Produto.xaml.cs">
       <DependentUpon>Devolver_Produto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Consulta_Cliente_DAO.cs" />
-    <Compile Include="Models\Estoque_DAO.cs" />
-    <Compile Include="Models\Estoque_teste.cs" />
     <Compile Include="Views\Fechar_Caixa.xaml.cs">
       <DependentUpon>Fechar_Caixa.xaml</DependentUpon>
     </Compile>

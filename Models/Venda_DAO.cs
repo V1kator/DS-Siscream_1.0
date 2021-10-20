@@ -11,6 +11,14 @@ namespace Siscream.Models
 {
     class Venda_DAO : IDAO<Venda>
     {
+        private static Conexao conn;
+
+
+        public Venda_DAO()
+        {
+            conn = new Conexao();
+        }
+
         public void Delete(Venda t)
         {
             throw new NotImplementedException();
@@ -43,7 +51,7 @@ namespace Siscream.Models
                     {
 
                         Codigo = reader.GetInt32("cod_venda"),
-                        Valor = reader.GetString("valor_venda"),
+                        Valor = reader.GetFloat("valor_venda"),
                         Pagamento = reader.GetString("formaPagamento_venda"),
                         Data = reader.GetDateTime("data_venda"),
                         Caixa = reader.GetInt32("cod_caixa_fk")
@@ -62,10 +70,7 @@ namespace Siscream.Models
             {
                 conn.Close();
             }
-
-
         }
-    }
 
         public void Update(Venda t)
         {
