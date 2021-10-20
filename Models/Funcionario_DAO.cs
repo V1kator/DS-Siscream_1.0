@@ -36,8 +36,8 @@ namespace Siscream.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_funcionario (nome_func, cpf_func, cargo_func, tipoContrato_func, senha_func, dataAdmissao_func, cod_end_fk) " +
-                                    "VALUES (@nome, @cpf, @cargo, @contrato, @senha, @admissao, @codigo_end)";
+                query.CommandText = "INSERT INTO tb_funcionario (nome_func, cpf_func, cargo_func, tipoContrato_func, senha_func, dataAdmissao_func, cod_end_fk, sexo_func, nascimento_func, email_func, telefone_func, rg_func) " +
+                                    "VALUES (@nome, @cpf, @cargo, @contrato, @senha, @admissao, @codigo_end, @sexo, @nascimento, @email, @telefone, @rg)";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
                 query.Parameters.AddWithValue("@cpf", t.Cpf);
@@ -46,6 +46,12 @@ namespace Siscream.Models
                 query.Parameters.AddWithValue("@senha", t.Senha);
                 query.Parameters.AddWithValue("@admissao", t.Admissao.ToString("yyyy-MM-dd"));
                 query.Parameters.AddWithValue("@codigo_end", t.Codigo_end);
+                query.Parameters.AddWithValue("@sexo", t.Sexo);
+                query.Parameters.AddWithValue("@nascimento", t.Nascimento);
+                query.Parameters.AddWithValue("@email", t.Email);
+                query.Parameters.AddWithValue("@telefone", t.Telefone);
+                query.Parameters.AddWithValue("@rg", t.Rg);
+
 
                 var result = query.ExecuteNonQuery();
 
@@ -83,7 +89,13 @@ namespace Siscream.Models
                         Contrato = reader.GetString("tipoContrato_func"),
                         Senha = reader.GetString("senha_func"),
                         Admissao = reader.GetDateTime("dataAdmissao_func"),
-                        Codigo_end = reader.GetInt32("cod_end_fk")
+                        Codigo_end = reader.GetInt32("cod_end_fk"),
+                        Sexo = reader.GetString("sexo_func"),
+                        Nascimento = reader.GetDateTime("nascimento_func"),
+                        Telefone = reader.GetString("telefone_func"),
+                        Email = reader.GetString("email_func"),
+                        Rg = reader.GetString("rg_func")
+
 
 
                     });

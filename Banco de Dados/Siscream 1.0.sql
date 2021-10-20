@@ -66,8 +66,13 @@ CREATE TABLE tb_caixa (
 
 CREATE TABLE tb_funcionario (
     cod_func int not null PRIMARY KEY auto_increment,
-    nome_func varchar (100),
+    nome_func varchar (100) not null,
     cpf_func varchar (11) not null,
+    sexo_func varchar (20) not null, 
+    nascimento_func varchar (11),
+    telefone_func varchar (20), 
+    email_func varchar (50),
+    rg_func varchar (15) not null,
     cargo_func varchar (20) not null,
     tipoContrato_func varchar (20) not null,
     senha_func varchar (20) not null,

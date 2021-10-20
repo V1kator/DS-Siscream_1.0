@@ -56,6 +56,36 @@ namespace Siscream.Views
 
         private void btn_cadastrar_Click_1(object sender, RoutedEventArgs e)
         {
+
+            try
+            {
+                Funcionario funcionario = new Funcionario();
+                funcionario.Nome = lbl_nome.Text;
+                funcionario.Cpf= lbl_cpf.Text;
+                funcionario.Cargo = lbl_cargo.Text;
+                funcionario.Contrato = lbl_contrato.Text;
+                funcionario.Senha = lbl_senha.Password;
+                funcionario.Admissao = (DateTime)lbl_admissao.SelectedDate;
+                funcionario.Telefone = lbl_telefone.Text;
+                /*funcionario.Rua = lbl_rua.Text;
+                funcionario.Bairro = lbl_bairro.Text;
+                funcionario.Cidade = lbl_cidade.Text;
+                funcionario.Estado = lbl_uf.Text;
+                funcionario.Numero = lbl_numero.Text;*/
+              
+
+                Funcionario_DAO funcionario_DAO = new Funcionario_DAO();
+                funcionario_DAO.Insert(funcionario);
+
+                MessageBox.Show("Funcionario adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information)
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
             Popup_Cadastrar_Funcionario popup = new Popup_Cadastrar_Funcionario();
             popup.ShowDialog();
 
