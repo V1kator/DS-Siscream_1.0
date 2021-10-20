@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Siscream.Interfaces;
 using Siscream.Models;
 using Siscream.DataBase;
+using MySql.Data.MySqlClient;
 
 namespace Siscream.Models
 {
@@ -52,7 +53,7 @@ namespace Siscream.Models
             catch (Exception e)
             {
                 throw e;
-            } 
+            }
             finally
             {
                 conn.Close();
@@ -61,33 +62,36 @@ namespace Siscream.Models
 
         public List<Funcionario> List()
         {
-            var query = conn.Query();
-            query.CommandText = "SELECT * FROM tb_funcionario";
-
-            MySqlDataReader reader = query.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-                List.Add(new Funcionario()
+                List<Funcionario> list = new List<Funcionario>();
+
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM tb_funcionario";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
                 {
+                    list.Add(new Funcionario()
+                    {
 
-                    Codigo = reader.GetInt32("cod_func"),
-                    Nome = reader.GetString("nome_func"),
-                    Cpf = reader.GetString("cpf_func"),
-                    Cargo = reader.GetString("cargo_func"),
-                    Contrato = reader.GetString("tipoContrato_func"),
-                    Senha = reader.GetString2("senha_func"),
-                    Admissao = reader.GetDate("dataAdmissao_func"),
-                    Codigo_end = reader.GetInt32("cod_end_fk")
+                        Codigo = reader.GetInt32("cod_func"),
+                        Nome = reader.GetString("nome_func"),
+                        Cpf = reader.GetString("cpf_func"),
+                        Cargo = reader.GetString("cargo_func"),
+                        Contrato = reader.GetString("tipoContrato_func"),
+                        Senha = reader.GetString("senha_func"),
+                        Admissao = reader.GetDateTime("dataAdmissao_func"),
+                        Codigo_end = reader.GetInt32("cod_end_fk")
 
 
-
-                });
+                    });
+                }
+                return list;
             }
 
-            return list;
-        }
-            catch (Exception e)
+               catch (Exception e)
             {
                 throw e;
             }
@@ -95,9 +99,6 @@ namespace Siscream.Models
             {
                 conn.Close();
             }
-        }
-    
-
 
 
         }
