@@ -162,7 +162,7 @@
     <Compile Include="Models\AbrirCaixa.cs" />
     <Compile Include="Models\AbrirCaixa_DAO.cs" />
     <Compile Include="Models\Abstract_DAO.cs" />
-    <Compile Include="Models\FecharCaixaDAO.cs" />
+    <Compile Include="Models\CaixaDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Cliente_DAO.cs" />
     <Compile Include="Views\Consultar_Estoque.xaml.cs">

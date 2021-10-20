@@ -8,17 +8,17 @@ using Siscream.DataBase;
 
 namespace Siscream.Models
 {
-    class FecharCaixaDAO : IDAO<Caixa>
+    class CaixaDAO : IDAO<FecharCaixa>
     {
         private static Conexao conn;
 
-        public FecharCaixaDAO(){
+        public CaixaDAO(){
 
             conn = new Conexao();
 
         }
 
-        public void Insert(Caixa t)
+        public void Insert(FecharCaixa t)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace Siscream.Models
                 var result = query.ExecuteNonQuery();
 
                 if (result == 0)
-                    throw new Exception("O registro não foi inserido. verifique e tente novamente.");
+                    throw new Exception("O registro não foi inserido. Verifique e tente novamente!");
             }
             catch (Exception e)
             {
@@ -55,22 +55,22 @@ namespace Siscream.Models
             }
         }
 
-        public void Update(Caixa t)
+        public void Update(FecharCaixa t)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Caixa t)
+        public void Delete(FecharCaixa t)
         {
             throw new NotImplementedException();
         }
 
-        public List<Caixa> List()
+        public List<FecharCaixa> List()
         {
             throw new NotImplementedException();
         }
 
-        public Caixa GetByID(int id)
+        public FecharCaixa GetByID(int id)
         {
             throw new NotImplementedException();
         }

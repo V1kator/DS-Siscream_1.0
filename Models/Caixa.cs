@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Siscream.Models
 {
-    class Caixa
+    class FecharCaixa
     {
         public string nome_func { get; set; }
         public double saldo { get; set; }

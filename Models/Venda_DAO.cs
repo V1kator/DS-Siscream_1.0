@@ -40,7 +40,7 @@ namespace Siscream.Models
             {
                 List<Venda> list = new List<Venda>();
 
-                var query = conn.Query();
+                var query = conn.Query(); 
                 query.CommandText = "SELECT * FROM tb_venda";
 
                 MySqlDataReader reader = query.ExecuteReader();
@@ -68,6 +68,7 @@ namespace Siscream.Models
             }
             finally
             {
+<<<<<<< Updated upstream
                 conn.Close();
             }
         }
@@ -77,4 +78,21 @@ namespace Siscream.Models
             throw new NotImplementedException();
         }
     }
+=======
+                //conn.Close();//
+            }
+
+            
+        }
+
+        public void Update(Venda t)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+       
+    
+>>>>>>> Stashed changes
 }
+

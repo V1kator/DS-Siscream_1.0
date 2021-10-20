@@ -25,6 +25,10 @@ namespace Siscream.Views
             InitializeComponent();
         }
 
+        private void Fechar_Caixa_Loaded(object sender, RoutedEventArgs e)
+        {
+            Insert_Teste();
+        }
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos produto = new SubMenu_Produtos();
@@ -86,7 +90,7 @@ namespace Siscream.Views
         {
             try
             {
-                Caixa FecharCaixa = new Caixa();
+                FecharCaixa FecharCaixa = new FecharCaixa();
                 FecharCaixa.nome_func = "Thallia";
                 FecharCaixa.aberto = "11:00 Hrs";
                 FecharCaixa.fechado = "22:00 Hrs";
@@ -100,7 +104,7 @@ namespace Siscream.Views
                 FecharCaixa.especif = "Pagamento de 30L de leite";
                 FecharCaixa.saldoFinal = 1154.5;
 
-                FecharCaixaDAO FecharCaixaDAO = new FecharCaixaDAO();
+                CaixaDAO FecharCaixaDAO = new CaixaDAO();
                 FecharCaixaDAO.Insert(FecharCaixa);
             }
             catch(Exception ex)
