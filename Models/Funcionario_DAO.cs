@@ -61,7 +61,45 @@ namespace Siscream.Models
 
         public List<Funcionario> List()
         {
-            throw new NotImplementedException();
+            var query = conn.Query();
+            query.CommandText = "SELECT * FROM tb_funcionario";
+
+            MySqlDataReader reader = query.ExecuteReader();
+
+            while (reader.Read())
+            {
+                List.Add(new Funcionario()
+                {
+
+                    Codigo = reader.GetInt32("cod_func"),
+                    Nome = reader.GetString("nome_func"),
+                    Cpf = reader.GetString("cpf_func"),
+                    Cargo = reader.GetString("cargo_func"),
+                    Contrato = reader.GetString("tipoContrato_func"),
+                    Senha = reader.GetString2("senha_func"),
+                    Admissao = reader.GetDate("dataAdmissao_func"),
+                    Codigo_end = reader.GetInt32("cod_end_fk")
+
+
+
+                });
+            }
+
+            return list;
+        }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+    
+
+
+
         }
 
         public void Update(Funcionario t)
