@@ -23,7 +23,7 @@ namespace Siscream.Models
         public string especif { get; set; }
         public double saldoFinal { get; set; }
 
-        /* */
+   
 
     }
 }
