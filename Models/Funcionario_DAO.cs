@@ -28,7 +28,47 @@ namespace Siscream.Models
 
         public Funcionario GetByID(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var query = conn.Query();
+                query.CommandText = "SELECT* FROM tb_funcionario WHERE cod_func = @id";
+
+                query.Parameters.AddWithValue("@id", id);
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                if (!reader.HasRows)
+                    throw new Exception("Nenhum registro foi encontrado!");
+
+                var funcionario = new Funcionario();
+
+                while (reader.Read())
+                {
+                    funcionario.Codigo = reader.GetInt32("cod_func");
+                    funcionario.Nome = reader.GetString("nome_func");
+                    funcionario.Cpf = reader.GetString("cpf_func");
+                    funcionario.Rg = reader.GetString("rg_func");
+                    funcionario.Nascimento = reader.GetDateTime("nascimento_func");
+                    funcionario.Senha = reader.GetString("senha_func");
+                    funcionario.Email = reader.GetString("email_func");
+                    funcionario.Sexo = reader.GetString("sexo_func");
+                    funcionario.Telefone = reader.GetString("telefone_func");
+                    funcionario.Cargo = reader.GetString("cargo_func");
+                    funcionario.Admissao = reader.GetDateTime("dataAdmissao_func");
+                    funcionario.Contrato = reader.GetString("tipoContrato_func");
+                }
+
+
+                return funcionario;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Query();
+            }
         }
 
         public void Insert(Funcionario t)
