@@ -290,8 +290,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Cadastrar_Funcionario.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Cadastrar_Produto.xaml">
       <SubType>Designer</SubType>

@@ -120,5 +120,20 @@ namespace Siscream.Views
         {
 
         }
+
+        private void lbl_nome_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void lbl_email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void lbl_email_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

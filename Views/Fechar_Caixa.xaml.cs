@@ -64,11 +64,36 @@ namespace Siscream.Views
 
         private void Salvar_Click(object sender, RoutedEventArgs e)
         {
-            PopUp_Salvar_FecharCaixa caixa = new PopUp_Salvar_FecharCaixa();
-            caixa.ShowDialog();
-            this.Close();
+            try
+            {
+                Caixa cx = new Caixa();
+                cx.aberto = abertoCx.Text;
+                cx.fechado = fechadoCx.Text;
+                cx.saldoInicial = saldoIn.Text;
+                cx.suprimento = suprim.Text;
+                cx.dinheiroCX = dinheiro.Text;
+                cx.creditoCX = credito.Text;
+                cx.debitoCX = debito.Text;
+                cx.totalCX = total.Text;
+                cx.valorRetirado = Vretirado.Text;
+                cx.especif = especif.Text;
+                cx.saldoFinal = Sfinal.Text;
 
-            FecharCaixa_teste();
+                CaixaDAO cxDAO = new CaixaDAO();
+                cxDAO.FecharCaixa(cx);
+
+                PopUp_Salvar_FecharCaixa caixa = new PopUp_Salvar_FecharCaixa();
+                caixa.ShowDialog();
+                this.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+             
+          
         }
 
         private void Editar_Click(object sender, RoutedEventArgs e)
@@ -84,7 +109,7 @@ namespace Siscream.Views
             caixa.ShowDialog();
             this.Close();
         }
-      
+        /*##########################################    TESTE ##############################################
         private void FecharCaixa_teste()
         {
             Caixa cx = new Caixa();
@@ -102,7 +127,25 @@ namespace Siscream.Views
 
             CaixaDAO cxDAO = new CaixaDAO();
             cxDAO.FecharCaixa(cx);
+        }*/
+
+        private void ClearInputs()
+        {
+            
+            abertoCx.Text = "";
+            fechadoCx.Text = "";
+            saldoIn.Text = "";
+            suprim.Text = "";
+            dinheiro.Text = "";
+            credito.Text = "";
+            debito.Text = "";
+            total.Text = "";
+            Vretirado.Text= "";
+            especif.Text = "";
+            Sfinal.Text = "";
         }
-      
+
     }
+
+   
 }
