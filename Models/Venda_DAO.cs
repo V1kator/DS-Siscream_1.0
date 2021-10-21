@@ -68,7 +68,7 @@ namespace Siscream.Models
             }
             finally
             {
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
                 conn.Close();
             }
         }
@@ -78,7 +78,7 @@ namespace Siscream.Models
             throw new NotImplementedException();
         }
     }
-=======
+/*=======
                 //conn.Close();//
             }
 
@@ -93,6 +93,6 @@ namespace Siscream.Models
 
        
     
->>>>>>> Stashed changes
+>>>>>>> Stashed changes*/
 }
 
