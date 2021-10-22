@@ -22,6 +22,7 @@ namespace Siscream.Models
         public double Preco { get; set; }
         public double Custo { get; set; }
         public string Descricao { get; set; }
+        public float quantidade { get; set; }
 
         private bool selected = false;
 
