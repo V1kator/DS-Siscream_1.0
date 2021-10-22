@@ -72,6 +72,8 @@ namespace Siscream.Views
                 funcionario.End.Logradouro = lbl_rua.Text;
                 funcionario.End.Bairro = lbl_bairro.Text;
                 funcionario.End.Cidade = lbl_cidade.Text;
+                funcionario.End.Uf = lbl_uf.Text;
+                //ta faltando cep
                 funcionario.End.Numero = lbl_numero.Text;
 
 
@@ -117,24 +119,5 @@ namespace Siscream.Views
             this.Close();
         }
 
-        private void lbl_nome_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void lbl_nome_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void lbl_email_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void lbl_email_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }

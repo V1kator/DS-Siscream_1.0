@@ -39,7 +39,7 @@ namespace Siscream.Models
 
 
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_cliente (nome_cli, cnpj_cli, email_cli, inscricao_cli, celular_cli, telefone_cli cod_end_fk) " +
+                query.CommandText = "INSERT INTO tb_cliente (nome_cli, cnpj_cli, email_cli, inscricao_cli, celular_cli, telefone_cli, cod_end_fk) " +
                                     "VALUES (@nome, @cnpj, @email, @inscricao, @celular, @telefone, @endereco)";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
@@ -47,8 +47,8 @@ namespace Siscream.Models
                 query.Parameters.AddWithValue("@email", t.Email);
                 query.Parameters.AddWithValue("@inscricao", t.Inscricao);
                 query.Parameters.AddWithValue("@celular", t.Celular);
-                query.Parameters.AddWithValue("@telefone", t.Telefone);     
-                query.Parameters.AddWithValue("@enderco", id_end);
+                query.Parameters.AddWithValue("@telefone", t.Telefone);
+                query.Parameters.AddWithValue("@endereco", id_end);
 
 
                 var result = query.ExecuteNonQuery();
@@ -69,12 +69,11 @@ namespace Siscream.Models
 
             try
             {
-                Endereco end = new Endereco();
-
+                
                 List<Cliente> list = new List<Cliente>();
 
                 var query = conn.Query();
-                query.CommandText = "SELECT * FROM tb_funcionario LEFT JOIN tb_endereco ON cod_end = cod_end_fk";
+                query.CommandText = "SELECT * FROM tb_cliente LEFT JOIN tb_endereco ON cod_end = cod_end_fk";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
@@ -92,7 +91,8 @@ namespace Siscream.Models
                     };
                     if (!reader.IsDBNull(reader.GetOrdinal("cod_end_fk")))
                     {
-                        cli.End.Codigo = reader.GetInt32("bairro_end");
+                        cli.End.Codigo = reader.GetInt32("cod_end");
+                        cli.End.Cidade = reader.GetString("cidade_end");
                     }
                     list.Add(cli);
 

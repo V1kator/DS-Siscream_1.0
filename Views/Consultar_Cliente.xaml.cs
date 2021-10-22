@@ -37,12 +37,9 @@ namespace Siscream.Views
         {
             try
             {
-                var clienteList = new Cliente_DAO();
-                Datagrid_consulta_cliente.ItemsSource = clienteList.List();
+                clienteList = new Cliente_DAO().List();
+                Datagrid_consulta_cliente.ItemsSource = clienteList;
 
-
-                //var dao = new Produto_DAO();
-                //datagrid_consulta.ItemsSource = dao.List();
             }
             catch (Exception ex)
             {
