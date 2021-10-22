@@ -35,15 +35,20 @@ namespace Siscream.Models
         {
             try
             {
+                var id_end = new Endereco_DAO().InsertEnd(t.End);
+
+
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_cliente (nome_cli, cpf_cli, cnpj_cli, tipo_pessoa_cli, cod_end_fk) " +
-                                    "VALUES (@nome, @cpf, @cnpj, @tipopessoa, @endereco)";
+                query.CommandText = "INSERT INTO tb_cliente (nome_cli, cnpj_cli, email_cli, inscricao_cli, celular_cli, telefone_cli cod_end_fk) " +
+                                    "VALUES (@nome, @cnpj, @email, @inscricao, @celular, @telefone,@endereco)";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
-                query.Parameters.AddWithValue("@cpf", t.Cpf);
                 query.Parameters.AddWithValue("@cnpj", t.Cnpj);
-                query.Parameters.AddWithValue("@tipopessoa", t.Tipo);
-                query.Parameters.AddWithValue("@endereco", t.Endereco);
+                query.Parameters.AddWithValue("@email", t.Email);
+                query.Parameters.AddWithValue("@inscricao", t.Inscricao);
+                query.Parameters.AddWithValue("@celular", t.Celular);
+                query.Parameters.AddWithValue("@telefone", t.Telefone);     
+                query.Parameters.AddWithValue("@enderco", id_end);
 
 
                 var result = query.ExecuteNonQuery();

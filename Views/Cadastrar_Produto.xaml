@@ -45,38 +45,38 @@
 
         <!--UNIDADE DE MEDIDA-->
         <Label Content="UNIDADE DE MEDIDA*" Grid.Column="1" HorizontalAlignment="Left" Margin="344,143,0,0" VerticalAlignment="Top" Height="34" Width="226" FontSize="18"/>
-        <TextBox x:Name="lbl_cpf" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="347,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+        <TextBox x:Name= "lbl_unidademed" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="347,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
                  Width="226" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
         <!--LABEL VALIDADE-->
         <Label Content="DATA DE VALIDADE*" Grid.Column="1" HorizontalAlignment="Left" Margin="603,143,0,0" VerticalAlignment="Top" Height="34" Width="216" FontSize="18"/>
-        <DatePicker x:Name="lbl_validade" Grid.Column="1" HorizontalAlignment="Left" Margin="608,180,0,0" VerticalAlignment="Top"
+        <DatePicker x:Name="lbl_datavalidade" Grid.Column="1" HorizontalAlignment="Left" Margin="608,180,0,0" VerticalAlignment="Top"
                     FontSize="18" RenderTransformOrigin="0.389,0.114" Width="223" Height="38" BorderThickness="3"/>
 
         <!--FABRICANTE-->
         <Label Content="FABRICANTE*" Grid.Column="1" HorizontalAlignment="Left" Margin="602,238,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
-        <TextBox x:Name="lbl_telefone" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="605,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+        <TextBox x:Name="lbl_fabricante" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="605,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
                  Width="225" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
         <!--MARCA-->
         <Label Content="MARCA*" Grid.Column="1" HorizontalAlignment="Left" Margin="26,329,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
-        <TextBox x:Name="lbl_rua" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="29,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+        <TextBox x:Name="lbl_marca" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="29,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
                  Width="275" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
         <!--CODIGO DE BARRAS-->
         <Label Content="CÓDIGO DE BARRAS*" Grid.Column="1" HorizontalAlignment="Left" Margin="346,329,0,0" VerticalAlignment="Top" Height="34" Width="209" FontSize="18"/>
-        <TextBox x:Name="lbl_bairro" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="349,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+        <TextBox x:Name="lbl_codbarras" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="349,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
                  Width="224" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
 
         <!--COMISSAO-->
         <Label Content="COMISSÃO*" Grid.Column="1" HorizontalAlignment="Left" Margin="604,329,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
-        <TextBox x:Name="lbl_cidade" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="607,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+        <TextBox x:Name="lbl_comissao" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="607,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
                  Width="222" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
 
 
         <!--DESCRICAO-->
         <Label Content="DESCRIÇÃO DO PRODUTO*" Grid.Column="1" HorizontalAlignment="Left" Margin="26,424,0,0" VerticalAlignment="Top" Height="34" Width="264" FontSize="18"/>
-        <TextBox x:Name="lbl_email" Grid.Column="1" HorizontalAlignment="Left" Height="105" Margin="29,461,0,0" TextWrapping="Wrap" 
+        <TextBox x:Name="lbl_descricao" Grid.Column="1" HorizontalAlignment="Left" Height="105" Margin="29,461,0,0" TextWrapping="Wrap" 
                  VerticalAlignment="Top" Width="1015" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
 
@@ -87,21 +87,21 @@
         
         <!--PRECO-->
         <Label Content="PREÇO*" Grid.Column="1" HorizontalAlignment="Left" Margin="868,147,-10,0" VerticalAlignment="Top" Height="34" Width="216" FontSize="18"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="868,181,0,0" VerticalAlignment="Top" Height="79" Width="180" FontSize="50" Background="#FF2279E2" Foreground="White"/>
+        <TextBox x:Name="lbl_preco" Grid.Column="1" HorizontalAlignment="Left" Margin="868,181,0,0" VerticalAlignment="Top" Height="79" Width="180" FontSize="50" Background="#FF2279E2" Foreground="White"/>
         
         <!--TIPO DE PRODUTO-->
         <Label Content="TIPO DE PRODUTO*" Grid.Column="1" HorizontalAlignment="Left" Margin="26,241,0,0" VerticalAlignment="Top" Height="34" Width="258" FontSize="18"/>
-        <TextBox x:Name="lbl_nome_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="29,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+        <TextBox x:Name="lbl_tipo" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="29,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
             Width="274" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
         
         <!--QUANTIDADE-->
         <Label Content="QUANTIDADE EM EST.*" Grid.Column="1" HorizontalAlignment="Left" Margin="350,241,0,0" VerticalAlignment="Top" Height="34" Width="258" FontSize="18"/>
-        <TextBox x:Name="lbl_nome_Copy1" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="348,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+        <TextBox x:Name="lbl_estoque" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="348,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
             Width="225" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
         
         <!--CUSTO-->
         <Label Content="CUSTO*" Grid.Column="1" HorizontalAlignment="Left" Margin="868,290,-10,0" VerticalAlignment="Top" Height="34" Width="216" FontSize="18"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="868,325,0,0" VerticalAlignment="Top" Height="79" Width="180" FontSize="50" Background="#FFF31207" Foreground="White"/>
+        <TextBox x:Name="lbl_custo" Grid.Column="1" HorizontalAlignment="Left" Margin="868,325,0,0" VerticalAlignment="Top" Height="79" Width="180" FontSize="50" Background="#FFF31207" Foreground="White"/>
 
     </Grid>
 </Window>

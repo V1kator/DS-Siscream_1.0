@@ -30,6 +30,8 @@ namespace Siscream.Models
         {
             try
             {
+
+
                 var query = conn.Query();
                 query.CommandText = "SELECT* FROM tb_funcionario WHERE cod_func = @id";
 
@@ -75,9 +77,11 @@ namespace Siscream.Models
         {
             try
             {
+                var id_end = new Endereco_DAO().InsertEnd(t.End);
+
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_funcionario (nome_func, cpf_func, cargo_func, tipoContrato_func, senha_func, dataAdmissao_func, cod_end_fk, sexo_func, nascimento_func, email_func, telefone_func, rg_func) " +
-                                    "VALUES (@nome, @cpf, @cargo, @contrato, @senha, @admissao, @codigo_end, @sexo, @nascimento, @email, @telefone, @rg)";
+                query.CommandText = "INSERT INTO tb_funcionario (nome_func, cpf_func, cargo_func, tipoContrato_func, senha_func, dataAdmissao_func, cod_end_fk, sexo_func, nascimento_func, email_func, telefone_func, rg_func, cod_end_fk) " +
+                                    "VALUES (@nome, @cpf, @cargo, @contrato, @senha, @admissao, @codigo_end, @sexo, @nascimento, @email, @telefone, @rg, @endereco)";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
                 query.Parameters.AddWithValue("@cpf", t.Cpf);
@@ -91,6 +95,7 @@ namespace Siscream.Models
                 query.Parameters.AddWithValue("@email", t.Email);
                 query.Parameters.AddWithValue("@telefone", t.Telefone);
                 query.Parameters.AddWithValue("@rg", t.Rg);
+                query.Parameters.AddWithValue("@enderco", id_end);
 
 
                 var result = query.ExecuteNonQuery();

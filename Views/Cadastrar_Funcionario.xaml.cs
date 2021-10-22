@@ -59,7 +59,9 @@ namespace Siscream.Views
 
             try
             {
+                Endereco endereco = new Endereco();
                 Funcionario funcionario = new Funcionario();
+
                 funcionario.Nome = lbl_nome.Text;
                 funcionario.Cpf= lbl_cpf.Text;
                 funcionario.Cargo = lbl_cargo.Text;
@@ -67,12 +69,11 @@ namespace Siscream.Views
                 funcionario.Senha = lbl_senha.Password;
                 funcionario.Admissao = (DateTime)lbl_admissao.SelectedDate;
                 funcionario.Telefone = lbl_telefone.Text;
-                /*funcionario.Rua = lbl_rua.Text;
-                funcionario.Bairro = lbl_bairro.Text;
-                funcionario.Cidade = lbl_cidade.Text;
-                funcionario.Estado = lbl_uf.Text;
-                funcionario.Numero = lbl_numero.Text;*/
-              
+                funcionario.End.Logradouro = lbl_rua.Text;
+                funcionario.End.Bairro = lbl_bairro.Text;
+                funcionario.End.Cidade = lbl_cidade.Text;
+                funcionario.End.Numero = lbl_numero.Text;
+
 
                 Funcionario_DAO funcionario_DAO = new Funcionario_DAO();
                 funcionario_DAO.Insert(funcionario);

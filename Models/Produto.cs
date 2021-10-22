@@ -19,8 +19,8 @@ namespace Siscream.Models
         public string Marca { get; set; }
         public string Barras { get; set; }
         public int Comissao { get; set; }
-        public float Preco { get; set; }
-        public float Custo { get; set; }
+        public double Preco { get; set; }
+        public double Custo { get; set; }
         public string Descricao { get; set; }
 
         private bool selected = false;

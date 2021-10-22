@@ -59,33 +59,57 @@ namespace Siscream.Views
 
         private void btn_cadastrar_Click_1(object sender, RoutedEventArgs e)
         {
-            Popup_Cadastrar_Cliente popup = new Popup_Cadastrar_Cliente();
-            popup.ShowDialog();
-            this.Close();
+            Cliente cliente = new Cliente();
+
+            cliente.Nome = lbl_nome.Text;
+            cliente.Cnpj = lbl_cnpj.Text;
+            cliente.Inscricao = lbl_inscricao.Text;
+            cliente.Email = lbl_email.Text;
+            cliente.End.Logradouro = lbl_rua.Text;
+            cliente.End.Bairro = lbl_bairro.Text;
+            cliente.End.Cidade = lbl_cidade.Text;
+            cliente.End.Cep = lbl_cep.Text;
+            cliente.End.Numero = lbl_numero.Text;
+
+
+            Cliente_DAO cliente_DAO = new Cliente_DAO();
+            cliente_DAO.Insert(cliente);
+
+            MessageBox.Show("Cliente adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+        
+ 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+        Popup_Cadastrar_Cliente popup = new Popup_Cadastrar_Cliente();
+        popup.ShowDialog();
+
         }
 
-        private void btn_cancelar_Click(object sender, RoutedEventArgs e)
-        {
-            Popup_Cancelar_Cliente popup = new Popup_Cancelar_Cliente();
-            popup.ShowDialog();
-        }
-
-        private void btn_editar_Click(object sender, RoutedEventArgs e)
-        {
-            Popup_Editar_Cliente popup = new Popup_Editar_Cliente();
-            popup.ShowDialog();
-        }
-
-        private void btn_produtos_Click(object sender, RoutedEventArgs e)
-        {
-            SubMenu_Produtos produto = new SubMenu_Produtos();
-            produto.ShowDialog();
-            this.Close();
-        }
-
-        private void lbl_codigo_user_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+    private void btn_cancelar_Click(object sender, RoutedEventArgs e)
+    {
+        Popup_Cancelar_Cliente popup = new Popup_Cancelar_Cliente();
+        popup.ShowDialog();
     }
+
+    private void btn_editar_Click(object sender, RoutedEventArgs e)
+    {
+        Popup_Editar_Cliente popup = new Popup_Editar_Cliente();
+        popup.ShowDialog();
+    }
+
+    private void btn_produtos_Click(object sender, RoutedEventArgs e)
+    {
+        SubMenu_Produtos produto = new SubMenu_Produtos();
+        produto.ShowDialog();
+        this.Close();
+    }
+
+    private void lbl_codigo_user_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
+}
 }

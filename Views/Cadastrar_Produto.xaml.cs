@@ -39,8 +39,38 @@ namespace Siscream.Views
 
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
         {
-            SubMenu_Cadastros submenu_cadastrar = new SubMenu_Cadastros();
-            submenu_cadastrar.ShowDialog();
+            try
+            {
+                Produto produto = new Produto();
+                produto.Nome = lbl_nome.Text;
+                produto.Unidade = lbl_unidademed.Text;
+                produto.Validade = (DateTime)lbl_datavalidade.SelectedDate;
+                produto.Tipo = lbl_tipo.Text;
+                produto.Estoque = Convert.ToInt32(lbl_estoque.Text);
+                produto.Fabricante = lbl_fabricante.Text;
+                produto.Marca = lbl_marca.Text;
+                produto.Barras = lbl_codbarras.Text;
+                produto.Comissao = Convert.ToInt32(lbl_comissao.Text);
+                produto.Preco = Convert.ToDouble(lbl_preco.Text);
+                produto.Custo = Convert.ToDouble(lbl_custo.Text);
+                produto.Descricao = lbl_descricao.Text;
+
+
+                Produto_DAO produto_DAO = new Produto_DAO();
+                produto_DAO.Insert(produto);
+
+                MessageBox.Show("Produto adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            Popup_Cadastrar_Produto popup = new Popup_Cadastrar_Produto();
+            popup.ShowDialog();
+
         }
 
         private void btn_close_Click(object sender, RoutedEventArgs e)

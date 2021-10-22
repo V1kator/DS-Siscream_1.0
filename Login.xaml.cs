@@ -26,6 +26,7 @@ namespace Siscream
     /// </summary>
     public partial class Login : Window
     { 
+
         public Login()
         {
             InitializeComponent();

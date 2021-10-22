@@ -45,12 +45,12 @@
 
         <!--LABEL CNPJ-->
         <Label Content="CNPJ*" Grid.Column="1" HorizontalAlignment="Left" Margin="543,141,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
-        <TextBox x:Name="lbl_cpf" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="543,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+        <TextBox x:Name="lbl_cnpj" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="543,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
                  Width="226" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
         <!--INSCRICAO-->
         <Label Content="INSCRIÇÃO MUNICIPAL*" Grid.Column="1" HorizontalAlignment="Left" Margin="803,143,0,0" VerticalAlignment="Top" Height="34" Width="266" FontSize="18"/>
-        <TextBox x:Name="lbl_rg" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="806,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+        <TextBox x:Name="lbl_inscricao" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="806,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
                  Width="217" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
         <!--LABEL TELEFONE-->
@@ -117,7 +117,7 @@
                  VerticalAlignment="Top" Width="547" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
         <!--BOTOES DE ACOES-->
-        <Button x:Name="btn_editar" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Height="54" Margin="508,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25" Background="#646464" Foreground="White" FontWeight="Normal" Click="btn_editar_Click"/>
+        <Button x:Name="btn_editar" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Height="54" Margin="514,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25" Background="#646464" Foreground="White" FontWeight="Normal" Click="btn_editar_Click"/>
         <Button x:Name="btn_cancelar" Content="CANCELAR" Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="684,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25"  Background="#fc3c4c" Foreground="White" FontWeight="Normal" Click="btn_cancelar_Click"/>
         <Button x:Name="btn_cadastrar" Content="CADASTRAR" Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="858,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25" Background="#FF139506" Foreground="White" FontWeight="Normal" Click="btn_cadastrar_Click_1"/>
         <Label Content="CÓDIGO USER*" Grid.Column="1" HorizontalAlignment="Left" Margin="29,141,0,0" VerticalAlignment="Top" Height="34" Width="204" FontSize="18"/>
@@ -133,7 +133,7 @@
 
         <!--LABEL TELEFONE-->
         <Label Content="TELEFONE CELULAR*" Grid.Column="1" HorizontalAlignment="Left" Margin="346,358,0,0" VerticalAlignment="Top" Height="34" Width="214" FontSize="18"/>
-        <TextBox x:Name="lbl_telefone_Copy1" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="349,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+        <TextBox x:Name="lbl_celular" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="349,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
             Width="226" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
     </Grid>
