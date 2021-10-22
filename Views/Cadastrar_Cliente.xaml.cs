@@ -59,32 +59,45 @@ namespace Siscream.Views
 
         private void btn_cadastrar_Click_1(object sender, RoutedEventArgs e)
         {
-            Cliente cliente = new Cliente();
 
-            cliente.Nome = lbl_nome.Text;
-            cliente.Cnpj = lbl_cnpj.Text;
-            cliente.Inscricao = lbl_inscricao.Text;
-            cliente.Email = lbl_email.Text;
-            cliente.End.Logradouro = lbl_rua.Text;
-            cliente.End.Bairro = lbl_bairro.Text;
-            cliente.End.Cidade = lbl_cidade.Text;
-            cliente.End.Cep = lbl_cep.Text;
-            cliente.End.Numero = lbl_numero.Text;
+
+            LoadCli();
+            
+
+            Popup_Cadastrar_Cliente popup = new Popup_Cadastrar_Cliente();
+            popup.ShowDialog();
+
+
+        }
+
+
+        private void LoadCli() {
+            try
+            {
+                Cliente cliente = new Cliente();
+
+                cliente.Nome = lbl_nome.Text;
+                cliente.Cnpj = lbl_cnpj.Text;
+                cliente.Inscricao = lbl_inscricao.Text;
+                cliente.Email = lbl_email.Text;
+                cliente.Celular = lbl_celular.Text;
+                cliente.Telefone = lbl_telefone.Text;
+                cliente.End.Logradouro = lbl_logradouro.Text;
+                cliente.End.Bairro = lbl_bairro.Text;
+                cliente.End.Cidade = lbl_cidade.Text;
+                cliente.End.Cep = lbl_cep.Text;
+                cliente.End.Numero = lbl_numero.Text;
 
 
             Cliente_DAO cliente_DAO = new Cliente_DAO();
             cliente_DAO.Insert(cliente);
 
             MessageBox.Show("Cliente adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
-        
- 
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
-        Popup_Cadastrar_Cliente popup = new Popup_Cadastrar_Cliente();
-        popup.ShowDialog();
 
         }
 

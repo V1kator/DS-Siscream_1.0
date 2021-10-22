@@ -66,32 +66,45 @@ namespace Siscream.Models
 
         public List<Cliente> List()
         {
+
             try
             {
+                Endereco end = new Endereco();
+
                 List<Cliente> list = new List<Cliente>();
 
                 var query = conn.Query();
-                query.CommandText = "SELECT * FROM tb_cliente";
+                query.CommandText = "SELECT * FROM tb_funcionario LEFT JOIN tb_endereco ON cod_end = cod_end_fk";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    list.Add(new Cliente()
+                    var cli = new Cliente()
                     {
-
-                        Id = reader.GetInt32("cod_cli"),
+                        Codigo = reader.GetInt32("cod_cli"),
                         Nome = reader.GetString("nome_cli"),
-                        Cpf = reader.GetString("cpf_cli"),
+                        Email = reader.GetString("email_cli"),
                         Cnpj = reader.GetString("cnpj_cli"),
-                        Tipo = reader.GetString("tipo_pessoa_cli"),
-                        Endereco = reader.GetInt32("cod_end_fk"),
-                       
+                        Inscricao = reader.GetString("inscricao_cli"),
+                        Celular = reader.GetString("celular_cli"),
+                        Telefone = reader.GetString("telefone_cli"),
+                    };
+                    if (!reader.IsDBNull(reader.GetOrdinal("cod_end_fk")))
+                    {
+                        cli.End.Bairro = reader.GetString("bairro_end");
+                        cli.End.Cidade = reader.GetString("cidade_end");
+                        cli.End.Logradouro = reader.GetString("logradouro_end");
+                        cli.End.Numero = reader.GetString("numero_end");
+                        cli.End.Uf = reader.GetString("uf_end");
+                        cli.End.Cep = reader.GetString("cep_end");
+                    }
+                    list.Add(cli);
 
-                    });
                 }
 
                 return list;
+
             }
             catch (Exception e)
             {

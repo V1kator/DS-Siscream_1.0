@@ -40,8 +40,8 @@ namespace Siscream.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_endereco (logradouro_end, numero_end, bairro_end, cidade_end, cep_end, uf_end) " +
-                                    "VALUES (@logradouro, @numero, @bairro, @cidade,@uf, @cep)";
+                query.CommandText = "INSERT INTO tb_endereco (logradouro_end, numero_end, bairro_end, cidade_end, uf_end, cep_end) " +
+                                    "VALUES (@logradouro, @numero, @bairro, @cidade, @uf, @cep)";
 
                 query.Parameters.AddWithValue("@logradouro", t.Logradouro);
                 query.Parameters.AddWithValue("@numero", t.Numero);
