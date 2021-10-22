@@ -115,6 +115,30 @@ namespace Siscream.Models
         {
             throw new NotImplementedException();
         }
+
+        public void ReporEstoque(Produto t)
+        {
+            try
+            {
+                var query = conn.Query();
+                query.CommandText = "INSERT INTO tb_produto (nome_prod, estoque_prod, preco_prod) " +
+                                    "VALUES (@nome, @quantidade, @preco)";
+
+                query.Parameters.AddWithValue("@nome", t.Nome);
+                query.Parameters.AddWithValue("@quantidade", t.quantidade);
+                query.Parameters.AddWithValue("@preco", t.Preco);
+
+                var result = query.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 
 }

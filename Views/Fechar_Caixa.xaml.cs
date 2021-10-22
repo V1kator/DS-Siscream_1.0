@@ -69,15 +69,15 @@ namespace Siscream.Views
                 Caixa cx = new Caixa();
                 cx.aberto = abertoCx.Text;
                 cx.fechado = fechadoCx.Text;
-                cx.saldoInicial = saldoIn.Text;
-                cx.suprimento = suprim.Text;
-                cx.dinheiroCX = dinheiro.Text;
-                cx.creditoCX = credito.Text;
-                cx.debitoCX = debito.Text;
-                cx.totalCX = total.Text;
-                cx.valorRetirado = Vretirado.Text;
+                cx.saldoInicial = Convert.ToDouble(saldoIn.Text);
+                cx.suprimento = Convert.ToDouble(suprim.Text);
+                cx.dinheiroCX = Convert.ToDouble(dinheiro.Text);
+                cx.creditoCX = Convert.ToDouble(credito.Text);
+                cx.debitoCX = Convert.ToDouble(debito.Text);
+                cx.totalCX = Convert.ToDouble(total.Text);
+                cx.valorRetirado = Convert.ToDouble(Vretirado.Text);
                 cx.especif = especif.Text;
-                cx.saldoFinal = Sfinal.Text;
+                cx.saldoFinal = Convert.ToDouble(Sfinal.Text);
 
                 CaixaDAO cxDAO = new CaixaDAO();
                 cxDAO.FecharCaixa(cx);
