@@ -40,7 +40,7 @@ namespace Siscream.Models
 
                 var query = conn.Query();
                 query.CommandText = "INSERT INTO tb_cliente (nome_cli, cnpj_cli, email_cli, inscricao_cli, celular_cli, telefone_cli cod_end_fk) " +
-                                    "VALUES (@nome, @cnpj, @email, @inscricao, @celular, @telefone,@endereco)";
+                                    "VALUES (@nome, @cnpj, @email, @inscricao, @celular, @telefone, @endereco)";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
                 query.Parameters.AddWithValue("@cnpj", t.Cnpj);

@@ -86,6 +86,7 @@ namespace Siscream.Views
                 cliente.End.Bairro = lbl_bairro.Text;
                 cliente.End.Cidade = lbl_cidade.Text;
                 cliente.End.Cep = lbl_cep.Text;
+                cliente.End.Uf = lbl_uf.Text;
                 cliente.End.Numero = lbl_numero.Text;
 
 
@@ -124,5 +125,6 @@ namespace Siscream.Views
     {
 
     }
-}
+
+    }
 }
