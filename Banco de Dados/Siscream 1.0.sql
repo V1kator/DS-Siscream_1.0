@@ -14,8 +14,8 @@
 
 ############################## BANCO DE DADOS ###################################
 
-CREATE DATABASE siscream;
-USE siscream;
+CREATE DATABASE SISCREAM;
+USE SISCREAM;
 
 ################################# TABELAS #######################################
 
@@ -72,7 +72,7 @@ CREATE TABLE tb_funcionario (
     nascimento_func varchar (11),
     telefone_func varchar (20), 
     email_func varchar (50),
-    rg_func varchar (15) not null,
+    rg_func varchar (15),
     cargo_func varchar (20) not null,
     tipoContrato_func varchar (20) not null,
     senha_func varchar (20) not null,
@@ -401,9 +401,9 @@ CALL pr_CadastrarEndereco ('AV. 7 de setembro', 749, 'Centro', 'Presidente Médi
 
 
 ############################## CADASTRAR FUNCIONARIO ###############################
-
+select*from tb_funcionario;
 DELIMITER $$
-CREATE PROCEDURE pr_CadastrarFuncionario(nome varchar(100), cpf varchar (15), cargo varchar (100), 
+CREATE PROCEDURE pr_CadastrarFuncionario(nome varchar(100), cpf varchar (15), sexo varchar(20), cargo varchar (100), 
 tipoContrato varchar (100), senha varchar (8), dataAdmissao date, cod_endereco int)
 BEGIN
 	DECLARE testeexistencia VARCHAR(100);
@@ -414,8 +414,8 @@ BEGIN
     
     IF (testeexistencia IS NULL) THEN
 		IF (testeexistencia2 = cod_endereco) THEN
-			INSERT INTO tb_funcionario (cod_func,nome_func, cpf_func, cargo_func, tipoContrato_func, senha_func, dataAdmissao_func, cod_end_fk)
-			VALUES (null, nome, cpf, cargo, tipoContrato, senha, dataAdmissao, cod_endereco);
+			INSERT INTO tb_funcionario (cod_func, nome_func, cpf_func, sexo_func, cargo_func, tipoContrato_func, senha_func, dataAdmissao_func, cod_end_fk)
+			VALUES (null, nome, cpf, sexo, cargo, tipoContrato, senha, dataAdmissao, cod_endereco);
 
 			SELECT 'Funcionario cadastrado com sucesso, seja bem vindo' AS Confirmacao;
         ELSE
@@ -427,11 +427,11 @@ BEGIN
 
 END $$ DELIMITER ;
 
-CALL pr_CadastrarFuncionario ('Jubileu dos Santos', 285788814, 'Auxiliar de Produção', 'Carteira assinada', '12345678', '2019-05-25', 1);
-CALL pr_CadastrarFuncionario ('Juninho', 370360394, 'Operador de Caixa', 'Carteira assinada', '87654321', '2019-05-25', 3);
+CALL pr_CadastrarFuncionario ('Jubileu dos Santos', 'M', 285788814, 'Auxiliar de Produção', 'Carteira assinada', '12345678', '2019-05-25', 1);
+CALL pr_CadastrarFuncionario ('Juninho', 370360394, 'M', 'Operador de Caixa', 'Carteira assinada', '87654321', '2019-05-25', 3);
 
 select cod_func codigo, nome_func nome, cpf_func cpf, cargo_func cargo, tipoContrato_func tipo_contrato, 
-dataAdmissao_func Egresso, cod_end_fk cod_endereco from tb_funcionario;
+dataAdmissao_func, cod_end_fk cod_endereco from tb_funcionario;
 
 ############################## CADASTRAR CLIENTE ###############################
 
@@ -812,3 +812,4 @@ CALL pr_devolver_produto(2, '2021-08-28', 2, 1.5, 2);
 SELECT * FROM tb_caixa;
 SELECT * FROM tb_devolver_produto;
 SELECT * FROM tb_devolucao_produtos;
+select*from tb_produto;
