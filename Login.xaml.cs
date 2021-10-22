@@ -25,7 +25,7 @@ namespace Siscream
     /// Interação lógica para Login.xam
     /// </summary>
     public partial class Login : Window
-    { 
+    {
 
         public Login()
         {
@@ -57,24 +57,25 @@ namespace Siscream
 
 
         /*private void btn_login_Click(object sender, RoutedEventArgs e)
-         {
-             string usuario = text_cpf_login.Text;
-             string senha = text_senha_login.Password.ToString();
+        {
+            string usuario = text_cpf_login.Text;
+            string senha = text_senha_login.Password.ToString();
 
-             if (Usuario.Login(usuario, senha))
-             {
-                 var main = new Tela_Menu();
-                 main.Show();    
-                 this.Close();
-             }
-             else
-             {
-                 MessageBox.Show( "CPF e/ou senha incorretos, por favor tente novamente!");
-                 _ = text_cpf_login.Focus();
+            if (Usuario.Login(usuario, senha))
+            {
+                var main = new Tela_Menu();
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("CPF e/ou senha incorretos, por favor tente novamente!","Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                _ = text_cpf_login.Focus();
 
 
-             }*/
+            }
+        }*/
+
     }
-
 }
 

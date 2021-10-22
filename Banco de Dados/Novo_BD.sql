@@ -37,23 +37,20 @@ CREATE TABLE tb_produto (
 
 CREATE TABLE tb_endereco (
     cod_end int not null PRIMARY KEY auto_increment,
-    logradouro_end varchar (100), 
-    numero_end varchar(5),
-    bairro_end varchar(15),
-    cidade_end varchar (100), 
-    uf_end varchar(100),
-    cep_end varchar (100) 
+    logradouro_end varchar (100) not null, 
+    numero_end varchar(5) not null,
+    bairro_end varchar(15) not null,
+    cidade_end varchar (100) not null, 
+    uf_end varchar(100) not null,
+    cep_end varchar (100) not null 
 );
 
 CREATE TABLE tb_caixa (
     cod_caixa int primary key not null auto_increment,
     funcionario_caixa varchar (100),
-    senha_caixa varchar(20),
-    data_caixa date,
-	periodo_caixa varchar (100),
-	valorAbertura_caixa double,
     caixa_aberto datetime,
     caixa_fechado datetime,
+	valorAbertura_caixa double,
     suprimento double,
     dinheiro_caixa double,
 	credito_caixa double,
@@ -145,5 +142,6 @@ CREATE TABLE tb_devolucao_produtos (
     foreign key (cod_dev_fk) references tb_devolver_produto (cod_dev_pro)
 ); 
 
-select * from tb_cliente;
+select * from tb_produto;
+select * from tb_caixa;
 select * from tb_endereco;

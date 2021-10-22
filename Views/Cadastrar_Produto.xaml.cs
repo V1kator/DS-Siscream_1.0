@@ -37,7 +37,7 @@ namespace Siscream.Views
             submenu_produtos.ShowDialog();
         }
 
-        private void btn_cadastros_Click(object sender, RoutedEventArgs e)
+        private void LoadProd()
         {
             try
             {
@@ -59,14 +59,22 @@ namespace Siscream.Views
                 Produto_DAO produto_DAO = new Produto_DAO();
                 produto_DAO.Insert(produto);
 
-                MessageBox.Show("Produto adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
-
+                Popup_Cadastrar_Produto popup = new Popup_Cadastrar_Produto();
+                popup.ShowDialog();
+                this.Close();
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+            
+        }
+        
+
+        private void btn_cadastros_Click(object sender, RoutedEventArgs e)
+        {
 
             Popup_Cadastrar_Produto popup = new Popup_Cadastrar_Produto();
             popup.ShowDialog();
@@ -86,9 +94,8 @@ namespace Siscream.Views
 
         private void btn_cadastrar_Click(object sender, RoutedEventArgs e)
         {
-            Popup_Cadastrar_Produto popup = new Popup_Cadastrar_Produto();
-            popup.ShowDialog();
-            this.Close();
+            LoadProd();
+            
         }
 
         private void btn_editar_Click(object sender, RoutedEventArgs e)

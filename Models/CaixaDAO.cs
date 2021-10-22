@@ -27,7 +27,7 @@ namespace Siscream.Models
                 var query = conn.Query();
                 query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, caixa_aberto, caixa_fechado, valorAbertura_caixa," +
                         "suprimento, dinheiro_caixa, credito_caixa, debito_caixa, total_caixa, valor_retirado_caixa, especificacoes, saldofinal_caixa) " +
-                        "VALUES (@nome_func, @aberto, @fechado, @saldoInicial, @suprimento, @dinheiroCX, @creditoCX, @debitoCX, @totalCX, @valorRetirado, @especif @saldoFinal)";
+                        "VALUES (@nome_func, @aberto, @fechado, @saldoInicial, @suprimento, @dinheiroCX, @creditoCX, @debitoCX, @totalCX, @valorRetirado, @especif, @saldoFinal)";
 
                 query.Parameters.AddWithValue("@nome_func", t.nome_func);
                 query.Parameters.AddWithValue("@aberto", t.aberto);

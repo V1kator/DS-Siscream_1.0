@@ -84,20 +84,15 @@ namespace Siscream.Models
                     {
                         Codigo = reader.GetInt32("cod_cli"),
                         Nome = reader.GetString("nome_cli"),
-                        Email = reader.GetString("email_cli"),
                         Cnpj = reader.GetString("cnpj_cli"),
+                        Email = reader.GetString("email_cli"),
                         Inscricao = reader.GetString("inscricao_cli"),
                         Celular = reader.GetString("celular_cli"),
                         Telefone = reader.GetString("telefone_cli"),
                     };
                     if (!reader.IsDBNull(reader.GetOrdinal("cod_end_fk")))
                     {
-                        cli.End.Bairro = reader.GetString("bairro_end");
-                        cli.End.Cidade = reader.GetString("cidade_end");
-                        cli.End.Logradouro = reader.GetString("logradouro_end");
-                        cli.End.Numero = reader.GetString("numero_end");
-                        cli.End.Uf = reader.GetString("uf_end");
-                        cli.End.Cep = reader.GetString("cep_end");
+                        cli.End.Codigo = reader.GetInt32("bairro_end");
                     }
                     list.Add(cli);
 
