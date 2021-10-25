@@ -20,6 +20,37 @@ namespace Siscream.Models
 
         }
 
+        public void AbrirCaixa(Caixa t)
+        {
+            try
+            {
+                var query = conn.Query();
+                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, periodo_caixa, senha_caixa, valorAbertura_caixa," +
+                                    "VALUES (@nome_func, @periodo, @saldoInicial)";
+
+                query.Parameters.AddWithValue("@nome_func", t.nome_func);
+                query.Parameters.AddWithValue("@periodo", t.periodo);
+                query.Parameters.AddWithValue("@senha", t.senha);
+                query.Parameters.AddWithValue("@saldoInicial", t.saldoInicial);
+                
+
+                var result = query.ExecuteNonQuery();
+
+                if (result == 0)
+                    throw new Exception("O registro não foi inserido. Verifique e tente novamente!");
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
+
         public void FecharCaixa(Caixa t) 
         {
             try
@@ -56,6 +87,8 @@ namespace Siscream.Models
                 conn.Close();
             }
         }
+
+
 
         public void Delete(Caixa t)
         {
