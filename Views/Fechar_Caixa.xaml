@@ -35,7 +35,7 @@
         <Image Source="imagens/ICONE_SAIR.png" Width="60" HorizontalAlignment="Left" Margin="110,20,0,17" Grid.Row="1"/>
 
         <Label x:Name="Fechar_Caixa1" Content="FECHAR CAIXA" HorizontalAlignment="Left" Margin="175,32,0,0" VerticalAlignment="Top" FontSize="24" RenderTransformOrigin="0.071,-0.396" FontFamily="Arial Black" Background="#00000000" Foreground="#FF030A02" FontWeight="Normal" Height="38" Width="235" Grid.ColumnSpan="2"/>
-        <ComboBox HorizontalAlignment="Left" Background="LightGray" FontSize="15" VerticalAlignment="Top" Width="180" Grid.Column="1" Margin="67,142,0,0" Height="31" BorderBrush="Black">
+        <ComboBox x:Name="func" HorizontalAlignment="Left" Background="LightGray" FontSize="15" VerticalAlignment="Top" Width="180" Grid.Column="1" Margin="67,142,0,0" Height="31" BorderBrush="Black">
             <ComboBoxItem Content="André" Background="LightGreen"/>
             <ComboBoxItem Content="Gabriel" Background="LightGreen"/>
             <ComboBoxItem Content="Gabrielly" Background="LightGreen"/>
@@ -46,14 +46,14 @@
         <Label Content="FUNCIONÁRIO*" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="67,103,0,0" FontSize="18" Height="34" Width="143"/>
 
         <!--Informações iniciais-->
-        <Label Content="Horário de abertura Caixa:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="448,103,0,0" FontSize="18" Height="34" Width="74"/>
-        <TextBox x:Name="abertoCx" HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" Margin="448,142,0,0" BorderBrush="Black"/>
-        <Label Content="Horário de fechamento Caixa:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="699,103,0,0" FontSize="18" RenderTransformOrigin="1.149,0.299" Height="34" Width="85"/>
-        <TextBox x:Name="fechadoCx" HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" Margin="699,142,0,0" BorderBrush="Black"/>
+        <Label Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="900,35,0,0" FontSize="18" Height="34" Width="143"/>
+        <Label Content="Horário de abertura Caixa:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="399,103,0,0" FontSize="18" Height="34" Width="258"/>
+        <TextBox x:Name="abertoCx" HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" Margin="448,142,0,0" BorderBrush="Black" TextChanged="abertoCx_TextChanged"/>
+        <Label Content="Horário de fechamento Caixa:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="683,103,0,0" FontSize="18" RenderTransformOrigin="1.149,0.299" Height="34" Width="275"/>
+        <TextBox x:Name="fechadoCx" HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" Margin="748,142,0,0" BorderBrush="Black"/>
         <Label Content="Saldo inicial:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="67,195,0,0" FontSize="18" Height="34" Width="117"/>
         <TextBox x:Name="saldoIn" HorizontalAlignment="Left" Background="White" FontSize="18" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Grid.Column="1" Margin="67,234,0,0" BorderBrush="Black"/>
-        <Label Content="Suprimento:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="448,195,0,0" FontSize="18" RenderTransformOrigin="1.149,0.299" Height="34" Width="114"/>
-        <TextBox x:Name="suprim" HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" Margin="448,240,0,0" BorderBrush="Black"/>
+        <TextBox x:Name="ID" HorizontalAlignment="Left" Background="LightGray" FontSize="18" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Grid.Column="1" Margin="940,34,0,0" BorderBrush="Black" RenderTransformOrigin="0.643,0.568"/>
 
         <!-- Entradas Caixa-->
         <Separator HorizontalAlignment="Left" Height="77" Margin="125,281,0,0" VerticalAlignment="Top" Width="949" Grid.Column="1" Background="#FF13A426" RenderTransformOrigin="0.504,0.356"/>
@@ -85,6 +85,7 @@
         <Button x:Name="Editar" Content="Editar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="598,25,0,0" Grid.Row="1" Background="#FF686868" FontSize="20" Height="41" Foreground="#FFF7EDED" Click="Editar_Click" BorderBrush="Black"/>
         <Button x:Name="Cancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="757,25,0,0" Grid.Row="1" Background="#FFCF0909" FontSize="20" Height="41" Foreground="#FFF3E7E7" Click="Cancelar_Click" BorderBrush="Black"/>
         <Button x:Name="Salvar" Content="Salvar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="918,25,0,0" Grid.Row="1" Background="Lime" FontSize="20" Height="41" Foreground="#FFF0F7ED" Click="Salvar_Click" BorderBrush="Black"/>
+
 
 
 

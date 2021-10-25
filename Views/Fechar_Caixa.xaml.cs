@@ -67,6 +67,8 @@ namespace Siscream.Views
             try
             {
                 Caixa cx = new Caixa();
+                cx.id = Convert.ToInt32(ID.Text); 
+                cx.nome_func = func.Text;
                 cx.aberto = abertoCx.Text;
                 cx.fechado = fechadoCx.Text;
                 cx.saldoInicial = Convert.ToDouble(saldoIn.Text);
@@ -97,6 +99,8 @@ namespace Siscream.Views
 
         private void Editar_Click(object sender, RoutedEventArgs e)
         {
+            var Fechar_Caixa = dataGrid.Select as Fechar_Caixa;
+            MessageBox.show()
             Fechar_Caixa tela = new Fechar_Caixa();
             tela.ShowDialog();
             this.Close();

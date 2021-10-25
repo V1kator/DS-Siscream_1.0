@@ -56,10 +56,11 @@ namespace Siscream.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, caixa_aberto, caixa_fechado, valorAbertura_caixa," +
+                query.CommandText = "INSERT INTO tb_caixa (cod_caixa, funcionario_caixa, caixa_aberto, caixa_fechado, valorAbertura_caixa," +
                         "dinheiro_caixa, credito_caixa, debito_caixa, total_caixa, valor_retirado_caixa, especificacoes, saldofinal_caixa) " +
-                        "VALUES (@nome_func, @aberto, @fechado, @saldoInicial, @dinheiroCX, @creditoCX, @debitoCX, @totalCX, @valorRetirado, @especif, @saldoFinal)";
+                        "VALUES (@id, @nome_func, @aberto, @fechado, @saldoInicial, @dinheiroCX, @creditoCX, @debitoCX, @totalCX, @valorRetirado, @especif, @saldoFinal)";
 
+                query.Parameters.AddWithValue("@id", t.id);
                 query.Parameters.AddWithValue("@nome_func", t.nome_func);
                 query.Parameters.AddWithValue("@aberto", t.aberto);
                 query.Parameters.AddWithValue("@fechado", t.fechado);
@@ -94,9 +95,28 @@ namespace Siscream.Models
             throw new NotImplementedException();
         }
 
-        public Caixa GetByID(int id)
+        public Caixa FecharCaixa(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM tb_caixa WHERE cod_caixa = @id";
+
+                query.Parameters.AddWithValue("@id", t.id);
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+               
+            
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                conn.Query();
+            }
         }
 
         public void Insert(Caixa t)
