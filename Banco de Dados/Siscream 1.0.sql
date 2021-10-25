@@ -53,7 +53,6 @@ CREATE TABLE tb_caixa (
     hora_abertura_caixa datetime,
     hora_fechamento_caixa datetime,
     valorAbertura_caixa double,
-    suprimento double,
     dinheiro_caixa double,
     credito_caixa double,
     debito_caixa double,

@@ -46,9 +46,9 @@
         <Label Content="FUNCIONÁRIO*" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="67,103,0,0" FontSize="18" Height="34" Width="143"/>
 
         <!--Informações iniciais-->
-        <Label Content="Aberto:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="448,103,0,0" FontSize="18" Height="34" Width="74"/>
+        <Label Content="Horário de abertura Caixa:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="448,103,0,0" FontSize="18" Height="34" Width="74"/>
         <TextBox x:Name="abertoCx" HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" Margin="448,142,0,0" BorderBrush="Black"/>
-        <Label Content="Fechado:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="699,103,0,0" FontSize="18" RenderTransformOrigin="1.149,0.299" Height="34" Width="85"/>
+        <Label Content="Horário de fechamento Caixa:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="699,103,0,0" FontSize="18" RenderTransformOrigin="1.149,0.299" Height="34" Width="85"/>
         <TextBox x:Name="fechadoCx" HorizontalAlignment="Left" Background="White" FontSize="18" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" Margin="699,142,0,0" BorderBrush="Black"/>
         <Label Content="Saldo inicial:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="67,195,0,0" FontSize="18" Height="34" Width="117"/>
         <TextBox x:Name="saldoIn" HorizontalAlignment="Left" Background="White" FontSize="18" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Grid.Column="1" Margin="67,234,0,0" BorderBrush="Black"/>

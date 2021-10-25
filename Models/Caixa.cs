@@ -14,7 +14,6 @@ namespace Siscream.Models
         public string aberto { get; set; }
         public string fechado { get; set; }
         public double saldoInicial { get; set; }
-        public double suprimento { get; set; }
         public double dinheiroCX { get; set; }
         public double creditoCX { get; set; }
         public double debitoCX { get; set; }

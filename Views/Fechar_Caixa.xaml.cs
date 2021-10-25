@@ -70,7 +70,6 @@ namespace Siscream.Views
                 cx.aberto = abertoCx.Text;
                 cx.fechado = fechadoCx.Text;
                 cx.saldoInicial = Convert.ToDouble(saldoIn.Text);
-                cx.suprimento = Convert.ToDouble(suprim.Text);
                 cx.dinheiroCX = Convert.ToDouble(dinheiro.Text);
                 cx.creditoCX = Convert.ToDouble(credito.Text);
                 cx.debitoCX = Convert.ToDouble(debito.Text);
@@ -116,7 +115,6 @@ namespace Siscream.Views
             cx.aberto = "11:00";
             cx.fechado = "23:00";
             cx.valorAbertura = 250.00;
-            cx.suprimento = 100.00;
             cx.dinheiroCX = 400.00;
             cx.creditoCX = 0;
             cx.debitoCX = 450.00;
@@ -135,7 +133,6 @@ namespace Siscream.Views
             abertoCx.Text = "";
             fechadoCx.Text = "";
             saldoIn.Text = "";
-            suprim.Text = "";
             dinheiro.Text = "";
             credito.Text = "";
             debito.Text = "";
@@ -145,6 +142,10 @@ namespace Siscream.Views
             Sfinal.Text = "";
         }
 
+        private void abertoCx_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 
    
