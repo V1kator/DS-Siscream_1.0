@@ -14,8 +14,8 @@
 
 ############################## BANCO DE DADOS ###################################
 
-CREATE DATABASE SISCREAM;
-USE SISCREAM;
+CREATE DATABASE siscream;
+USE siscream;
 
 ################################# TABELAS #######################################
 
@@ -41,23 +41,22 @@ CREATE TABLE tb_endereco (
     numero_end varchar(5) not null,
     bairro_end varchar(15) not null,
     cidade_end varchar (100) not null, 
-    uf_end varchar(2) not null,
-    cep_end varchar (10) not null
+    uf_end varchar(100) not null,
+    cep_end varchar (100) not null 
 );
 
 CREATE TABLE tb_caixa (
     cod_caixa int primary key not null auto_increment,
     funcionario_caixa varchar (100),
-    senha_caixa varchar(20),
-    data_caixa date,
-	periodo_caixa varchar (100),
-	valorAbertura_caixa double,
-    data_hora_abertura_caixa datetime,
-    data_hora_fechamento_caixa datetime,
+    senha_caixa varchar (10),
+    periodo_caixa varchar (20),
+    hora_abertura_caixa datetime,
+    hora_fechamento_caixa datetime,
+    valorAbertura_caixa double,
     suprimento double,
     dinheiro_caixa double,
-	credito_caixa double,
-	debito_caixa double,
+    credito_caixa double,
+    debito_caixa double,
     total_caixa double,
     valor_retirado_caixa double,
     especificacoes varchar(500),
@@ -72,21 +71,24 @@ CREATE TABLE tb_funcionario (
     nascimento_func varchar (11),
     telefone_func varchar (20), 
     email_func varchar (50),
-    rg_func varchar (15),
+    rg_func varchar (15) not null,
     cargo_func varchar (20) not null,
     tipoContrato_func varchar (20) not null,
     senha_func varchar (20) not null,
     dataAdmissao_func date not null,
     cod_end_fk int not null,
+    salario_func float not null,
 	foreign key (cod_end_fk) references tb_endereco (cod_end)
 );
 
 CREATE TABLE tb_cliente (
     cod_cli int not null PRIMARY KEY auto_increment,
     nome_cli varchar (100) not null,
-    cpf_cli varchar (11) not null,
     cnpj_cli varchar (20),
-    tipo_pessoa_cli varchar (100) not null,
+    email_cli varchar(100),
+    inscricao_cli varchar(100),
+	celular_cli varchar(100),
+    telefone_cli varchar(100),
     cod_end_fk int not null,
 	foreign key (cod_end_fk) references tb_endereco (cod_end)
 );
@@ -143,11 +145,9 @@ CREATE TABLE tb_devolucao_produtos (
 ); 
 
 
+############################################# TRIGGER E PROCEDURE  ####################################################
 
-############################ GATILHOS E PROCEDIMENTOS ###########################
-
-############################## GATILHO CAIXA ###############################
-DELIMITER $$
+/*DELIMITER $$
 CREATE TRIGGER GastoAtualizarCaixa AFTER INSERT ON tb_gasto
 FOR EACH ROW
 BEGIN
@@ -808,8 +808,8 @@ BEGIN
     END IF;
 END $$ DELIMITER ;
 
-CALL pr_devolver_produto(2, '2021-08-28', 2, 1.5, 2);
-SELECT * FROM tb_caixa;
-SELECT * FROM tb_devolver_produto;
-SELECT * FROM tb_devolucao_produtos;
-select*from tb_produto;
+CALL pr_devolver_produto(2, '2021-08-28', 2, 1.5, 2);*/
+
+select * from tb_produto;
+select * from tb_caixa;
+select * from tb_endereco;
