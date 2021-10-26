@@ -70,14 +70,14 @@
                             <CheckBox IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}"></CheckBox>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
-                    
+
                 </DataGridTemplateColumn>
-                
-                
-                
-                
-                
-                
+
+
+
+
+
+
             </DataGrid.Columns>
         </DataGrid>
         <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="25.557,289,0,0" VerticalAlignment="Top" Width="690" RenderTransformOrigin="0.5,0.5">
@@ -126,15 +126,15 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="Vendedor_selecionado" Grid.Column="2" HorizontalAlignment="Left" Margin="428.557,95,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5"/>
-        <TextBox x:Name="Data_venda" Grid.Column="2" HorizontalAlignment="Left" Margin="753.557,9,0,0" VerticalAlignment="Top" Height="46" Width="160" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold"/>
+        <TextBox x:Name="Data_venda" Grid.Column="2" HorizontalAlignment="Left" Margin="754,0,0,536" VerticalAlignment="Bottom" Height="46" Width="160" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" TextChanged="Data_venda_TextChanged"/>
 
 
-        <!--Separadores-->
+        <!--Separadores
         <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="369.557,200,-2,0" VerticalAlignment="Top" Width="568" RenderTransformOrigin="0.491,0.36"/>
         <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="369.557,258,-2,0" VerticalAlignment="Top" Width="568" RenderTransformOrigin="0.491,0.36"/>
         <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="369.557,320,-2,0" VerticalAlignment="Top" Width="568" RenderTransformOrigin="0.491,0.36"/>
         <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="369.557,436,-2,0" VerticalAlignment="Top" Width="568" RenderTransformOrigin="0.491,0.36"/>
-
+-->
         <!--Codigo venda-->
         <Label Content="001" Grid.Column="2" HorizontalAlignment="Left" Margin="537.557,9,0,0" VerticalAlignment="Top" Height="46" Width="66" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.3"/>
 
@@ -151,21 +151,21 @@
         <Button Content="FINALIZAR VENDA" Grid.Column="2" HorizontalAlignment="Left" Margin="694.557,10,0,0" VerticalAlignment="Top" Width="216" Height="40" FontSize="20" Background="#FF139506" Foreground="White" FontFamily="Yu Gothic UI" Grid.Row="1" Click="Button_Click"/>
 
         <!--Itens selecionados na compra-->
-        <CheckBox Content="POTE DE SORVETE 2L " Grid.Column="2" HorizontalAlignment="Left" Margin="381.557,219,0,0" VerticalAlignment="Top" Height="31" Width="301" FontSize="25" RenderTransformOrigin="0.566,0.419"/>
+        <!--<CheckBox Content="POTE DE SORVETE 2L " Grid.Column="2" HorizontalAlignment="Left" Margin="381.557,219,0,0" VerticalAlignment="Top" Height="31" Width="301" FontSize="25" RenderTransformOrigin="0.566,0.419"/>
         <CheckBox Content="CAIXA DE SORVETE 10L" Grid.Column="2" HorizontalAlignment="Left" Margin="381.557,279,0,0" VerticalAlignment="Top" Height="33" Width="272" FontSize="25" RenderTransformOrigin="0.566,0.419"/>
-        <CheckBox Content="CASCÃO DUPLO" Grid.Column="2" HorizontalAlignment="Left" Margin="381.557,341,0,0" VerticalAlignment="Top" Height="33" Width="272" FontSize="25" RenderTransformOrigin="0.566,0.419"/>
+        <CheckBox Content="CASCÃO DUPLO" Grid.Column="2" HorizontalAlignment="Left" Margin="381.557,341,0,0" VerticalAlignment="Top" Height="33" Width="272" FontSize="25" RenderTransformOrigin="0.566,0.419"/> -->
 
         <!--Precos dos produtos selecionados-->
-        <Label Content="R$25,00" Grid.Column="2" HorizontalAlignment="Left" Margin="802.557,212,0,0" VerticalAlignment="Top" Height="46" Width="129" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold"/>
+        <!--<Label Content="R$25,00" Grid.Column="2" HorizontalAlignment="Left" Margin="802.557,212,0,0" VerticalAlignment="Top" Height="46" Width="129" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold"/>
         <Label Content="R$50,00" Grid.Column="2" HorizontalAlignment="Left" Margin="802.557,274,0,0" VerticalAlignment="Top" Height="46" Width="129" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold"/>
-        <Label Content="R$5,00" Grid.Column="2" HorizontalAlignment="Left" Margin="802.557,334,0,0" VerticalAlignment="Top" Height="46" Width="129" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold"/>
+        <Label Content="R$5,00" Grid.Column="2" HorizontalAlignment="Left" Margin="802.557,334,0,0" VerticalAlignment="Top" Height="46" Width="129" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold"/>-->
 
         <!--Precos dos produtos finais, descontos e bla bla bla-->
-        <Label Content="R$80,00" Grid.Column="2" HorizontalAlignment="Left" Margin="742.557,497,-71,0" VerticalAlignment="Top" Height="88" Width="264" FontSize="45" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Foreground="White"/>
+        <!--<Label Content="R$80,00" Grid.Column="2" HorizontalAlignment="Left" Margin="742.557,497,-71,0" VerticalAlignment="Top" Height="88" Width="264" FontSize="45" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Foreground="White"/>
         <Label Content="R$80,00" Grid.Column="2" HorizontalAlignment="Left" Margin="483.557,478,0,0" VerticalAlignment="Top" Height="34" Width="90" FontSize="18" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Foreground="White"/>
         <Label Content="R$0,00" Grid.Column="2" HorizontalAlignment="Left" Margin="483.557,498,0,0" VerticalAlignment="Top" Height="34" Width="90" FontSize="18" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Foreground="White"/>
         <Label Content="R$0,00" Grid.Column="2" HorizontalAlignment="Left" Margin="483.557,517,0,0" VerticalAlignment="Top" Height="34" Width="90" FontSize="18" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Foreground="White"/>
-        <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="369.557,204,-2,0" VerticalAlignment="Top" Width="568" RenderTransformOrigin="0.491,0.36"/>
+        <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="369.557,204,-2,0" VerticalAlignment="Top" Width="568" RenderTransformOrigin="0.491,0.36"/>-->
 
     </Grid>
 </Window>
