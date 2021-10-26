@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Siscream.Models;
+using Siscream.DataBase;
+using MySql.Data.MySqlClient;
+
 
 namespace Siscream.Views
 {
@@ -34,7 +37,9 @@ namespace Siscream.Views
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+          /*  Funcionario funcionario = new Funcionario();
+            funcionario = CBCargo();
+            */
         }
 
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)

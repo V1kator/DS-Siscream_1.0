@@ -112,6 +112,13 @@ namespace Siscream.Models
             }
         }
 
+        private void CBCargo()
+        {
+            var query = conn.Query();
+            query.CommandText = "SELECT cargo_func FROM tb_funcionario WHERE cargo_func = 'vendedor'";
+
+        }
+
         public List<Funcionario> List()
         {
             throw new NotImplementedException();
