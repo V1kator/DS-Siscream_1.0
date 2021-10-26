@@ -47,13 +47,38 @@
         <TextBox Margin="9,79,660,463" Name="txtFilter" Grid.Column="1" BorderThickness="3" TextChanged="txtFilter_TextChanged" Grid.ColumnSpan="2" />
 
         <!--Caixa de resultados do filtro-->
-        <DataGrid x:Name="filterprodutos" Grid.Column="1" Margin="7,204,621,3" FontSize="20" VerticalContentAlignment="Top" Background="#FFFF9900" Grid.ColumnSpan="2" SelectionChanged="filterprodutos_SelectionChanged_1">
+        <DataGrid x:Name="filterprodutos" 
+                  Grid.Column="1" 
+                  Margin="7,204,621,3" 
+                  FontSize="20" 
+                  VerticalContentAlignment="Top" 
+                  Background="#FFFF9900" 
+                  Grid.ColumnSpan="2" 
+                  SelectionChanged="filterprodutos_SelectionChanged_1"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  AlternationCount="2">
             <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Width="50" IsReadOnly="True" Binding="{Binding ID}" />
+
+                <DataGridTextColumn Header="ID" Width="50" IsReadOnly="True" Binding="{Binding ID}" />
                 <DataGridTextColumn Header="DESCRIÇÃO" Width="300" IsReadOnly="True" Binding="{Binding DESCRICAO}" />
                 <DataGridTextColumn Header="PREÇO" Width="100" IsReadOnly="True" Binding="{Binding PRECO}" />
-                </DataGrid.Columns>
 
+                <DataGridTemplateColumn Header="Adicionar">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}"></CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    
+                </DataGridTemplateColumn>
+                
+                
+                
+                
+                
+                
+            </DataGrid.Columns>
         </DataGrid>
         <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="25.557,289,0,0" VerticalAlignment="Top" Width="690" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>
