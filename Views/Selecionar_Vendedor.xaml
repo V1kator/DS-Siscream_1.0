@@ -49,9 +49,7 @@
                    DisplayMemberPath="Nome"
                   SelectedValuePath="Id"
                   >
-                 
-            
-            <ComboBoxItem Content="Paulo Santos"/>
+               
         </ComboBox>
         <Button Content="INICIAR VENDA" Grid.Column="1" HorizontalAlignment="Left" Margin="303,424,0,0" VerticalAlignment="Top" Width="487" Height="70" FontSize="40" Background="#FF139506" Foreground="White" FontFamily="Yu Gothic UI" Click="Button_Iniciar_Click"/>
 

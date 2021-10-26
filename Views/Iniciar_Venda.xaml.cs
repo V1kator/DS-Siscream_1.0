@@ -70,6 +70,9 @@ namespace Siscream.Views
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            var text = txtFilter.Text;
+            var filterlist = prodList.Where(i => i.Nome.ToLower().Contains(text));
+            filterprodutos.ItemsSource = filterlist;
 
         }
 
@@ -98,12 +101,12 @@ namespace Siscream.Views
 
         private void filterprodutos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            filterprodutos.ItemsSource = new Produto_DAO().ListVenda();
         }
 
         private void filterprodutos_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            filterprodutos.ItemsSource = new Produto_DAO().ListVenda();
+            
         }
 
         private void LoadDataGrid()

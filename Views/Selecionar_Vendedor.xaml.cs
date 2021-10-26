@@ -26,6 +26,12 @@ namespace Siscream.Views
         public Selecionar_Vendedor()
         {
             InitializeComponent();
+            Loaded += Selecionar_Vendedor_Loaded;
+        }
+
+        private void Selecionar_Vendedor_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadComboBox();
         }
 
         private void Button_Iniciar_Click(object sender, RoutedEventArgs e)
@@ -37,7 +43,7 @@ namespace Siscream.Views
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            CBFuncionario.ItemsSource = new Funcionario_DAO().List();
+            
         }
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
         {
@@ -72,6 +78,18 @@ namespace Siscream.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void LoadComboBox()
+        {
+            try
+            {
+                CBFuncionario.ItemsSource = new Funcionario_DAO().List();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

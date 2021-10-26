@@ -52,6 +52,7 @@
                   Margin="7,204,621,3" 
                   FontSize="20" 
                   VerticalContentAlignment="Top" 
+                  AutoGenerateColumns="False"
                   Background="#FFFF9900" 
                   Grid.ColumnSpan="2" 
                   SelectionChanged="filterprodutos_SelectionChanged_1"
@@ -60,9 +61,9 @@
                   AlternationCount="2">
             <DataGrid.Columns>
 
-                <DataGridTextColumn Header="ID" Width="50" IsReadOnly="True" Binding="{Binding ID}" />
-                <DataGridTextColumn Header="DESCRIÇÃO" Width="300" IsReadOnly="True" Binding="{Binding DESCRICAO}" />
-                <DataGridTextColumn Header="PREÇO" Width="100" IsReadOnly="True" Binding="{Binding PRECO}" />
+                <DataGridTextColumn Header="Nome" Width="100" IsReadOnly="True" Binding="{Binding Nome}" />
+                <DataGridTextColumn Header="Descrição" Width="300" IsReadOnly="True" Binding="{Binding Descricao}" />
+                <DataGridTextColumn Header="Preço" Width="100" IsReadOnly="True" Binding="{Binding Preco}" />
 
                 <DataGridTemplateColumn Header="Adicionar">
                     <DataGridTemplateColumn.CellTemplate>
@@ -72,12 +73,6 @@
                     </DataGridTemplateColumn.CellTemplate>
 
                 </DataGridTemplateColumn>
-
-
-
-
-
-
             </DataGrid.Columns>
         </DataGrid>
         <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="25.557,289,0,0" VerticalAlignment="Top" Width="690" RenderTransformOrigin="0.5,0.5">
@@ -92,7 +87,7 @@
         </Separator>
 
         <!--Botao pesquisar-->
-        <Button Grid.Column="2" Margin="271.557,79,620,463" BorderThickness="3" Click="Button_Click_2" RenderTransformOrigin="0.505,0.5">
+        <Button x:Name="btnSearch" Grid.Column="2" Margin="271.557,79,620,463" BorderThickness="3" Click="Button_Click_2" RenderTransformOrigin="0.505,0.5">
             <Button.Background>
                 <ImageBrush ImageSource="imagens/search.png"/>
             </Button.Background>
