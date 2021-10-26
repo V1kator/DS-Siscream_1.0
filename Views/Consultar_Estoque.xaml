@@ -54,7 +54,7 @@
                 <DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Produto" IsReadOnly="True" Binding="{Binding Nome}"/>
                 <DataGridTextColumn Header="Estoque" IsReadOnly="True" Binding="{Binding Estoque}"/>
-                <DataGridTextColumn Header="Valor" IsReadOnly="True" Binding="{Binding ValorCompra, ConverterCulture='pt-BR', StringFormat=C}"/>
+                <DataGridTextColumn Header="Valor" IsReadOnly="True" Binding="{Binding Preco, ConverterCulture='pt-BR', StringFormat=C}"/>
 
                 <DataGridTemplateColumn Header="Adicionar?">
                     <DataGridTemplateColumn.CellTemplate>
