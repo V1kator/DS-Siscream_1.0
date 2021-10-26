@@ -116,9 +116,7 @@ namespace Siscream.Models
             throw new NotImplementedException();
         }
 
-        public Caixa GetByID(int id)
-        {
-            throw new NotImplementedException();
-        }
+        
+       
     }
 }

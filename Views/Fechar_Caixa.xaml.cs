@@ -67,8 +67,9 @@ namespace Siscream.Views
             try
             {
                 Caixa cx = new Caixa();
+                Funcionario funcionario = new Funcionario();
                 cx.id = Convert.ToInt32(ID.Text); 
-                cx.nome_func = func.Text;
+                funcionario.Nome = func.Text;
                 cx.aberto = abertoCx.Text;
                 cx.fechado = fechadoCx.Text;
                 cx.saldoInicial = Convert.ToDouble(saldoIn.Text);
@@ -80,8 +81,10 @@ namespace Siscream.Views
                 cx.especif = especif.Text;
                 cx.saldoFinal = Convert.ToDouble(Sfinal.Text);
 
-                CaixaDAO cxDAO = new CaixaDAO();
+                CaixaDAO cxDAO = new CaixaDAO(); 
                 cxDAO.FecharCaixa(cx);
+                Funcionario_DAO funcionarioDAO = new Funcionario_DAO();
+                funcionarioDAO.Insert(funcionario);
 
                 PopUp_Salvar_FecharCaixa caixa = new PopUp_Salvar_FecharCaixa();
                 caixa.ShowDialog();
@@ -99,15 +102,7 @@ namespace Siscream.Views
 
         private void Editar_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< Updated upstream
-            var Fechar_Caixa = dataGrid.Select as Fechar_Caixa;
-            MessageBox.Show();
-=======
-            
->>>>>>> Stashed changes
-            Fechar_Caixa tela = new Fechar_Caixa();
-            tela.ShowDialog();
-            this.Close();
+
         }
 
         private void Cancelar_Click(object sender, RoutedEventArgs e)
@@ -137,7 +132,7 @@ namespace Siscream.Views
 
         private void ClearInputs()
         {
-            
+            nome_func.Text = "";
             abertoCx.Text = "";
             fechadoCx.Text = "";
             saldoIn.Text = "";
