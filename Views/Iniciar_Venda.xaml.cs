@@ -78,5 +78,15 @@ namespace Siscream.Views
             produto.ShowDialog();
             this.Close();
         }
+
+        private void txtFilter_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void filterprodutos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

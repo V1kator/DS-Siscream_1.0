@@ -37,11 +37,8 @@ namespace Siscream.Views
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-          /*  Funcionario funcionario = new Funcionario();
-            funcionario = CBCargo();
-            */
+            CBFuncionario.ItemsSource = new Funcionario_DAO().List();
         }
-
         private void btn_cadastros_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Cadastros submenu_cadastrar = new SubMenu_Cadastros();

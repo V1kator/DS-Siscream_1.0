@@ -111,17 +111,36 @@ namespace Siscream.Models
                 conn.Close();
             }
         }
-
-        private void CBCargo()
-        {
-            var query = conn.Query();
-            query.CommandText = "SELECT cargo_func FROM tb_funcionario WHERE cargo_func = 'vendedor'";
-
-        }
-
         public List<Funcionario> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Funcionario> list = new List<Funcionario>();
+
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM tb_funcionario";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Funcionario()
+                    {
+
+                        Nome = reader.GetString("nome_func")
+
+                    });
+                }
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void Update(Funcionario t)
