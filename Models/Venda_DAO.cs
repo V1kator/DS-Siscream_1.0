@@ -68,7 +68,7 @@ namespace Siscream.Models
             }
             finally
             {
-//<<<<<<< Updated upstream
+
                 conn.Close();
             }
         }
@@ -78,21 +78,6 @@ namespace Siscream.Models
             throw new NotImplementedException();
         }
     }
-/*=======
-                //conn.Close();//
-            }
 
-            
-        }
-
-        public void Update(Venda t)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-       
-    
->>>>>>> Stashed changes*/
 }
 
