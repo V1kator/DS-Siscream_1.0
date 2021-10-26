@@ -100,7 +100,7 @@ namespace Siscream.Views
         private void Editar_Click(object sender, RoutedEventArgs e)
         {
             var Fechar_Caixa = dataGrid.Select as Fechar_Caixa;
-            MessageBox.show()
+            MessageBox.Show();
             Fechar_Caixa tela = new Fechar_Caixa();
             tela.ShowDialog();
             this.Close();

@@ -79,14 +79,14 @@
                  Width="275" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
         <!--BAIRRO-->
-        <Label Content="BAIRRO" Grid.Column="1" HorizontalAlignment="Left" Margin="471,399,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
-        <TextBox x:Name="lbl_bairro" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="474,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
-                 Width="212" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
+        <Label Content="BAIRRO" Grid.Column="1" HorizontalAlignment="Left" Margin="450,399,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
+        <TextBox x:Name="lbl_bairro" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="453,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+                 Width="156" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
 
         <!--CIDADE-->
-        <Label Content="CIDADE" Grid.Column="1" HorizontalAlignment="Left" Margin="721,399,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
-        <TextBox x:Name="lbl_cidade" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="724,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
-                 Width="186" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
+        <Label Content="CIDADE" Grid.Column="1" HorizontalAlignment="Left" Margin="758,399,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
+        <TextBox x:Name="lbl_cidade" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="763,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+                 Width="156" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
 
         <!--ESTADO-->
         <Label Content="UF" Grid.Column="1" HorizontalAlignment="Left" Margin="935,401,0,0" VerticalAlignment="Top" Height="34" Width="109" FontSize="18"/>
@@ -175,6 +175,9 @@
         <Label Content="SALARIO" Grid.Column="1" HorizontalAlignment="Left" Margin="347,496,0,0" VerticalAlignment="Top" Height="34" Width="203" FontSize="18"/>
         <TextBox x:Name="lbl_salario" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="351,533,0,0" 
             VerticalAlignment="Top" Width="194" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
+        <Label Content="CEP" Grid.Column="1" HorizontalAlignment="Left" Margin="623,399,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
+        <TextBox x:Name="lbl_cep" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="626,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+            Width="125" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
 
     </Grid>
 </Window>

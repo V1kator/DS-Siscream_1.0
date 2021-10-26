@@ -69,11 +69,11 @@ namespace Siscream.Views
                 funcionario.Senha = lbl_senha.Password;
                 funcionario.Admissao = (DateTime)lbl_admissao.SelectedDate;
                 funcionario.Telefone = lbl_telefone.Text;
-                funcionario.End.Logradouro = lbl_rua.Text;
+                funcionario.End.Logradouro = lbl_rua.Text;       
                 funcionario.End.Bairro = lbl_bairro.Text;
+                funcionario.End.Bairro = lbl_cep.Text;
                 funcionario.End.Cidade = lbl_cidade.Text;
                 funcionario.End.Uf = lbl_uf.Text;
-                //ta faltando cep
                 funcionario.End.Numero = lbl_numero.Text;
 
 
