@@ -141,6 +141,8 @@
     </ApplicationDefinition>
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Endereco_DAO.cs" />
+    <Compile Include="Models\Venda_Produto.cs" />
+    <Compile Include="Models\Venda_Produto_DAO.cs" />
     <Compile Include="Views\Abrir_Caixa.xaml.cs">
       <DependentUpon>Abrir_Caixa.xaml</DependentUpon>
     </Compile>

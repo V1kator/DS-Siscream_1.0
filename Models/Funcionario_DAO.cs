@@ -111,6 +111,8 @@ namespace Siscream.Models
                 conn.Close();
             }
         }
+
+
         public List<Funcionario> List()
         {
             try
@@ -118,7 +120,7 @@ namespace Siscream.Models
                 List<Funcionario> list = new List<Funcionario>();
 
                 var query = conn.Query();
-                query.CommandText = "SELECT nome_func FROM tb_funcionario WHERE cargo_func ='vendedor'";
+                query.CommandText = "SELECT * FROM tb_funcionario WHERE cargo_func ='vendedor'";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
@@ -126,10 +128,19 @@ namespace Siscream.Models
                 {
                     list.Add(new Funcionario()
                     {
-
-                        Nome = reader.GetString("nome_func")
-
-                    });
+                        Codigo = reader.GetInt32("cod_func"),
+                        Cpf = reader.GetString("cpf_func"),
+                        Sexo = reader.GetString("sexo_func"),
+                        Nascimento = reader.GetDateTime("nascimento_func"),
+                        Telefone = reader.GetString("telefone_func"),
+                        Email = reader.GetString("email_func"),
+                        Rg = reader.GetString("rg_func"),
+                        Contrato = reader.GetString("tipoContrato_func"),
+                        Senha = reader.GetString("senha_func"),
+                        Nome = reader.GetString("nome_func"),
+                        Admissao = reader.GetDateTime("dataAdmissao_func"),
+                        Codigo_end = reader.GetInt32("cod_end_fk")
+                    }) ;
                 }
                 return list;
             }

@@ -36,8 +36,12 @@ namespace Siscream.Views
 
         private void Button_Iniciar_Click(object sender, RoutedEventArgs e)
         {
-            Iniciar_Venda selectVend = new Iniciar_Venda();
-            selectVend.ShowDialog();
+            var FuncSelected = CBFuncionario.SelectedItem as Funcionario;
+
+            var window = new Iniciar_Venda(FuncSelected);
+
+            window.ShowDialog();
+            
             this.Close();
         }
 
@@ -84,7 +88,9 @@ namespace Siscream.Views
         {
             try
             {
-                CBFuncionario.ItemsSource = new Funcionario_DAO().List();
+                var func_select = new Funcionario_DAO().List();
+
+                CBFuncionario.ItemsSource = func_select;
             }
             catch(Exception ex)
             {

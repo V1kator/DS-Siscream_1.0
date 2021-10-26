@@ -47,13 +47,13 @@ namespace Siscream
             }
         }
 
+
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
             var main = new Tela_Menu();
             main.Show();
             this.Close();
         }
-
 
 
         /*private void btn_login_Click(object sender, RoutedEventArgs e)

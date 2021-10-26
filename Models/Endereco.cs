@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Siscream.Models
 {
-    class Endereco
+   public class Endereco
     {
         public int Codigo { get; set; }
         public string Logradouro { get; set; }

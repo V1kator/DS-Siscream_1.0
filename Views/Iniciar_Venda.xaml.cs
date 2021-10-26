@@ -21,16 +21,31 @@ namespace Siscream.Views
     public partial class Iniciar_Venda : Window
     {
         private List<Produto> prodList = new List<Produto>();
+
+        public List<Produto> prodselecionado = new List<Produto>();
+
+        private Funcionario _funcionario = new Funcionario();
         public Iniciar_Venda()
         {
             InitializeComponent();
             Loaded += Iniciar_Venda_Loaded;
         }
 
+        public Iniciar_Venda(Funcionario func)
+        {
+            _funcionario = func;
+            InitializeComponent();
+            Loaded += Iniciar_Venda_Loaded;
+        }
+
         private void Iniciar_Venda_Loaded(object sender, RoutedEventArgs e)
         {
+            Data_venda.SelectedDate = DateTime.Now;
+            txtnomefunc.Text = _funcionario.Nome;
             LoadDataGrid();
+             
         }
+
 
         private void btn_gastos_Click(object sender, RoutedEventArgs e)
         {
@@ -64,8 +79,25 @@ namespace Siscream.Views
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Cadastrar_Produto cadastrar = new Cadastrar_Produto();
-            cadastrar.ShowDialog();
+            var itens = filterprodutos.Items;
+
+            prodselecionado.Clear();
+            foreach (Produto produto in itens)
+            {
+                if (produto.IsSelected)
+                    prodselecionado.Add(produto);
+            }
+
+
+            dateGrid_produtos_selecionados.ItemsSource = null;
+            dateGrid_produtos_selecionados.ItemsSource = prodselecionado;
+
+            if (prodselecionado.Count == 0)
+                MessageBox.Show("Nenhum produto foi selecionado!", "", MessageBoxButton.OK, MessageBoxImage.Information);
+
+
+
+
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -104,10 +136,6 @@ namespace Siscream.Views
             filterprodutos.ItemsSource = new Produto_DAO().ListVenda();
         }
 
-        private void filterprodutos_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-            
-        }
 
         private void LoadDataGrid()
         {
@@ -122,5 +150,7 @@ namespace Siscream.Views
             }
            
         }
+
+
     }
 }

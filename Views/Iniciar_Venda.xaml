@@ -55,14 +55,13 @@
                   AutoGenerateColumns="False"
                   Background="#FFFF9900" 
                   Grid.ColumnSpan="2" 
-                  SelectionChanged="filterprodutos_SelectionChanged_1"
                   CanUserAddRows="False"
                   CanUserDeleteRows="False"
                   AlternationCount="2">
             <DataGrid.Columns>
 
                 <DataGridTextColumn Header="Nome" Width="100" IsReadOnly="True" Binding="{Binding Nome}" />
-                <DataGridTextColumn Header="Descrição" Width="300" IsReadOnly="True" Binding="{Binding Descricao}" />
+                <DataGridTextColumn Header="Descrição" Width="200" IsReadOnly="True" Binding="{Binding Descricao}" />
                 <DataGridTextColumn Header="Preço" Width="100" IsReadOnly="True" Binding="{Binding Preco}" />
 
                 <DataGridTemplateColumn Header="Adicionar">
@@ -120,8 +119,8 @@
                 <ImageBrush ImageSource="imagens/lixeira1.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="Vendedor_selecionado" Grid.Column="2" HorizontalAlignment="Left" Margin="428.557,95,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5"/>
-        <TextBox x:Name="Data_venda" Grid.Column="2" HorizontalAlignment="Left" Margin="754,0,0,536" VerticalAlignment="Bottom" Height="46" Width="160" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" TextChanged="Data_venda_TextChanged"/>
+        <TextBox x:Name="txtnomefunc" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="428.4,99,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5"/>
+        <DatePicker x:Name="Data_venda" Grid.Column="2" HorizontalAlignment="Left" Margin="754,0,0,536" VerticalAlignment="Bottom" Height="46" Width="160" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" />
 
 
         <!--Separadores
@@ -144,6 +143,24 @@
 
         <!--Botao de finalizar a venda-->
         <Button Content="FINALIZAR VENDA" Grid.Column="2" HorizontalAlignment="Left" Margin="694.557,10,0,0" VerticalAlignment="Top" Width="216" Height="40" FontSize="20" Background="#FF139506" Foreground="White" FontFamily="Yu Gothic UI" Grid.Row="1" Click="Button_Click"/>
+        <!--Tabela direira produtos selecionados-->
+        <DataGrid x:Name="dateGrid_produtos_selecionados" 
+            Grid.Column="2" 
+            Margin="377.4,205,9.6,170.4" 
+            FontSize="20" 
+            VerticalContentAlignment="Top" 
+            AutoGenerateColumns="False"
+            Background="White" 
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"
+            AlternationCount="2">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Nome" Width="100" IsReadOnly="True" Binding="{Binding Nome}" />
+                <DataGridTextColumn Header="Quantidade" Width="300" IsReadOnly="False" Binding="{Binding Quantidade}" />
+                <DataGridTextColumn Header="Preço" Width="150" IsReadOnly="True" Binding="{Binding Preco}" />
+            </DataGrid.Columns>
+        </DataGrid>
 
         <!--Itens selecionados na compra-->
         <!--<CheckBox Content="POTE DE SORVETE 2L " Grid.Column="2" HorizontalAlignment="Left" Margin="381.557,219,0,0" VerticalAlignment="Top" Height="31" Width="301" FontSize="25" RenderTransformOrigin="0.566,0.419"/>
