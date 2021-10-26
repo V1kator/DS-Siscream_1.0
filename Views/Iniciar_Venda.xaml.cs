@@ -88,6 +88,11 @@ namespace Siscream.Views
 
         private void txtFilter_TextChanged(object sender, TextChangedEventArgs e)
         {
+            
+        }
+
+        private void Data_venda_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
 
@@ -106,7 +111,7 @@ namespace Siscream.Views
             try
             {
                 prodList = new Produto_DAO().List();
-                DataGrid.ItemsSource = prodList();
+                filterprodutos.ItemsSource = prodList;
             }
             catch (Exception ex)
             {

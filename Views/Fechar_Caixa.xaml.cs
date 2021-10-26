@@ -69,7 +69,10 @@ namespace Siscream.Views
                 Caixa cx = new Caixa();
                 Funcionario funcionario = new Funcionario();
                 cx.id = Convert.ToInt32(ID.Text); 
+
                 funcionario.Nome = func.Text;
+
+
                 cx.aberto = abertoCx.Text;
                 cx.fechado = fechadoCx.Text;
                 cx.saldoInicial = Convert.ToDouble(saldoIn.Text);
@@ -100,10 +103,15 @@ namespace Siscream.Views
           
         }
 
+
         private void Editar_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+
+
+
 
         private void Cancelar_Click(object sender, RoutedEventArgs e)
         {
@@ -132,7 +140,7 @@ namespace Siscream.Views
 
         private void ClearInputs()
         {
-            nome_func.Text = "";
+            func.Text = "";
             abertoCx.Text = "";
             fechadoCx.Text = "";
             saldoIn.Text = "";

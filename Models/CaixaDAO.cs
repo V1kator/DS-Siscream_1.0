@@ -34,6 +34,7 @@ namespace Siscream.Models
                 query.Parameters.AddWithValue("@saldoInicial", t.saldoInicial);
                 
 
+
                 var result = query.ExecuteNonQuery();
 
                 if (result == 0)
@@ -95,11 +96,13 @@ namespace Siscream.Models
             throw new NotImplementedException();
         }
 
+
         public Caixa GetByID(int id)
         {
             throw new NotImplementedException();
 
         }
+
 
         public void Insert(Caixa t)
         {
@@ -116,7 +119,6 @@ namespace Siscream.Models
             throw new NotImplementedException();
         }
 
-        
-       
+
     }
 }

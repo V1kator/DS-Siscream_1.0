@@ -31,7 +31,6 @@ namespace Siscream.Models
             try
             {
 
-
                 var query = conn.Query();
                 query.CommandText = "SELECT* FROM tb_funcionario WHERE cod_func = @id";
 
@@ -63,6 +62,7 @@ namespace Siscream.Models
 
 
                 return funcionario;
+
             }
             catch (Exception e)
             {
@@ -96,7 +96,7 @@ namespace Siscream.Models
                 query.Parameters.AddWithValue("@email", t.Email);
                 query.Parameters.AddWithValue("@telefone", t.Telefone);
                 query.Parameters.AddWithValue("@rg", t.Rg);
-                query.Parameters.AddWithValue("@enderco", id_end);
+                query.Parameters.AddWithValue("@endereco", id_end);
 
 
                 var result = query.ExecuteNonQuery();
