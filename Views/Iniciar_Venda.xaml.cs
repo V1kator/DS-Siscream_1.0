@@ -20,9 +20,16 @@ namespace Siscream.Views
     /// </summary>
     public partial class Iniciar_Venda : Window
     {
+        private List<Produto> prodList = new List<Produto>();
         public Iniciar_Venda()
         {
             InitializeComponent();
+            Loaded += Iniciar_Venda_Loaded;
+        }
+
+        private void Iniciar_Venda_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadDataGrid();
         }
 
         private void btn_gastos_Click(object sender, RoutedEventArgs e)
@@ -87,6 +94,25 @@ namespace Siscream.Views
         private void filterprodutos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void filterprodutos_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            filterprodutos.ItemsSource = new Produto_DAO().ListVenda();
+        }
+
+        private void LoadDataGrid()
+        {
+            try
+            {
+                prodList = new Produto_DAO().List();
+                DataGrid.ItemsSource = prodList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+           
         }
     }
 }

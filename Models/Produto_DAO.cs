@@ -111,6 +111,40 @@ namespace Siscream.Models
             }
         }
 
+        public List<Produto> ListVenda()
+        {
+            try
+            {
+                List<Produto> ListVenda = new List<Produto>();
+
+                var query = conn.Query();
+                query.CommandText = "SELECT cod_prod, nome_prod, preco_prod FROM tb_produto";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ListVenda.Add(new Produto()
+                    {
+
+                        Id = reader.GetInt32("cod_prod"),
+                        Nome = reader.GetString("nome_prod"),
+                        Preco = reader.GetFloat("preco_prod"),
+
+                    });
+                }
+
+                return ListVenda;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public void Update(Produto t)
         {
             throw new NotImplementedException();
