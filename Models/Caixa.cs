@@ -9,7 +9,7 @@ namespace Siscream.Models
     class Caixa
     {
         public int id { get; set; }
-        public string nome_func { get; set; }
+        public Funcionario nome_func { get; set; }
         public int senha { get; set; }
         public string periodo { get; set; }
         public string aberto { get; set; }

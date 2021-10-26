@@ -95,28 +95,10 @@ namespace Siscream.Models
             throw new NotImplementedException();
         }
 
-        public Caixa FecharCaixa(int id)
+        public Caixa GetByID(int id)
         {
-            try
-            {
-                var query = conn.Query();
-                query.CommandText = "SELECT * FROM tb_caixa WHERE cod_caixa = @id";
+            throw new NotImplementedException();
 
-                query.Parameters.AddWithValue("@id", t.id);
-
-                MySqlDataReader reader = query.ExecuteReader();
-
-               
-            
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                conn.Query();
-            }
         }
 
         public void Insert(Caixa t)

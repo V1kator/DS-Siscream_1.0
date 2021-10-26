@@ -35,14 +35,9 @@
         <Image Source="imagens/ICONE_SAIR.png" Width="60" HorizontalAlignment="Left" Margin="110,20,0,17" Grid.Row="1"/>
 
         <Label x:Name="Fechar_Caixa1" Content="FECHAR CAIXA" HorizontalAlignment="Left" Margin="175,32,0,0" VerticalAlignment="Top" FontSize="24" RenderTransformOrigin="0.071,-0.396" FontFamily="Arial Black" Background="#00000000" Foreground="#FF030A02" FontWeight="Normal" Height="38" Width="235" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="func" HorizontalAlignment="Left" Background="LightGray" FontSize="15" VerticalAlignment="Top" Width="180" Grid.Column="1" Margin="67,142,0,0" Height="31" BorderBrush="Black">
-            <ComboBoxItem Content="André" Background="LightGreen"/>
-            <ComboBoxItem Content="Gabriel" Background="LightGreen"/>
-            <ComboBoxItem Content="Gabrielly" Background="LightGreen"/>
-            <ComboBoxItem Content="Paulo" Background="LightGreen"/>
-            <ComboBoxItem Content="Thallia" Background="LightGreen"/>
-            <ComboBoxItem Content="Victor" Background="LightGreen"/>
-        </ComboBox>
+        <ComboBox x:Name="func" HorizontalAlignment="Left" Background="LightGray" FontSize="15" VerticalAlignment="Top" Width="180" Grid.Column="1" Margin="67,142,0,0" Height="31" BorderBrush="Black" SelectionChanged="func_SelectionChanged" />
+
+
         <Label Content="FUNCIONÁRIO*" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="67,103,0,0" FontSize="18" Height="34" Width="143"/>
 
         <!--Informações iniciais-->
@@ -82,7 +77,6 @@
         <Label Content="R$" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="67,579,0,0" FontSize="18" Height="34" Width="151" Grid.RowSpan="2"/>
 
         <!--Botões-->
-        <Button x:Name="Editar" Content="Editar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="598,25,0,0" Grid.Row="1" Background="#FF686868" FontSize="20" Height="41" Foreground="#FFF7EDED" Click="Editar_Click" BorderBrush="Black"/>
         <Button x:Name="Cancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="757,25,0,0" Grid.Row="1" Background="#FFCF0909" FontSize="20" Height="41" Foreground="#FFF3E7E7" Click="Cancelar_Click" BorderBrush="Black"/>
         <Button x:Name="Salvar" Content="Salvar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Grid.Column="1" Margin="918,25,0,0" Grid.Row="1" Background="Lime" FontSize="20" Height="41" Foreground="#FFF0F7ED" Click="Salvar_Click" BorderBrush="Black"/>
 

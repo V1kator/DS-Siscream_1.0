@@ -99,8 +99,12 @@ namespace Siscream.Views
 
         private void Editar_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< Updated upstream
             var Fechar_Caixa = dataGrid.Select as Fechar_Caixa;
             MessageBox.Show();
+=======
+            
+>>>>>>> Stashed changes
             Fechar_Caixa tela = new Fechar_Caixa();
             tela.ShowDialog();
             this.Close();
@@ -150,7 +154,26 @@ namespace Siscream.Views
         {
 
         }
-    }
 
-   
+        private void loadComboBoxs()
+        {
+            try
+            {
+                func.ItemsSource = new Funcionario_DAO().List();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+          
+
+        }
+
+        private void func_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+    }
+       
 }
