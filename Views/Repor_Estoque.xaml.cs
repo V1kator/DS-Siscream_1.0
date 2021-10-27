@@ -85,7 +85,7 @@ namespace Siscream.Views
 
         }
 
-        private void Quant_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Quantidade_Selected(object sender, RoutedEventArgs e)
         {
 
         }

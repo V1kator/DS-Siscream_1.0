@@ -38,8 +38,8 @@
         <TextBox x:Name="nome_prod" Background="White" FontFamily="Roboto" FontSize="20" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" Grid.Column="1" Margin="198,188,0,0" Foreground="#FF16720D" TextChanged="nome_prod_TextChanged" BorderBrush="Black"/>
 
         <Label Content="QUANTIDADE" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontFamily="Roboto" Margin="460,297,370,0" Width="244"></Label>
-        <ListBox x:Name="Quant" FontSize="20" FontFamily="Roboto" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="682" Grid.Column="1" Background="White" Margin="198,342,0,0" SelectionChanged="Quant_SelectionChanged" Foreground="#FF16720D" BorderBrush="Black">
-            <ListBoxItem x:Name="Quant1" Content="1" Height="36" Width="644" Selected="ListBoxItem_Selected" BorderBrush="White"/>
+        <ListBox x:Name="Quant" FontSize="20" FontFamily="Roboto" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="682" Grid.Column="1" Background="White" Margin="198,342,0,0"  Foreground="#FF16720D" BorderBrush="Black">
+            <ListBoxItem x:Name="Quant1" Content="1" Height="36" Width="644" Selected="Quantidade_Selected" BorderBrush="White"/>
             <ListBoxItem Content="2" Height="40"/>
             <ListBoxItem Content="3"/>
             <ListBoxItem Content="4"/>

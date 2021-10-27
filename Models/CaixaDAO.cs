@@ -30,7 +30,6 @@ namespace Siscream.Models
 
                 query.Parameters.AddWithValue("@nome_func", t.Funcionario.Nome);
                 query.Parameters.AddWithValue("@periodo", t.periodo);
-                query.Parameters.AddWithValue("@senha", t.senha);
                 query.Parameters.AddWithValue("@saldoInicial", t.saldoInicial);
                 
 
