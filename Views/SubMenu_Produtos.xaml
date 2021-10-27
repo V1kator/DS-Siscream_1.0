@@ -39,7 +39,6 @@
             <Button Height="42" Background="#FF999595" Content="CADASTRAR &#xD;&#xA;  PRODUTO" Foreground="White" FontFamily="Arial Black" FontSize="17" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,20,10,0" Click="Button_Click"/>
             <Button x:Name="bnt_consulta_estoque_submenu" Height="42" Background="#FF999595" Content="CONSULTAR&#xD;&#xA;  ESTOQUE" Foreground="White" FontFamily="Arial Black" FontSize="17" VerticalAlignment="Stretch" Margin="10,20,0,0" Click="Button_Click_1" HorizontalAlignment="Left" Width="190"/>
             <Button Height="42" Background="#FF999595" Content="DEVOLVER&#xD;&#xA; PRODUTO" Foreground="White" FontFamily="Arial Black" FontSize="17" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,20,10,0" Click="Button_Click_2"/>
-            <Button Height="42" Background="#FF999595" Content="  REPOR ESTOQUE" Foreground="White" FontFamily="Arial Black" FontSize="17" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,20,10,0" Click="Button_Click_3"/>
         </StackPanel>
     </Grid>
 </Window>
