@@ -57,7 +57,6 @@ namespace Siscream.Models
                     funcionario.Cargo = reader.GetString("cargo_func");
                     funcionario.Admissao = reader.GetDateTime("dataAdmissao_func");
                     funcionario.Contrato = reader.GetString("tipoContrato_func");
-                    funcionario.Codigo_end = reader.GetInt32("cod_end_fk");
                 }
 
 
