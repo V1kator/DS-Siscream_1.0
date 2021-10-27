@@ -69,8 +69,6 @@
 
         <!--LABEL SEXO-->
         <Label Content="SEXO" Grid.Column="1" HorizontalAlignment="Left" Margin="26,227,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
-        <RadioButton Content="MASCULINO" Grid.Column="1" HorizontalAlignment="Left" Margin="31,270,0,0" VerticalAlignment="Top" FontSize="18" BorderThickness="3"/>
-        <RadioButton Content="FEMININO" Grid.Column="1" HorizontalAlignment="Left" Margin="193,270,0,0" VerticalAlignment="Top" FontSize="18" BorderThickness="3"/>
 
         <!--LABEL ENDERECO-->
         <!--RUA-->
@@ -178,6 +176,10 @@
         <Label Content="CEP" Grid.Column="1" HorizontalAlignment="Left" Margin="623,399,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
         <TextBox x:Name="lbl_cep" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="626,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
             Width="125" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
+        <ComboBox x:Name="lbl_sexo" Grid.Column="1" HorizontalAlignment="Left" Margin="35,262,0,0" VerticalAlignment="Top" Width="265" Height="37" BorderThickness="3" FontSize="18">
+            <ComboBoxItem Content="MASCULINO"/>
+            <ComboBoxItem Content="FEMINIO"/>
+        </ComboBox>
 
     </Grid>
 </Window>

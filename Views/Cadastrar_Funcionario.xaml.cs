@@ -118,5 +118,9 @@ namespace Siscream.Views
             this.Close();
         }
 
+        private void lbl_sexo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
