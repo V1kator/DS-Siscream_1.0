@@ -79,9 +79,6 @@ namespace Siscream.Views
 
                 funcionario.Nome = func_nome.Text;
 
-
-                cx.aberto = abertoCx.Text;
-                cx.fechado = fechadoCx.Text;
                 cx.saldoInicial = Convert.ToDouble(saldoIn.Text);
                 cx.dinheiroCX = Convert.ToDouble(dinheiro.Text);
                 cx.creditoCX = Convert.ToDouble(credito.Text);
@@ -122,8 +119,6 @@ namespace Siscream.Views
         private void ClearInputs()
         {
             func_nome.Text = "";
-            abertoCx.Text = "";
-            fechadoCx.Text = "";
             saldoIn.Text = "";
             dinheiro.Text = "";
             credito.Text = "";
@@ -133,12 +128,7 @@ namespace Siscream.Views
             especif.Text = "";
             Sfinal.Text = "";
         }
-
-        private void abertoCx_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
+                
         private void LoadComboBoxs()
         {
             try

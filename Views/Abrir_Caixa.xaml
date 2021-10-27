@@ -53,10 +53,7 @@
             </ComboBox>
         </StackPanel>
 
-        <StackPanel Grid.ColumnSpan="2" Margin="190,9,10,13">
-            <Label Content="Senha" FontSize="18" HorizontalAlignment="Right" Margin="300 120 220 0" />
-            <PasswordBox Height="30" Margin="800 5 40 30" BorderThickness="4"/>
-        </StackPanel>
+        <StackPanel Grid.ColumnSpan="2" Margin="190,9,10,13"/>
 
         <StackPanel Grid.ColumnSpan="2">
             <Image Source="imagens/caixa_registradora.png" Height="220" Width="500" Margin="0 270 550 0"/>

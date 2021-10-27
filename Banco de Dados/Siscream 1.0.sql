@@ -46,20 +46,19 @@ CREATE TABLE tb_endereco (
 );
 
 CREATE TABLE tb_caixa (
-    cod_caixa int primary key not null auto_increment,
+    cod_caixa int not null PRIMARY KEY auto_increment,
     funcionario_caixa varchar (100),
-    senha_caixa varchar (10),
     periodo_caixa varchar (20),
-    hora_abertura_caixa datetime,
-    hora_fechamento_caixa datetime,
-    valorAbertura_caixa double,
-    dinheiro_caixa double,
-    credito_caixa double,
-    debito_caixa double,
-    total_caixa double,
-    valor_retirado_caixa double,
+    hora_abertura_caixa time,
+    /*hora_fechamento_caixa time,
+    valorAbertura_caixa float,*/
+    dinheiro_caixa float,
+    credito_caixa float,
+    debito_caixa float,
+    total_caixa float,
+    valor_retirado_caixa float,
     especificacoes varchar(500),
-    saldofinal_caixa double
+    saldofinal_caixa float
 );
 
 CREATE TABLE tb_funcionario (
@@ -67,7 +66,7 @@ CREATE TABLE tb_funcionario (
     nome_func varchar (100) not null,
     cpf_func varchar (11) not null,
     sexo_func varchar (20) not null, 
-    nascimento_func varchar (11),
+    nascimento_func date not null,
     telefone_func varchar (20), 
     email_func varchar (50),
     rg_func varchar (15) not null,
@@ -75,11 +74,12 @@ CREATE TABLE tb_funcionario (
     tipoContrato_func varchar (20) not null,
     senha_func varchar (20) not null,
     dataAdmissao_func date not null,
-    salario_func float not null,
-    cod_end_fk int not null,
-	foreign key (cod_end_fk) references tb_endereco (cod_end)
+    salario_func float not null
+   /* cod_end_fk int not null,
+	foreign key (cod_end_fk) references tb_endereco (cod_end)*/
 );
 
+	INSERT INTO tb_funcionario VALUES (null,'André Raymundo', '12345678910', 'M', '2003-11-17', '285788814', 'nightmare@gmail.com', '12345', 'Atendente de caixa', 'Carteira assinada', '1234567', '2019-05-25', 1.540);
 CREATE TABLE tb_cliente (
     cod_cli int not null PRIMARY KEY auto_increment,
     nome_cli varchar (100) not null,
@@ -813,4 +813,4 @@ select * from tb_produto;
 select * from tb_caixa;
 select * from tb_endereco;
 select*from tb_funcionario;
-INSERT INTO tb_funcionario VALUES (null,'Thallia Michelle', 12345678910, 'F', 2003-10-08, 285788814, 'thalliamichelle@gmail.com', 'Atendente de caixa', 'Carteira assinada', '12345678', '2019-05-25', null, 1.540);
+
