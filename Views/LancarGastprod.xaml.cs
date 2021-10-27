@@ -26,7 +26,7 @@ namespace Siscream.Views
         }
 
         private void botao_confim_Click(object sender, RoutedEventArgs e)
-        {/*
+        {
             try
             {
                 LancarGastos lancargastos = new LancarGastos();
@@ -45,7 +45,7 @@ namespace Siscream.Views
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro de execução", MessageBoxButton.OK, MessageBoxImage.Error);
-            }*/
+            }
 
             PopUp_AdicionarGastProd adg = new PopUp_AdicionarGastProd();
             adg.ShowDialog();

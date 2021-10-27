@@ -39,20 +39,48 @@
                 FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,589,30,0" Grid.RowSpan="2" Click="btn_close_Click"/>
         <Image Source="/Views/imagens/icone_sair.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
 
-        <StackPanel Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Margin="6,30,4,32">
-            <Label Content="PRODUTO" FontSize="40" Height="48" Padding="0 0 0 0" Margin="-30,0,0,0" Background="#FA8072" HorizontalContentAlignment="Center"></Label>
-            <Label Content="Sorvete bão d+ hmmmm" FontSize="30" Height="48" Padding="0 0 0 0" Margin="-30 0 0 0" Background="#FA8072" HorizontalContentAlignment="Center"></Label>
-        </StackPanel>
+        <DataGrid x:Name="filterprodutos" 
+                  Grid.Column="1" 
+                  Margin="7,204,621,3" 
+                  FontSize="20" 
+                  VerticalContentAlignment="Top" 
+                  AutoGenerateColumns="False"
+                  Background="#FFFF9900" 
+                  Grid.ColumnSpan="2" 
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  AlternationCount="2">
+            <DataGrid.Columns>
 
-        <StackPanel Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2" Margin="6,30,4,32">
-            <Label Content="DATA" FontSize="40" Height="48" Padding="0 0 0 0" Margin="-30,0,0,0" Background="#FA8072" HorizontalContentAlignment="Center"></Label>
-            <Label Content="20/06/2021" FontSize="30" Height="48" Padding="0 0 0 0" Margin="-30,0,0,0" Background="#FA8072" HorizontalContentAlignment="Center"></Label>
-        </StackPanel>
+                <DataGridTextColumn Header="Nome" Width="100" IsReadOnly="True" Binding="{Binding Nome}" />
+                <DataGridTextColumn Header="Descrição" Width="200" IsReadOnly="True" Binding="{Binding Descricao}" />
+                <DataGridTextColumn Header="Preço" Width="100" IsReadOnly="True" Binding="{Binding Preco}" />
 
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Margin="196,30,4,32">
-            <Label Content="GASTO" FontSize="40" Height="48" Padding="0 0 0 0" Background="#FA8072" HorizontalContentAlignment="Center"/>
-            <Label Content="R$ 2.000" FontSize="30" Height="48" Padding="0 0 0 0" Background="#FA8072" HorizontalContentAlignment="Center"/>
-        </StackPanel>
+                <DataGridTemplateColumn Header="Adicionar">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}"></CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="25.557,289,0,0" VerticalAlignment="Top" Width="690" RenderTransformOrigin="0.5,0.5">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+
+
+
+
+
 
         <Button x:Name="botao_adg" Background="#FF139506" Content="ADICIONAR GASTOS" FontSize="30" 
                 HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Grid.Column="3" 
@@ -60,13 +88,6 @@
         </Button>
 
         <Image Source="imagens/adicionar2.png" Grid.Column="1" Grid.Row="1" Margin="183,15,317,25" Grid.ColumnSpan="3"></Image>
-
-        <Button x:Name="botao_excluir" FontSize="30" Background="Red" 
-                HorizontalAlignment="Stretch" Grid.Column="6" 
-                Margin="0 50 0 493" Click="excluir">
-        </Button>
-
-        <Image Source="imagens/deletar_icon.png" Grid.Column="6" Grid.Row="0" Margin="0 35 0 477" HorizontalAlignment="Left" Width="50"></Image>
 
     </Grid>
 </Window>

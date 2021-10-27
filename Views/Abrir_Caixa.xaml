@@ -41,6 +41,7 @@
             <ComboBox x:Name="Funcionario" Grid.Column="1" Margin="0 0 800 0" BorderThickness="3" FontSize="20" SelectionChanged="Funcionario_SelectionChanged">
                 <ComboBoxItem Content="Paulo Santos"/>
                 <ComboBoxItem Content="Victor Daniel"/>
+                <ComboBoxItem Content="João"/>
             </ComboBox>
         </StackPanel>
 
