@@ -21,12 +21,33 @@ namespace Siscream.Views
     /// Interação lógica para Consultar_Funcionario.xam
     /// </summary>
     public partial class Consultar_Funcionario : Window
+
     {
+        private List<Funcionario> funcionariolist = new List<Funcionario>();
+
         public Consultar_Funcionario()
         {
             InitializeComponent();
+            Loaded += Consultar_Funcionario_Loaded;
         }
 
+        private void Consultar_Funcionario_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadList();
+        }
+        private void LoadList()
+        {
+            try
+            {
+                funcionariolist = new Funcionario_DAO().List();
+                Datagrid_consulta_func.ItemsSource = funcionariolist;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
 
 
 
@@ -58,6 +79,33 @@ namespace Siscream.Views
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void bnt_excluir_funcionarii_Click(object sender, RoutedEventArgs e)
+        {
+            var funcionarioSelected = Datagrid_consulta_func.SelectedItem as Funcionario;
+
+            var result = MessageBox.Show($"Deseja realmente excluir o funcionario'{funcionarioSelected.Nome}'?", "Confirmação de Exclusão",
+            MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new Funcionario_DAO();
+                    dao.Delete(funcionarioSelected);
+                    LoadList();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exeção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
         }
 
 

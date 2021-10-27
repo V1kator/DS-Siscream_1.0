@@ -23,7 +23,32 @@ namespace Siscream.Models
 
         public void Delete(Funcionario t)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                var query = conn.Query();
+                query.CommandText = "DELETE  FROM  tb_funcionario WHERE cod_func = @codigo";
+
+
+                query.Parameters.AddWithValue("@codigo", t.Codigo);
+
+
+                var result = query.ExecuteNonQuery();
+
+                if (result == 0)
+                    throw new Exception("Registro não removido da base de dados. Verifique e tente novamente!");
+
+
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public Funcionario GetByID(int id)
@@ -120,13 +145,13 @@ namespace Siscream.Models
                 List<Funcionario> list = new List<Funcionario>();
 
                 var query = conn.Query();
-                query.CommandText = "SELECT * FROM tb_funcionario WHERE cargo_func ='Atendente de caixa'";
+                query.CommandText = "SELECT * FROM tb_funcionario LEFT JOIN tb_endereco ON cod_end = cod_end_fk";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    list.Add(new Funcionario()
+                    var func = new Funcionario()
                     {
                         Codigo = reader.GetInt32("cod_func"),
                         Cpf = reader.GetString("cpf_func"),
@@ -141,7 +166,14 @@ namespace Siscream.Models
                         Nome = reader.GetString("nome_func"),
                         Admissao = reader.GetDateTime("dataAdmissao_func")
                   
-                    }) ;
+                    } ;
+                    if (!reader.IsDBNull(reader.GetOrdinal("cod_end_fk")))
+                    {
+                        func.End.Codigo = reader.GetInt32("cod_end");
+                        func.End.Cidade = reader.GetString("cidade_end");
+                    }
+                    list.Add(func);
+
                 }
                 return list;
             }
