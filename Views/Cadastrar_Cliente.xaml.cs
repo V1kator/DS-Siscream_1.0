@@ -64,9 +64,6 @@ namespace Siscream.Views
             LoadCli();
             
 
-            Popup_Cadastrar_Cliente popup = new Popup_Cadastrar_Cliente();
-            popup.ShowDialog();
-
 
         }
 
@@ -102,16 +99,13 @@ namespace Siscream.Views
 
         }
 
-    private void btn_cancelar_Click(object sender, RoutedEventArgs e)
-    {
-        Popup_Cancelar_Cliente popup = new Popup_Cancelar_Cliente();
-        popup.ShowDialog();
-    }
+   
 
     private void btn_editar_Click(object sender, RoutedEventArgs e)
     {
-        Popup_Editar_Cliente popup = new Popup_Editar_Cliente();
-        popup.ShowDialog();
+            Consultar_Cliente consultar = new Consultar_Cliente();
+            consultar.ShowDialog();
+            this.Close();
     }
 
     private void btn_produtos_Click(object sender, RoutedEventArgs e)

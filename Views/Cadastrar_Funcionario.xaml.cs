@@ -106,8 +106,8 @@ namespace Siscream.Views
 
         private void btn_editar_Click(object sender, RoutedEventArgs e)
         {
-            Popup_Editar_Funcionario popup = new Popup_Editar_Funcionario();
-            popup.ShowDialog();
+            Popup_Editar_Funcionario consultar_func = new Popup_Editar_Funcionario();
+            consultar_func.ShowDialog();
         }
 
         private void btn_demitir_Click(object sender, RoutedEventArgs e)
