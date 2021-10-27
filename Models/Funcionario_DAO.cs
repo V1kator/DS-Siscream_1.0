@@ -53,6 +53,7 @@ namespace Siscream.Models
                     funcionario.Senha = reader.GetString("senha_func");
                     funcionario.Email = reader.GetString("email_func");
                     funcionario.Sexo = reader.GetString("sexo_func");
+                    funcionario.Salario = reader.GetDouble("salario_func");
                     funcionario.Telefone = reader.GetString("telefone_func");
                     funcionario.Cargo = reader.GetString("cargo_func");
                     funcionario.Admissao = reader.GetDateTime("dataAdmissao_func");
@@ -136,6 +137,7 @@ namespace Siscream.Models
                         Rg = reader.GetString("rg_func"),
                         Contrato = reader.GetString("tipoContrato_func"),
                         Senha = reader.GetString("senha_func"),
+                        Salario = reader.GetDouble("salario_func"),
                         Nome = reader.GetString("nome_func"),
                         Admissao = reader.GetDateTime("dataAdmissao_func")
                   
