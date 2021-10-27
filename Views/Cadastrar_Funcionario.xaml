@@ -172,12 +172,17 @@
         <Button x:Name="btn_cadastrar" Content="CADASTRAR" Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="858,23,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" FontSize="25" Background="#FF139506" Foreground="White" FontWeight="Normal" Click="btn_cadastrar_Click_1"/>
         <Label Content="SALARIO" Grid.Column="1" HorizontalAlignment="Left" Margin="347,496,0,0" VerticalAlignment="Top" Height="34" Width="203" FontSize="18"/>
         <TextBox x:Name="lbl_salario" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="351,533,0,0" 
-            VerticalAlignment="Top" Width="194" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
+            VerticalAlignment="Top" Width="194" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" TextChanged="lbl_salario_TextChanged" />
         <Label Content="CEP" Grid.Column="1" HorizontalAlignment="Left" Margin="623,399,0,0" VerticalAlignment="Top" Height="34" Width="176" FontSize="18"/>
         <TextBox x:Name="lbl_cep" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="626,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
             Width="125" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" />
-        <TextBox x:Name="lbl_sexo" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="33,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
-            Width="270" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3" TextChanged="lbl_nome_Copy_TextChanged"/>
+        <ComboBox x:Name="lbl_sexo" Grid.Column="1" HorizontalAlignment="Left" Margin="30,264,0,0" VerticalAlignment="Top" Width="274" Height="37" BorderThickness="3" FontSize="18">
+            <ComboBoxItem Content="FEMININO"/>
+            <ComboBoxItem Content="MASCULINO"/>
+            <ComboBoxItem Content="PREFIRO NAO INFORMAR"/>
+           
+
+        </ComboBox>
 
     </Grid>
 </Window>

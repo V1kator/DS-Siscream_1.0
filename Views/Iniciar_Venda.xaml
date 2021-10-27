@@ -136,10 +136,7 @@
         <Rectangle Grid.Column="2" Fill="#FFFF9900" HorizontalAlignment="Left" Height="146" Margin="370.557,442,0,0" Stroke="Black" VerticalAlignment="Top" Width="565"/>
 
         <!--Valores a pagar, descontos e bla bla bla-->
-        <Label Content="VALOR A PAGAR:" Grid.Column="2" HorizontalAlignment="Left" Margin="741.557,475,-25,0" VerticalAlignment="Top" Height="45" Width="219" FontSize="20" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
-        <Label Content="SUBTOTAL:" Grid.Column="2" HorizontalAlignment="Left" Margin="377.557,476,0,0" VerticalAlignment="Top" Height="31" Width="98" FontSize="18" RenderTransformOrigin="-0.374,0.185"/>
-        <Label Content="DESCONTOS:" Grid.Column="2" HorizontalAlignment="Left" Margin="376.557,496,0,0" VerticalAlignment="Top" Height="31" Width="117" FontSize="18" RenderTransformOrigin="-0.374,0.185"/>
-        <Label Content="CUPONS:" Grid.Column="2" HorizontalAlignment="Left" Margin="377.557,515,0,0" VerticalAlignment="Top" Height="31" Width="89" FontSize="18" RenderTransformOrigin="-0.374,0.185"/>
+        <Label Content="VALOR A PAGAR:" Grid.Column="2" HorizontalAlignment="Left" Margin="742,475,0,0" VerticalAlignment="Top" Height="45" Width="183" FontSize="20" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
 
         <!--Botao de finalizar a venda-->
         <Button Content="FINALIZAR VENDA" Grid.Column="2" HorizontalAlignment="Left" Margin="694.557,10,0,0" VerticalAlignment="Top" Width="216" Height="40" FontSize="20" Background="#FF139506" Foreground="White" FontFamily="Yu Gothic UI" Grid.Row="1" Click="Button_Click"/>
@@ -161,6 +158,7 @@
                 <DataGridTextColumn Header="Preço" Width="150" IsReadOnly="True" Binding="{Binding Preco}" />
             </DataGrid.Columns>
         </DataGrid>
+        <TextBox x:Name="lbl_preco" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="740,512,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5"/>
 
         <!--Itens selecionados na compra-->
         <!--<CheckBox Content="POTE DE SORVETE 2L " Grid.Column="2" HorizontalAlignment="Left" Margin="381.557,219,0,0" VerticalAlignment="Top" Height="31" Width="301" FontSize="25" RenderTransformOrigin="0.566,0.419"/>

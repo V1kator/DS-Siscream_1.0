@@ -93,8 +93,8 @@ namespace Siscream.Views
                 MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            Popup_Cadastrar_Funcionario popup = new Popup_Cadastrar_Funcionario();
-            popup.ShowDialog();
+            /*Popup_Cadastrar_Funcionario popup = new Popup_Cadastrar_Funcionario();
+            popup.ShowDialog();*/
 
         }
 
