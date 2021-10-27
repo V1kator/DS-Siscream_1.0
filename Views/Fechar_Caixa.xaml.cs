@@ -23,9 +23,16 @@ namespace Siscream.Views
         public Fechar_Caixa()
         {
             InitializeComponent();
+            Loaded += Fechar_Caixa_Loaded;
+
         }
 
-        
+        private void Fechar_Caixa_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadComboBoxs();
+        }
+
+
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos produto = new SubMenu_Produtos();
@@ -70,7 +77,7 @@ namespace Siscream.Views
                 Funcionario funcionario = new Funcionario();
                 cx.id = Convert.ToInt32(ID.Text); 
 
-                funcionario.Nome = func.Text;
+                funcionario.Nome = func_nome.Text;
 
 
                 cx.aberto = abertoCx.Text;
@@ -104,43 +111,17 @@ namespace Siscream.Views
         }
 
 
-        private void Editar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-
-
-
-
         private void Cancelar_Click(object sender, RoutedEventArgs e)
         {
             PopUp_Cancelar_FecharCaixa caixa = new PopUp_Cancelar_FecharCaixa();
             caixa.ShowDialog();
             this.Close();
         }
-        /*##########################################    TESTE ##############################################
-        private void FecharCaixa_teste()
-        {
-            Caixa cx = new Caixa();
-            cx.aberto = "11:00";
-            cx.fechado = "23:00";
-            cx.valorAbertura = 250.00;
-            cx.dinheiroCX = 400.00;
-            cx.creditoCX = 0;
-            cx.debitoCX = 450.00;
-            cx.totalCX = 1200.00;
-            cx.valorRetirado = 138.00;
-            cx.especif = "Pagamento de ingredientes para produção de sorvetes";
-            cx.saldoFinal = 1062.00;
-
-            CaixaDAO cxDAO = new CaixaDAO();
-            cxDAO.FecharCaixa(cx);
-        }*/
-
+        
+           
         private void ClearInputs()
         {
-            func.Text = "";
+            func_nome.Text = "";
             abertoCx.Text = "";
             fechadoCx.Text = "";
             saldoIn.Text = "";
@@ -158,11 +139,11 @@ namespace Siscream.Views
 
         }
 
-        private void loadComboBoxs()
+        private void LoadComboBoxs()
         {
             try
             {
-                func.ItemsSource = new Funcionario_DAO().List();
+                func_nome.ItemsSource = new Funcionario_DAO().List();
             }
             catch (Exception ex)
             {
@@ -173,7 +154,7 @@ namespace Siscream.Views
 
         }
 
-        private void func_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void func_nome_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

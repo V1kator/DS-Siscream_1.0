@@ -120,7 +120,7 @@ namespace Siscream.Models
                 List<Funcionario> list = new List<Funcionario>();
 
                 var query = conn.Query();
-                query.CommandText = "SELECT * FROM tb_funcionario WHERE cargo_func ='atendente de caixa'";
+                query.CommandText = "SELECT * FROM tb_funcionario WHERE cargo_func ='Atendente de caixa'";
 
                 MySqlDataReader reader = query.ExecuteReader();
 

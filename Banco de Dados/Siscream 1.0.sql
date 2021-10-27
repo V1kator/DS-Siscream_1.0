@@ -812,3 +812,5 @@ CALL pr_devolver_produto(2, '2021-08-28', 2, 1.5, 2);*/
 select * from tb_produto;
 select * from tb_caixa;
 select * from tb_endereco;
+select*from tb_funcionario;
+INSERT INTO tb_funcionario VALUES (null,'Thallia Michelle', 12345678910, 'F', 2003-10-08, 285788814, 'thalliamichelle@gmail.com', 'Atendente de caixa', 'Carteira assinada', '12345678', '2019-05-25', null, 1.540);

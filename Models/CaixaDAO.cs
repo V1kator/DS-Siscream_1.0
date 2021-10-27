@@ -28,7 +28,7 @@ namespace Siscream.Models
                 query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, periodo_caixa, senha_caixa, valorAbertura_caixa," +
                                     "VALUES (@nome_func, @periodo, @saldoInicial)";
 
-                query.Parameters.AddWithValue("@nome_func", t.nome_func);
+                query.Parameters.AddWithValue("@nome_func", t.Funcionario.Nome);
                 query.Parameters.AddWithValue("@periodo", t.periodo);
                 query.Parameters.AddWithValue("@senha", t.senha);
                 query.Parameters.AddWithValue("@saldoInicial", t.saldoInicial);
@@ -62,7 +62,7 @@ namespace Siscream.Models
                         "VALUES (@id, @nome_func, @aberto, @fechado, @saldoInicial, @dinheiroCX, @creditoCX, @debitoCX, @totalCX, @valorRetirado, @especif, @saldoFinal)";
 
                 query.Parameters.AddWithValue("@id", t.id);
-                query.Parameters.AddWithValue("@nome_func", t.nome_func);
+                query.Parameters.AddWithValue("@nome_func", t.Funcionario.Nome);
                 query.Parameters.AddWithValue("@aberto", t.aberto);
                 query.Parameters.AddWithValue("@fechado", t.fechado);
                 query.Parameters.AddWithValue("@saldoInicial", t.saldoInicial);
@@ -111,7 +111,35 @@ namespace Siscream.Models
 
         public List<Caixa> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                List<Caixa> list = new List<Caixa>();
+
+                var query = conn.Query();
+
+                /*query.CommandText = "SELECT funcionario_caixa FROM tb_caixa"*/
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var cx = new Caixa()
+                    {
+
+
+                    };
+
+                    list.Add(cx);
+
+                }
+                return list;
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
 
         public void Update(Caixa t)
