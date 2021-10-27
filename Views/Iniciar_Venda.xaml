@@ -153,7 +153,7 @@
             Background="White" 
             CanUserAddRows="False"
             CanUserDeleteRows="False"
-            AlternationCount="2">
+            AlternationCount="2" SelectionChanged="dateGrid_produtos_selecionados_SelectionChanged">
             <DataGrid.Columns>
 
                 <DataGridTextColumn Header="Nome" Width="100" IsReadOnly="True" Binding="{Binding Nome}" />

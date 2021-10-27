@@ -151,6 +151,9 @@ namespace Siscream.Views
            
         }
 
+        private void dateGrid_produtos_selecionados_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
+        }
     }
 }
