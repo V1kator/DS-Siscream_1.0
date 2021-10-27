@@ -55,6 +55,33 @@ namespace Siscream.Views
         }
 
 
+        private void Button_Excluir_Cli(object sender, RoutedEventArgs e)
+        {
+            var clienteSelected = Datagrid_consulta_cliente.SelectedItem as Cliente;
+
+            var result = MessageBox.Show($"Deseja realmente remover o cliente '{clienteSelected.Nome}'?", "Confirmação de Exclusão",
+            MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new Cliente_DAO();
+                    dao.Delete(clienteSelected);
+                    LoadList();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exeção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+        }
+
 
 
 

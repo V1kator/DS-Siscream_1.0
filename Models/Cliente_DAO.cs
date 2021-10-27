@@ -23,7 +23,32 @@ namespace Siscream.Models
 
         public void Delete(Cliente t)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                var query = conn.Query();
+                query.CommandText = "DELETE  FROM  tb_cliente 	WHERE 	cod_cli = @codigo";
+
+
+                query.Parameters.AddWithValue("@codigo", t.Codigo);
+
+
+                var result = query.ExecuteNonQuery();
+
+                if (result == 0)
+                    throw new Exception("Registro não removido da base de dados. Verifique e tente novamente!");
+
+
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public Cliente GetByID(int id)
