@@ -122,5 +122,10 @@ namespace Siscream.Views
         {
 
         }
+
+        private void lbl_nome_Copy_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
