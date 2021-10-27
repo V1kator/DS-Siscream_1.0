@@ -155,5 +155,10 @@ namespace Siscream.Views
         {
 
         }
+
+        private void filterprodutos_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
