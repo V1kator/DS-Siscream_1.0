@@ -45,7 +45,8 @@
                 </Button.Background>
             </Button>
         </Grid>
-        <Button x:Name="bnt_editar_consulta_estoque" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="811,28,0,0" VerticalAlignment="Top" Width="209" Foreground="White" Background="#FF5F5F5F" FontSize="30" Height="54" Click="bnt_editar_consulta_estoque_Click" Grid.Row="1"/>
+        <Button x:Name="bnt_editar_consulta_estoque" Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="609,20,0,0" VerticalAlignment="Top" Width="209" Foreground="White" Background="#FF5F5F5F" FontSize="30" Height="54" Click="bnt_editar_consulta_estoque_Click" Grid.Row="1"/>
+        <Button Content="EXCLUIR" Grid.Column="1" HorizontalAlignment="Left" Margin="841,13,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FFD60000" BorderBrush="White" Foreground="White" FontSize="25" Click="bnt_excluir_consulta_estoque_Click"/>
         <Label Content="Resultados:" Grid.Column="1" HorizontalAlignment="Left" Margin="45,225,0,0" VerticalAlignment="Top" FontSize="24" RenderTransformOrigin="0.632,0.503"/>
         <DataGrid  Margin="45,272,10,0" x:Name="datagrid_consulta" CanUserAddRows="False" CanUserDeleteRows="False" 
                        AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2"

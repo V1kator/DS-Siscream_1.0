@@ -20,10 +20,34 @@ namespace Siscream.Models
         {
             conn = new Conexao();
         }
-
         public void Delete(Produto t)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                var query = conn.Query();
+                query.CommandText = "DELETE  FROM  tb_produto 	WHERE 	cod_prod = @id";
+
+
+                query.Parameters.AddWithValue("@id", t.Id);
+
+
+                var result = query.ExecuteNonQuery();
+
+                if (result == 0)
+                    throw new Exception("Registro não removido da base de dados. Verifique e tente novamente!");
+
+
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public Produto GetByID(int id)

@@ -124,5 +124,32 @@ namespace Siscream.Views
         {
 
         }
+
+        private void bnt_excluir_consulta_estoque_Click(object sender, RoutedEventArgs e)
+        {
+            var produtoSelected = datagrid_consulta.SelectedItem as Produto;
+
+            var result = MessageBox.Show($"Deseja realmente ecluir o produto '{produtoSelected.Nome}'?", "Confirmação de Exclusão",
+            MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new Produto_DAO();
+                    dao.Delete(produtoSelected);
+                    LoadList();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exeção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+        }
     }
 }
