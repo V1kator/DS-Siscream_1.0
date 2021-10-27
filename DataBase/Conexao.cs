@@ -13,7 +13,7 @@ namespace Siscream.DataBase
         private string host = "localhost";
         private string port = "3306";
         private string user = "root";
-        private string password = "andre123";
+        private string password = "";
         private string dbname = "siscream";
         private static MySqlConnection connection;
         private static MySqlCommand command;

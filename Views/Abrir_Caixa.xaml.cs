@@ -55,49 +55,16 @@ namespace Siscream.Views
             subcdastro.ShowDialog();
         }
 
-
-
-
-
         private void botao_cancelar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-
-
-
-
         private void botao_abrir_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                Caixa cx = new Caixa();
-                Funcionario funcionario = new Funcionario();
-
-                funcionario.Nome = Funcionario.Text;
-                cx.aberto = hora.Text;
-
-                CaixaDAO cxDAO = new CaixaDAO(); 
-                cxDAO.FecharCaixa(cx);
-                Funcionario_DAO funcionarioDAO = new Funcionario_DAO();
-                funcionarioDAO.Insert(funcionario);
-
-                PopUp_Abrir_Caixa caixaA = new PopUp_Abrir_Caixa();
-                caixaA.ShowDialog();
-                this.Close();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-
+           PopUp_Abrir_Caixa PupUp = new PopUp_Abrir_Caixa();
+           PupUp.ShowDialog();
         }
-
-
-
-
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {

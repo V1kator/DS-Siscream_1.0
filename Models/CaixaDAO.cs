@@ -25,12 +25,14 @@ namespace Siscream.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, periodo_caixa, " +
-                                    "VALUES (@nome_func, @periodo)";
+                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, periodo_caixa, senha_caixa, valorAbertura_caixa," +
+                                    "VALUES (@nome_func, @periodo, @saldoInicial)";
 
                 query.Parameters.AddWithValue("@nome_func", t.Funcionario.Nome);
                 query.Parameters.AddWithValue("@periodo", t.periodo);
-
+                query.Parameters.AddWithValue("@senha", t.senha);
+                query.Parameters.AddWithValue("@saldoInicial", t.saldoInicial);
+                
 
 
                 var result = query.ExecuteNonQuery();
