@@ -52,9 +52,8 @@
             </Button>
         </Grid>
 
-        <Button Content="RELATÓRIO" Grid.Column="1" HorizontalAlignment="Left" Margin="668,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF27D600" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_1"/>
-        <Button Content="EXCLUIR" Grid.Column="1" HorizontalAlignment="Left" Margin="441,9,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FFD60000" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Excluir_Cli"/>
-        <Button Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="213,10,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF685A5A" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_3"/>
+        <Button Content="EXCLUIR" Grid.Column="1" HorizontalAlignment="Left" Margin="841,13,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FFD60000" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Excluir_Cli"/>
+        <Button Content="EDITAR" Grid.Column="1" HorizontalAlignment="Left" Margin="613,14,0,0" VerticalAlignment="Top" Width="194" Height="65" Grid.Row="1" Background="#FF685A5A" BorderBrush="White" Foreground="White" FontSize="25" Click="Button_Click_3"/>
         <DataGrid  Margin="45,272,10,0" x:Name="Datagrid_consulta_cliente" CanUserAddRows="False" CanUserDeleteRows="False" 
                        AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2"
                        ColumnWidth="*" Grid.Column="1" FontSize="24" Background="White" BorderBrush="White">
