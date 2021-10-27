@@ -161,6 +161,7 @@
                 <DataGridTextColumn Header="Preço" Width="150" IsReadOnly="True" Binding="{Binding Preco}" />
             </DataGrid.Columns>
         </DataGrid>
+        <TextBox x:Name="lbl_preco" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="740,512,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5"/>
 
         <!--Itens selecionados na compra-->
         <!--<CheckBox Content="POTE DE SORVETE 2L " Grid.Column="2" HorizontalAlignment="Left" Margin="381.557,219,0,0" VerticalAlignment="Top" Height="31" Width="301" FontSize="25" RenderTransformOrigin="0.566,0.419"/>
