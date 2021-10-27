@@ -159,7 +159,6 @@ namespace Siscream.Models
                                     "VALUES (@nome, @quantidade, @preco)";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
-                query.Parameters.AddWithValue("@quantidade", t.quantidade);
                 query.Parameters.AddWithValue("@preco", t.Preco);
 
                 var result = query.ExecuteNonQuery();
