@@ -88,5 +88,10 @@ namespace Siscream.Views
             Consul_clien.ShowDialog();
             this.Close();
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

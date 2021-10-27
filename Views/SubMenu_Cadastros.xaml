@@ -38,6 +38,8 @@
             <Button Height="42" Background="#FF999595" Content="CADASTRAR&#xD;&#xA;   CLIENTE" Foreground="White" FontFamily="Arial Black" FontSize="17" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,20,10,0" Click="Button_Click_2"/>
             <Button Height="42" Background="#FF999595" Content="CADASTRAR &#xD;&#xA;FUNCIONÁRIO" Foreground="White" FontFamily="Arial Black" FontSize="17" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,20,10,0" Click="Button_Click_1"/>
             <Button Height="42" Background="#FF999595" Content="CONSULTAR&#xD;&#xA;   CLIENTE" Foreground="White" FontFamily="Arial Black" FontSize="17" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,20,10,0" Click="Button_Click_3"/>
+            <Button Height="42" Background="#FF999595" Content="CONSULTAR&#xD;&#xA;FUNCIONÁRIO" Foreground="White" FontFamily="Arial Black" FontSize="17" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,20,10,0" Click="Button_Click_4"/>
+
         </StackPanel>
     </Grid>
 
