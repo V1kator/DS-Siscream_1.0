@@ -80,8 +80,8 @@ namespace Siscream.Models
                 var id_end = new Endereco_DAO().InsertEnd(t.End);
 
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_funcionario (nome_func, cpf_func, cargo_func, tipoContrato_func, senha_func, dataAdmissao_func, sexo_func, nascimento_func, email_func, telefone_func, rg_func, cod_end_fk) " +
-                                    "VALUES (@nome, @cpf, @cargo, @contrato, @senha, @admissao, @sexo, @nascimento, @email, @telefone, @rg, @endereco)";
+                query.CommandText = "INSERT INTO tb_funcionario (nome_func, cpf_func, cargo_func, tipoContrato_func, senha_func, dataAdmissao_func, sexo_func, nascimento_func, salario_func,email_func, telefone_func, rg_func, cod_end_fk) " +
+                                    "VALUES (@nome, @cpf, @cargo, @contrato, @senha, @admissao, @sexo, @nascimento, @salario, @email, @telefone, @rg, @endereco)";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
                 query.Parameters.AddWithValue("@cpf", t.Cpf);
@@ -90,6 +90,7 @@ namespace Siscream.Models
                 query.Parameters.AddWithValue("@senha", t.Senha);
                 query.Parameters.AddWithValue("@admissao", t.Admissao.ToString("yyyy-MM-dd"));
                 query.Parameters.AddWithValue("@sexo", t.Sexo);
+                query.Parameters.AddWithValue("@salario", t.Salario);
                 query.Parameters.AddWithValue("@nascimento", t.Nascimento);
                 query.Parameters.AddWithValue("@email", t.Email);
                 query.Parameters.AddWithValue("@telefone", t.Telefone);

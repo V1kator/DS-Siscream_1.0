@@ -63,10 +63,14 @@ namespace Siscream.Views
 
                 funcionario.Nome = lbl_nome.Text;
                 funcionario.Cpf = lbl_cpf.Text;
+                funcionario.Rg = lbl_rg.Text;
                 funcionario.Sexo = lbl_sexo.Text;
                 funcionario.Cargo = lbl_cargo.Text;
+                funcionario.Nascimento = (DateTime)lbl_nascimento.SelectedDate;
                 funcionario.Contrato = lbl_contrato.Text;
                 funcionario.Senha = lbl_senha.Password;
+                funcionario.Salario = lbl_cpf.Text;
+                funcionario.Email = lbl_email.Text;
                 funcionario.Admissao = (DateTime)lbl_admissao.SelectedDate;
                 funcionario.Telefone = lbl_telefone.Text;
                 funcionario.End.Logradouro = lbl_rua.Text;       

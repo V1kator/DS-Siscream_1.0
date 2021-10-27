@@ -33,6 +33,7 @@ namespace Siscream.Models
         public string Sexo { get; set; }
         public DateTime Nascimento { get; set; }
         public string Telefone { get; set; }
+        public double Salario { get; set; }
         public string Email { get; set; }
         public string Rg { get; set; }
         public Endereco End { get; set; } = new Endereco();
