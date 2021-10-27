@@ -89,7 +89,6 @@ namespace Siscream.Models
                 query.Parameters.AddWithValue("@contrato", t.Contrato);
                 query.Parameters.AddWithValue("@senha", t.Senha);
                 query.Parameters.AddWithValue("@admissao", t.Admissao.ToString("yyyy-MM-dd"));
-                query.Parameters.AddWithValue("@codigo_end", t.Codigo_end);
                 query.Parameters.AddWithValue("@sexo", t.Sexo);
                 query.Parameters.AddWithValue("@nascimento", t.Nascimento);
                 query.Parameters.AddWithValue("@email", t.Email);
