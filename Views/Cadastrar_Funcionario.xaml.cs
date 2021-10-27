@@ -69,7 +69,7 @@ namespace Siscream.Views
                 funcionario.Nascimento = (DateTime)lbl_nascimento.SelectedDate;
                 funcionario.Contrato = lbl_contrato.Text;
                 funcionario.Senha = lbl_senha.Password;
-                funcionario.Salario = lbl_cpf.Text;
+                funcionario.Salario = Convert.ToDouble(lbl_salario.Text);
                 funcionario.Email = lbl_email.Text;
                 funcionario.Admissao = (DateTime)lbl_admissao.SelectedDate;
                 funcionario.Telefone = lbl_telefone.Text;
@@ -129,6 +129,11 @@ namespace Siscream.Views
         }
 
         private void lbl_nome_Copy_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void lbl_salario_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
