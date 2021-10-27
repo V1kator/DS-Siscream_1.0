@@ -75,10 +75,17 @@ CREATE TABLE tb_funcionario (
     tipoContrato_func varchar (20) not null,
     senha_func varchar (20) not null,
     dataAdmissao_func date not null,
+<<<<<<< Updated upstream
     salario_func float not null,
     cod_end_fk int not null,
 	foreign key (cod_end_fk) references tb_endereco (cod_end)
+=======
+    cod_end_fk int not null,
+    salario_func float not null
+	/*foreign key (cod_end_fk) references tb_endereco (cod_end)*/
+>>>>>>> Stashed changes
 );
+INSERT INTO tb_funcionario VALUES (null, 'Jubileu dos Santos', 12345678910, 'M', 2003-10-08, 285788814, 'ghgdhd@', 12345, 'vendedor', 'Carteira assinada', '12345678', '2019-05-25', 1, 2.540);
 
 CREATE TABLE tb_cliente (
     cod_cli int not null PRIMARY KEY auto_increment,
@@ -811,4 +818,7 @@ CALL pr_devolver_produto(2, '2021-08-28', 2, 1.5, 2);*/
 
 select * from tb_produto;
 select * from tb_caixa;
+select*from tb_funcionario;
 select * from tb_endereco;
+select * from tb_funcionario where cod_func = 'vendedor';
+SELECT * FROM tb_funcionario WHERE cargo_func ='vendedor';
