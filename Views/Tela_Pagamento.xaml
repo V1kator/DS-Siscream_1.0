@@ -57,22 +57,18 @@
 
         <!--texto valor e preco-->
         <Label Content="VALOR PAGO:" Grid.Column="1" HorizontalAlignment="Left" Margin="288,336,0,0" VerticalAlignment="Top" Height="58" Width="281" FontSize="35" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
-        <Label Content="R$80,00" Grid.Column="1" HorizontalAlignment="Left" Margin="288,378,0,0" VerticalAlignment="Top" Height="74" Width="281" FontSize="40" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
-            <Label.Background>
-                <SolidColorBrush Color="Transparent" Opacity="0.2"/>
-            </Label.Background>
-        </Label>
+        <TextBox x:Name="lbl_valor" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Margin="288,378,0,0" VerticalAlignment="Top" Height="74" Width="281" FontSize="40" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
+
+        </TextBox>
 
         <!--label pagamento e forma inferior-->
         <Label Content="PAGAMENTO" Grid.Column="1" HorizontalAlignment="Left" Margin="288,502,0,0" VerticalAlignment="Top" Height="39" Width="272" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
-        <Label Content="R$80,00 | " Grid.Column="1" HorizontalAlignment="Left" Margin="288,527,0,0" VerticalAlignment="Top" Height="43" Width="94" FontSize="18" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
-            <Label.Background>
-                <SolidColorBrush Color="Transparent" Opacity="0.2"/>
-            </Label.Background>
-        </Label>
-        
+        <TextBox x:Name ="lbl_preco_fim" IsReadOnly="True" TextAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="284,538,0,0" VerticalAlignment="Top" Height="18" Width="94" FontSize="15" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
+
+        </TextBox>
+
         <!--FORMA SELECIONADA-->
-        <TextBox x:Name="forma_de_pagamento" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="379,538,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox_TextChanged" Text="batata"/>
+        <TextBox x:Name="forma_de_pagamento" IsReadOnly="True" Grid.Column="1" TextAlignment="Center" HorizontalAlignment="Left" Height="15" Margin="379,539,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox_TextChanged"/>
 
     </Grid>
 </Window>

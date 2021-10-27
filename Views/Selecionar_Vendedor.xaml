@@ -48,6 +48,8 @@
                   Grid.Column="1"
                    DisplayMemberPath="Nome"
                   SelectedValuePath="Id"
+                  FontFamily="Yu Gothic UI"
+                  FontSize="40"
                   >
                
         </ComboBox>

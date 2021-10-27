@@ -113,14 +113,14 @@
         <Label Content="VENDEDOR:" Grid.Column="2" HorizontalAlignment="Left" Margin="428.557,65,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold"/>
         <Image Grid.Column="2" HorizontalAlignment="Left" Height="73" Margin="355.557,69,0,0" VerticalAlignment="Top" Width="100" Source="imagens/cracha.png"/>
         <Label Content="ID VENDA:" Grid.Column="2" HorizontalAlignment="Left" Margin="384.557,9,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold"/>
-        <Label Content="DATA:" Grid.Column="2" HorizontalAlignment="Left" Margin="673.557,9,0,0" VerticalAlignment="Top" Height="46" Width="90" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold"/>
+        <Label Content="DATA:" Grid.Column="2" HorizontalAlignment="Left" Margin="607.4,15,0,0" VerticalAlignment="Top" Height="46" Width="106" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold"/>
         <Button Grid.Column="2" Margin="837.557,71,35,445" RenderTransformOrigin="12.816,1.256" BorderThickness="0">
             <Button.Background>
                 <ImageBrush ImageSource="imagens/lixeira1.png"/>
             </Button.Background>
         </Button>
         <TextBox x:Name="txtnomefunc" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="428.4,99,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5"/>
-        <DatePicker x:Name="Data_venda" Grid.Column="2" HorizontalAlignment="Left" Margin="754,0,0,536" VerticalAlignment="Bottom" Height="46" Width="160" FontSize="30" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" />
+        <DatePicker x:Name="Data_venda" Grid.Column="2" HorizontalAlignment="Left" Margin="694.4,0,-0.4,527.4" VerticalAlignment="Bottom" Height="40" Width="242" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" />
 
 
         <!--Separadores
@@ -158,7 +158,7 @@
                 <DataGridTextColumn Header="Preço" Width="150" IsReadOnly="True" Binding="{Binding Preco}" />
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="lbl_preco" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="740,512,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5"/>
+        <TextBox x:Name="lbl_preco" IsReadOnly="True" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="740,512,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5" TextChanged="lbl_preco_TextChanged"/>
 
         <!--Itens selecionados na compra-->
         <!--<CheckBox Content="POTE DE SORVETE 2L " Grid.Column="2" HorizontalAlignment="Left" Margin="381.557,219,0,0" VerticalAlignment="Top" Height="31" Width="301" FontSize="25" RenderTransformOrigin="0.566,0.419"/>

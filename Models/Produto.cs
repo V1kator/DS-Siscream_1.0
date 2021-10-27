@@ -37,5 +37,7 @@ namespace Siscream.Models
                 selected = value;
             }
         }
+
+        public int Quantidade { get; set; }
     }
 }

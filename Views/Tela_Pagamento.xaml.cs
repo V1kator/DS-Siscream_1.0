@@ -19,14 +19,36 @@ namespace Siscream.Views
     /// </summary>
     public partial class Tela_Pagamento : Window
     {
+        double preco;
+        string pagamento;
+        public Tela_Pagamento(double valor)
+        {
+            preco = valor;
+            InitializeComponent();
+            Loaded += Tela_Pagamento_Loaded;
+        }
+
         public Tela_Pagamento()
         {
             InitializeComponent();
+            Loaded += Tela_Pagamento_Loaded;
+        }
+
+        private void Tela_Pagamento_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbl_valor.Text = Convert.ToString(preco);
+            lbl_preco_fim.Text = Convert.ToString(preco);
+            
+
         }
 
         private void lbl_pagamento_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+
+            pagamento = lbl_pagamento.Text;
+
+            forma_de_pagamento.Text = pagamento;
+
         }
 
         private void btn_produtos_Click(object sender, RoutedEventArgs e)
@@ -68,11 +90,12 @@ namespace Siscream.Views
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            string pagamento;
+            
+        }
 
-            pagamento = lbl_pagamento.Text;
-
-            forma_de_pagamento.Text = pagamento;
+        private void loadPagameto()
+        {
+            
         }
     }
 }

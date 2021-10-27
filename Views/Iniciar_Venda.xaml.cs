@@ -25,6 +25,8 @@ namespace Siscream.Views
         public List<Produto> prodselecionado = new List<Produto>();
 
         private Funcionario _funcionario = new Funcionario();
+
+        double valor = 0;
         public Iniciar_Venda()
         {
             InitializeComponent();
@@ -43,7 +45,8 @@ namespace Siscream.Views
             Data_venda.SelectedDate = DateTime.Now;
             txtnomefunc.Text = _funcionario.Nome;
             LoadDataGrid();
-             
+           
+
         }
 
 
@@ -61,8 +64,8 @@ namespace Siscream.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Tela_Pagamento horadepagar = new Tela_Pagamento();
-            horadepagar.ShowDialog();
+            var window = new Tela_Pagamento(valor);
+            window.ShowDialog();
             this.Close();
         }
 
@@ -92,6 +95,20 @@ namespace Siscream.Views
             dateGrid_produtos_selecionados.ItemsSource = null;
             dateGrid_produtos_selecionados.ItemsSource = prodselecionado;
 
+            
+            foreach (Produto produto in itens)
+            {
+                if (produto.IsSelected)
+                {
+                    valor = produto.Quantidade;
+                    valor = valor * produto.Preco;
+                }
+                    
+            }
+
+            LoadPreco();
+
+
             if (prodselecionado.Count == 0)
                 MessageBox.Show("Nenhum produto foi selecionado!", "", MessageBoxButton.OK, MessageBoxImage.Information);
 
@@ -106,6 +123,11 @@ namespace Siscream.Views
             var filterlist = prodList.Where(i => i.Nome.ToLower().Contains(text));
             filterprodutos.ItemsSource = filterlist;
 
+        }
+
+        private void lbl_preco_TextChanged(object sender, TextChangedEventArgs e)
+        {
+          
         }
 
         private void btn_cadastrarnovo_Click(object sender, RoutedEventArgs e)
@@ -151,14 +173,23 @@ namespace Siscream.Views
            
         }
 
+        private void LoadPreco()
+        {
+            lbl_preco.Text = Convert.ToString(valor);
+
+            
+        }
+
         private void dateGrid_produtos_selecionados_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
+
         private void filterprodutos_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
 
         }
+
     }
 }

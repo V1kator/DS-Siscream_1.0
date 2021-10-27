@@ -91,9 +91,9 @@ namespace Siscream.Views
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            Consultar_Funcionario Consul_func = new Consultar_Funcionario();
-            Consul_func.ShowDialog();
-            this.Close();
+            /*Consultar_Funcionario Consul_func = new Consultar_Funcionario();*/
+            /*Consul_func.ShowDialog();
+            this.Close();*/
         }
     }
 }
