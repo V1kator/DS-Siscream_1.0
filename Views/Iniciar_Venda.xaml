@@ -158,7 +158,8 @@
                 <DataGridTextColumn Header="Preço" Width="150" IsReadOnly="True" Binding="{Binding Preco}" />
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="lbl_preco" IsReadOnly="True" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="740,512,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5" TextChanged="lbl_preco_TextChanged"/>
+        <TextBox x:Name="lbl_preco" IsReadOnly="True" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="796.4,522,0,0" VerticalAlignment="Top" Height="28" Width="122" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5" TextChanged="lbl_preco_TextChanged"/>
+        <Label Content="R$" Grid.Column="2" HorizontalAlignment="Left" Margin="748.4,517,0,0" VerticalAlignment="Top" Height="39" Width="42" FontSize="20" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
 
         <!--Itens selecionados na compra-->
         <!--<CheckBox Content="POTE DE SORVETE 2L " Grid.Column="2" HorizontalAlignment="Left" Margin="381.557,219,0,0" VerticalAlignment="Top" Height="31" Width="301" FontSize="25" RenderTransformOrigin="0.566,0.419"/>

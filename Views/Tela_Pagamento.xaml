@@ -39,12 +39,11 @@
         <DockPanel Margin="10"/>
 
         <!--Botao valor final-->
-        <Label Content="R$80,00" Grid.Column="1" HorizontalAlignment="Left" Margin="881,489,-71,0" VerticalAlignment="Top" Height="88" Width="264" FontSize="45" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Foreground="White"/>
         <Rectangle Grid.Column="1" Fill="#FFC3C2C0" HorizontalAlignment="Left" Height="31" Margin="135,59,0,0" Stroke="Black" VerticalAlignment="Top" Width="776"/>
 
         <!--Botao confirmar e bordas-->
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="509" Margin="135,59,0,0" VerticalAlignment="Top" Width="776" Grid.Column="1">
-            <Button Content="CONFIRMAR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="186" Height="40" FontSize="20" Background="#FF139506" Foreground="White" FontFamily="Yu Gothic UI" Click="Button_Click" Margin="436,456,0,0"/>
+            <Button Content="CONFIRMAR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="445" Height="40" FontSize="20" Background="#FF139506" Foreground="White" FontFamily="Yu Gothic UI" Click="Button_Click" Margin="164.2,416.2,0,0"/>
         </Border>
         <Label Content="RESUMO VENDA" Grid.Column="1" HorizontalAlignment="Left" Margin="138,61,0,0" VerticalAlignment="Top" Height="34" Width="195" FontSize="18" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
 
@@ -57,18 +56,14 @@
 
         <!--texto valor e preco-->
         <Label Content="VALOR PAGO:" Grid.Column="1" HorizontalAlignment="Left" Margin="288,336,0,0" VerticalAlignment="Top" Height="58" Width="281" FontSize="35" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
-        <TextBox x:Name="lbl_valor" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Margin="288,378,0,0" VerticalAlignment="Top" Height="74" Width="281" FontSize="40" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
+        <TextBox x:Name="lbl_valor" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Margin="371,392,0,0" VerticalAlignment="Top" Height="50" Width="198" FontSize="40" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
 
         </TextBox>
+        <Label Content="R$" Grid.Column="1" HorizontalAlignment="Left" Margin="293,390,0,0" VerticalAlignment="Top" Height="58" Width="65" FontSize="35" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
 
         <!--label pagamento e forma inferior-->
-        <Label Content="PAGAMENTO" Grid.Column="1" HorizontalAlignment="Left" Margin="288,502,0,0" VerticalAlignment="Top" Height="39" Width="272" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
-        <TextBox x:Name ="lbl_preco_fim" IsReadOnly="True" TextAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="284,538,0,0" VerticalAlignment="Top" Height="18" Width="94" FontSize="15" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold" Opacity="0.5">
-
-        </TextBox>
 
         <!--FORMA SELECIONADA-->
-        <TextBox x:Name="forma_de_pagamento" IsReadOnly="True" Grid.Column="1" TextAlignment="Center" HorizontalAlignment="Left" Height="15" Margin="379,539,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox_TextChanged"/>
 
     </Grid>
 </Window>
