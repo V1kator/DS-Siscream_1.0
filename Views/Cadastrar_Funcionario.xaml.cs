@@ -137,5 +137,20 @@ namespace Siscream.Views
         {
 
         }
+
+        private void lbl_cargo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void lbl_id_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void lbl_id_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

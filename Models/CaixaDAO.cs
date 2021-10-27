@@ -118,7 +118,7 @@ namespace Siscream.Models
 
                 var query = conn.Query();
 
-                /*query.CommandText = "SELECT funcionario_caixa FROM tb_caixa"*/
+                query.CommandText = "SELECT funcionario_caixa FROM tb_caixa";
 
                 MySqlDataReader reader = query.ExecuteReader();
 

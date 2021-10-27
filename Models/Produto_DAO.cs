@@ -163,6 +163,7 @@ namespace Siscream.Models
                 query.Parameters.AddWithValue("@preco", t.Preco);
 
                 var result = query.ExecuteNonQuery();
+
             }
             catch (Exception e)
             {
