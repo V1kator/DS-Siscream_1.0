@@ -1,19 +1,3 @@
-#################################################################################
-######################### SISTEMA COMERCIAL SISCREAM 1.0 ########################
-
-################################## ALUNOS #######################################
-# André Raymundo | Gabriel Henrique | Gabrielly Lorraynne | Paulo Santos        #
-# Thallia Michelle | Victor Daniel                                              #
-#################################################################################
-
-############################ REQUISITOS FUNCIONAIS ##############################
-# Cadastrar Cliente, Cadastrar Funcionário, Vender Produto, Abrir Caixa         #
-# Fazer Login, Cadastrar Produto, Lançar gasto, Fechar caixa, Consultar         #
-# estoque, Devolver produto, Consultar cliente, Repor estoque             #
-#################################################################################
-
-############################## BANCO DE DADOS ###################################
-
 CREATE DATABASE siscream;
 USE siscream;
 
@@ -35,11 +19,13 @@ CREATE TABLE tb_produto (
 	descricao_prod varchar (200) not null
 );
 
+
+
 CREATE TABLE tb_endereco (
     cod_end int not null PRIMARY KEY auto_increment,
     logradouro_end varchar (100) not null, 
     numero_end varchar(5) not null,
-    bairro_end varchar(15) not null,
+    bairro_end varchar(50) not null,
     cidade_end varchar (100) not null, 
     uf_end varchar(100) not null,
     cep_end varchar (100) not null 
@@ -66,7 +52,7 @@ CREATE TABLE tb_funcionario (
     nome_func varchar (100) not null,
     cpf_func varchar (11) not null,
     sexo_func varchar (20) not null, 
-    nascimento_func varchar (11),
+    nascimento_func date,
     telefone_func varchar (20), 
     email_func varchar (50),
     rg_func varchar (15) not null,
@@ -142,7 +128,7 @@ CREATE TABLE tb_devolucao_produtos (
     foreign key (cod_dev_fk) references tb_devolver_produto (cod_dev_pro)
 ); 
 
-select * from tb_produto;
+select * from tb_caixa;
 select * from tb_gasto;
 select * from tb_funcionario;
 select * from tb_login;
