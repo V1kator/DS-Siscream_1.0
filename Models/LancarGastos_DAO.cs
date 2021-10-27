@@ -32,6 +32,7 @@ namespace Siscream.Models
 
         public void Insert(LancarGastos t)
         {
+            /*
             try
             {
                 var query = conn.Query();
@@ -55,7 +56,8 @@ namespace Siscream.Models
             finally
             {
                 conn.Close();
-            }
+            } 
+            */
         }
 
         public List<LancarGastos> List()

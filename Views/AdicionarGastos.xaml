@@ -25,19 +25,19 @@
 
 
         <StackPanel Background="#FF139506" Margin="0,0,30,4" Grid.RowSpan="2" >
-            <Image Source="/imagens/icone_produtos.png" Height="100" Width="100"/>
+            <Image Source="/Views/imagens/icone_produtos.png" Height="100" Width="100"/>
             <Button Height="42" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="vai_tela_subproduto"/>
-            <Image Source="/imagens/icone_vendas.png" Height="100" Width="100"/>
+            <Image Source="/Views/imagens/icone_vendas.png" Height="100" Width="100"/>
             <Button x:Name="botao_vendas" Height="42" Background="#FF1ADA06" Content="VENDAS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="botao_vendas_Click"/>
-            <Image Source="/imagens/icone_gastos.png" Height="100" Width="100"/>
+            <Image Source="/Views/imagens/icone_gastos.png" Height="100" Width="100"/>
             <Button x:Name="botaos_gastos" Height="42" Background="#FF1ADA06" Content="LANÇAR &#xD;&#xA;GASTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="botaos_gastos_Click" />
-            <Image Source="/imagens/icone_cadastrar.png" Height="100" Width="100" Margin="35,0"/>
+            <Image Source="/Views/imagens/icone_cadastrar.png" Height="100" Width="100" Margin="35,0"/>
             <Button x:Name="botao_escravos" Height="42" Background="#FF1ADA06" Content="CADASTRAR" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="botao_escravos_Click"/>
         </StackPanel>
 
         <Button x:Name="botao_sair" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" 
                 FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,589,30,0" Grid.RowSpan="2" Click="btn_close_Click"/>
-        <Image Source="/imagens/icone_sair.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
+        <Image Source="/Views/imagens/icone_sair.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
 
         <StackPanel Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Margin="6,30,4,32">
             <Label Content="PRODUTO" FontSize="40" Height="48" Padding="0 0 0 0" Margin="-30,0,0,0" Background="#FA8072" HorizontalContentAlignment="Center"></Label>

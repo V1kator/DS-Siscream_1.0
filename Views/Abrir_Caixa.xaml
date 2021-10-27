@@ -18,19 +18,19 @@
         </Grid.RowDefinitions>
 
         <StackPanel Background="#FF139506" Margin="0,0,30,4" Grid.RowSpan="2" >
-            <Image Source="/imagens/icone_produtos.png" Height="100" Width="100"/>
+            <Image Source="/Views/imagens/icone_produtos.png" Height="100" Width="100"/>
             <Button Height="42" Background="#FF1ADA06" Content="PRODUTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="vai_tela_subproduto"/>
-            <Image Source="/imagens/icone_vendas.png" Height="100" Width="100"/>
+            <Image Source="/Views/imagens/icone_vendas.png" Height="100" Width="100"/>
             <Button x:Name="botao_vendas" Height="42" Background="#FF1ADA06" Content="VENDAS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="botao_vendas_Click"/>
-            <Image Source="/imagens/icone_gastos.png" Height="100" Width="100"/>
+            <Image Source="/Views/imagens/icone_gastos.png" Height="100" Width="100"/>
             <Button x:Name="botaos_gastos" Height="42" Background="#FF1ADA06" Content="LANÇAR &#xD;&#xA;GASTOS" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="botaos_gastos_Click" />
-            <Image Source="/imagens/icone_cadastrar.png" Height="100" Width="100" Margin="35,0"/>
+            <Image Source="/Views/imagens/icone_cadastrar.png" Height="100" Width="100" Margin="35,0"/>
             <Button x:Name="botao_escravos" Height="42" Background="#FF1ADA06" Content="CADASTRAR" Foreground="White" FontFamily="Arial Black" FontSize="17" Click="botao_escravos_Click"/>
         </StackPanel>
 
         <Button x:Name="botao_sair" Background="#FFF10404" Content="  SAIR" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" 
                 FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,589,30,0" Grid.RowSpan="2" Click="btn_close_Click"/>
-        <Image Source="/imagens/icone_sair.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
+        <Image Source="/Views/imagens/icone_sair.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
 
         <StackPanel Margin="196,29,44,11" Grid.ColumnSpan="2" >
             <Label Content="ABRIR CAIXA" FontSize="40" HorizontalAlignment="Left" Margin="0 0 0 0" FontWeight="Bold"/>
@@ -40,24 +40,25 @@
             <Label Content=" Funcionário" FontSize="18" HorizontalAlignment="Left" Margin="0 100 0 0" />
             <ComboBox x:Name="Funcionario" Grid.Column="1" Margin="0 0 800 0" BorderThickness="3" FontSize="20" SelectionChanged="Funcionario_SelectionChanged">
                 <ComboBoxItem Content="Paulo Santos"/>
+                <ComboBoxItem Content="Victor Daniel"/>
             </ComboBox>
         </StackPanel>
 
         <StackPanel Grid.Column="1">
             <Label Content="Período" FontSize="18" HorizontalAlignment="Left" Margin="400 130 0 0" Grid.Column="1"/>
-            <ComboBox x:Name="Periodo" Grid.Column="1" Margin="400 0 425 390" BorderThickness="3" FontSize="20">
-                <ComboBoxItem Content="Matutino"/>
-                <ComboBoxItem Content="Vespertino"/>
-                <ComboBoxItem Content="Noturno"/>
-                <ComboBoxItem Content="Integral"/>
-            </ComboBox>
+            <TextBox x:Name="Periodo" HorizontalAlignment="Left" FontSize="20" Height="37" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="290" Grid.Column="2" Margin="390,0,10,0" />
         </StackPanel>
 
-        <StackPanel Grid.ColumnSpan="2" Margin="190,9,10,13"/>
+        <StackPanel Grid.ColumnSpan="2" Margin="190,9,10,13">
+            <Label Content="Senha" FontSize="18" HorizontalAlignment="Right" Margin="300 120 220 0" />
+            <PasswordBox x:Name="Senha" Height="30" Margin="800 5 40 30" BorderThickness="4"/>
+        </StackPanel>
+        
 
         <StackPanel Grid.ColumnSpan="2">
             <Image Source="imagens/caixa_registradora.png" Height="220" Width="500" Margin="0 270 550 0"/>
-            <Label Content="R$ 20,00" Height="64" Width="230" FontSize="33" Margin="0 10 550 0" Background="#4682B4" HorizontalContentAlignment="Center" Foreground="White"/>
+            <TextBox  Height="64" Width="230" FontSize="33" Margin="0 10 550 0" Background="#4682B4" HorizontalContentAlignment="Center" Foreground="White"/>
         </StackPanel>
 
         <Button x:Name="botao_cancelar" Background="#fc3c4c" HorizontalContentAlignment="Center" FontFamily="Arial Black" 

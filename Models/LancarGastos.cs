@@ -12,7 +12,7 @@ namespace Siscream.Models
 
         public string valor_gas { get; set; }
 
-        public string data_gas { get; set; }
+        public DateTime data_gas { get; set; }
 
     }
 }

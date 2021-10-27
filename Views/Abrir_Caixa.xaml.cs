@@ -62,7 +62,33 @@ namespace Siscream.Views
 
         private void botao_abrir_Click(object sender, RoutedEventArgs e)
         {
-           PopUp_Abrir_Caixa PupUp = new PopUp_Abrir_Caixa();
+            /*
+            try
+            {
+                Caixa acx = new Caixa();
+                Funcionario funcionario = new Funcionario();
+
+                funcionario.Nome = Funcionario.Text;
+                acx.periodo = Periodo.Text;
+
+
+                CaixaDAO cxDAO = new CaixaDAO();
+                cxDAO.AbrirCaixa(acx);
+                Funcionario_DAO funcionarioDAO = new Funcionario_DAO();
+                funcionarioDAO.Insert(funcionario);
+
+                PopUp_Abrir_Caixa caixaA = new PopUp_Abrir_Caixa();
+                caixaA.ShowDialog();
+                this.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            */
+
+            PopUp_Abrir_Caixa PupUp = new PopUp_Abrir_Caixa();
            PupUp.ShowDialog();
         }
 

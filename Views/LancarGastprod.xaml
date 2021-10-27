@@ -29,8 +29,9 @@
 
 
         <Label Content="DATA*" Grid.Column="2" HorizontalAlignment="Left" Margin="30 100 0 0" VerticalAlignment="Top" Height="34" Width="196" FontSize="18"/>
-        <TextBox x:Name="data" Grid.Column="2" HorizontalAlignment="Left" Height="37" Margin="30 130 0 0" TextWrapping="Wrap" VerticalAlignment="Top" 
-                 Width="290" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
+        <DatePicker x:Name="data" Grid.Column="2" HorizontalAlignment="Left" Height="37" Margin="30,130,0,0"  VerticalAlignment="Top"
+                    Width="290" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
+
 
 
         <Button x:Name="botao_ok" Background="#FF139506" Content="Confirmar" FontSize="27" 
