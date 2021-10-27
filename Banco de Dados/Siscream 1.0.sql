@@ -75,8 +75,8 @@ CREATE TABLE tb_funcionario (
     tipoContrato_func varchar (20) not null,
     senha_func varchar (20) not null,
     dataAdmissao_func date not null,
-    cod_end_fk int not null,
     salario_func float not null,
+    cod_end_fk int not null,
 	foreign key (cod_end_fk) references tb_endereco (cod_end)
 );
 

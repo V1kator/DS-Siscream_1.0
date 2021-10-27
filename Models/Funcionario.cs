@@ -30,7 +30,6 @@ namespace Siscream.Models
         public string Contrato { get; set; }
         public string Senha { get; set; }
         public DateTime Admissao { get; set; }
-        public int Codigo_end { get; set; }
         public string Sexo { get; set; }
         public DateTime Nascimento { get; set; }
         public string Telefone { get; set; }
