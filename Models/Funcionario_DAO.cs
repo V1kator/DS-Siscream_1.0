@@ -137,8 +137,8 @@ namespace Siscream.Models
                         Contrato = reader.GetString("tipoContrato_func"),
                         Senha = reader.GetString("senha_func"),
                         Nome = reader.GetString("nome_func"),
-                        Admissao = reader.GetDateTime("dataAdmissao_func"),
-                        Codigo_end = reader.GetInt32("cod_end_fk")
+                        Admissao = reader.GetDateTime("dataAdmissao_func")
+                  
                     }) ;
                 }
                 return list;
