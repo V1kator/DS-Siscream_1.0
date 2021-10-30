@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,7 @@ namespace Siscream.Models
     {
         public int id { get; set; }
         public Funcionario Funcionario { get; set; } = new Funcionario();
-        public string periodo { get; set; }
+        public DateTime periodo { get; set; }
         public string aberto { get; set; }
         public string fechado { get; set; }
         public double saldoInicial { get; set; }

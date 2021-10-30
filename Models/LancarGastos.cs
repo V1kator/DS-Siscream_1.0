@@ -8,11 +8,13 @@ namespace Siscream.Models
 {
     class LancarGastos
     {
-        public string Descricao_gas { get; set; }
+        public int cod_g { get; set; }
 
-        public string valor_gas { get; set; }
+        public string Descricao{ get; set; }
 
-        public DateTime data_gas { get; set; }
+        public double valor { get; set; }
+
+        public DateTime data { get; set; }
 
     }
 }

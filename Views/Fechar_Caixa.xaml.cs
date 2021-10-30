@@ -72,7 +72,7 @@ namespace Siscream.Views
         private void Salvar_Click(object sender, RoutedEventArgs e)
         {
             try
-            {
+            {         
                 Caixa cx = new Caixa();
                 Funcionario funcionario = new Funcionario();
                 cx.id = Convert.ToInt32(ID.Text); 

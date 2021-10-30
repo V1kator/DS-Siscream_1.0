@@ -23,6 +23,12 @@ namespace Siscream.Views
         public Abrir_Caixa()
         {
             InitializeComponent();
+            Loaded += Abrir_Caixa_Loaded;
+        }
+
+        private void Abrir_Caixa_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadComboBox();
         }
 
 
@@ -60,20 +66,27 @@ namespace Siscream.Views
             this.Close();
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
         private void botao_abrir_Click(object sender, RoutedEventArgs e)
         {
-            /*
+            
             try
             {
-                Caixa acx = new Caixa();
+                Caixa cx = new Caixa();
                 Funcionario funcionario = new Funcionario();
 
-                funcionario.Nome = Funcionario.Text;
-                acx.periodo = Periodo.Text;
+
+                funcionario.Nome = func_nome.Text;
+                cx.periodo = (DateTime)abertura.SelectedDate;
+                cx.saldoInicial = Convert.ToDouble(valorcaixa.Text);
 
 
                 CaixaDAO cxDAO = new CaixaDAO();
-                cxDAO.AbrirCaixa(acx);
+                cxDAO.AbrirCaixaInsert(cx);
                 Funcionario_DAO funcionarioDAO = new Funcionario_DAO();
                 funcionarioDAO.Insert(funcionario);
 
@@ -86,7 +99,7 @@ namespace Siscream.Views
             {
                 MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            */
+            
 
             PopUp_Abrir_Caixa PupUp = new PopUp_Abrir_Caixa();
            PupUp.ShowDialog();
@@ -101,6 +114,28 @@ namespace Siscream.Views
         {
 
         }
+
+
+
+        private void LoadComboBox()
+        {
+            try
+            {
+                func_nome.ItemsSource = new Funcionario_DAO().List();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não executado", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+
+
+        }
+        private void func_nome_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
     }
 }
 

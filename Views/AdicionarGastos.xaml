@@ -39,33 +39,19 @@
                 FontFamily="Arial Black" FontSize="35" VerticalContentAlignment="Center" FontWeight="Normal" FontStyle="Normal" BorderBrush="#FFF10404" Foreground="White" OpacityMask="#FFE60707" Margin="0,589,30,0" Grid.RowSpan="2" Click="btn_close_Click"/>
         <Image Source="/Views/imagens/icone_sair.png" Height="60" Width="60" HorizontalAlignment="Left" Margin="110,20,0,20" Grid.Row="1"/>
 
-        <DataGrid x:Name="filterprodutos" 
-                  Grid.Column="1" 
-                  Margin="7,204,621,3" 
-                  FontSize="20" 
-                  VerticalContentAlignment="Top" 
-                  AutoGenerateColumns="False"
-                  Background="#FFFF9900" 
-                  Grid.ColumnSpan="2" 
-                  CanUserAddRows="False"
-                  CanUserDeleteRows="False"
-                  AlternationCount="2">
+        <DataGrid  Margin="28,56,27,64" x:Name="Datagrid_Lancar_Gastos" CanUserAddRows="False" CanUserDeleteRows="False" 
+                       AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2"
+                       ColumnWidth="*" Grid.Column="1" FontSize="24" Background="White" BorderBrush="White" Grid.ColumnSpan="5" SelectionChanged="Datagrid_consulta_cliente_SelectionChanged">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Codigo" IsReadOnly="True" Binding="{Binding cod_g}"/>
+                <DataGridTextColumn Header="Descrição" IsReadOnly="True" Binding="{Binding Descricao}"/>
+                <DataGridTextColumn Header="Valor Gasto(R$)" IsReadOnly="True" Binding="{Binding valor}"/>
+                <DataGridTextColumn Header="Data(Mês/data/Ano)" IsReadOnly="True" Binding="{Binding data  }"/>
 
-                <DataGridTextColumn Header="Nome" Width="100" IsReadOnly="True" Binding="{Binding Nome}" />
-                <DataGridTextColumn Header="Descrição" Width="200" IsReadOnly="True" Binding="{Binding Descricao}" />
-                <DataGridTextColumn Header="Preço" Width="100" IsReadOnly="True" Binding="{Binding Preco}" />
-
-                <DataGridTemplateColumn Header="Adicionar">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <CheckBox IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}"></CheckBox>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-
-                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+
+
         <Separator Grid.Column="2" HorizontalAlignment="Left" Height="118" Margin="25.557,289,0,0" VerticalAlignment="Top" Width="690" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>
                 <TransformGroup>

@@ -23,7 +23,28 @@ namespace Siscream.Views
         public AdicionarGastos()
         {
             InitializeComponent();
+            Loaded += AdicionarGastos_Loaded;
         }
+
+        private void AdicionarGastos_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadDataGrid();
+        }
+
+        private void LoadDataGrid()
+        {
+            try
+            {
+                var dao = new LancarGastos_DAO();
+
+                Datagrid_Lancar_Gastos.ItemsSource = dao.List();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "erro");
+            }
+        }
+
         private void vai_tela_subproduto(object sender, RoutedEventArgs e)
         {
             SubMenu_Produtos subproduto = new SubMenu_Produtos();
@@ -69,5 +90,9 @@ namespace Siscream.Views
             this.Close();
         }
 
+        private void Datagrid_consulta_cliente_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

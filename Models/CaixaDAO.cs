@@ -20,19 +20,19 @@ namespace Siscream.Models
 
         }
 
-        public void AbrirCaixa(Caixa t)
+        public void AbrirCaixaInsert(Caixa t)
         {
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, periodo_caixa, senha_caixa, valorAbertura_caixa," +
-                                    "VALUES (@nome_func, @periodo, @saldoInicial)";
+
+                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, periodo_caixa, valorAbertura_caixa," +
+                                    "VALUES (@nome_func, @periodo, @saldoinicial)";
 
                 query.Parameters.AddWithValue("@nome_func", t.Funcionario.Nome);
                 query.Parameters.AddWithValue("@periodo", t.periodo);
-                query.Parameters.AddWithValue("@saldoInicial", t.saldoInicial);
-                
-
+                query.Parameters.AddWithValue("@saldoinicial", t.saldoInicial);
+               
 
                 var result = query.ExecuteNonQuery();
 
@@ -140,6 +140,8 @@ namespace Siscream.Models
                 throw e;
             }
         }
+
+
 
         public void Update(Caixa t)
         {

@@ -19,16 +19,16 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
-        <Label Content="GASTO*" Grid.Column="0" HorizontalAlignment="Left" Margin="30 100 0 0" VerticalAlignment="Top" Height="34" Width="196" FontSize="18"/>
+        <Label Content="GASTO (R$)" Grid.Column="0" HorizontalAlignment="Left" Margin="30 100 0 0" VerticalAlignment="Top" Height="34" Width="196" FontSize="18"/>
         <TextBox x:Name="gasto" Grid.Column="0" HorizontalAlignment="Left" Height="37" Margin="30 130 0 0" TextWrapping="Wrap" VerticalAlignment="Top" 
                  Width="260" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
-        <Label Content="PRODUTO*" Grid.Column="1" HorizontalAlignment="Left" Margin="30 100 0 0" VerticalAlignment="Top" Height="34" Width="196" FontSize="18"/>
+        <Label Content="PRODUTO" Grid.Column="1" HorizontalAlignment="Left" Margin="30 100 0 0" VerticalAlignment="Top" Height="34" Width="196" FontSize="18"/>
         <TextBox x:Name="produto" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="30 130 0 0" TextWrapping="Wrap" VerticalAlignment="Top" 
                  Width="290" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 
 
-        <Label Content="DATA*" Grid.Column="2" HorizontalAlignment="Left" Margin="30 100 0 0" VerticalAlignment="Top" Height="34" Width="196" FontSize="18"/>
+        <Label Content="DATA" Grid.Column="2" HorizontalAlignment="Left" Margin="30 100 0 0" VerticalAlignment="Top" Height="34" Width="196" FontSize="18"/>
         <DatePicker x:Name="data" Grid.Column="2" HorizontalAlignment="Left" Height="37" Margin="30,130,0,0"  VerticalAlignment="Top"
                     Width="290" FontSize="18" RenderTransformOrigin="0.433,0.108" BorderThickness="3"/>
 

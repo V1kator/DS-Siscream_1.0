@@ -31,14 +31,13 @@ namespace Siscream.Views
             {
                 LancarGastos lancargastos = new LancarGastos();
 
-                lancargastos.valor_gas = gasto.Text;
-                lancargastos.Descricao_gas = produto.Text;
-                lancargastos.data_gas = (DateTime)data.SelectedDate;
+                lancargastos.valor = Convert.ToDouble(gasto.Text);
+                lancargastos.Descricao = produto.Text;
+                lancargastos.data = (DateTime)data.SelectedDate;
 
                 LancarGastos_DAO lancargastos_DAO = new LancarGastos_DAO();
                 lancargastos_DAO.Insert(lancargastos);
 
-                MessageBox.Show("Gasto adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
 
             }
 
