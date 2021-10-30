@@ -122,6 +122,8 @@ CREATE TABLE tb_login(
 CREATE TABLE tb_Venda_Produto (
 	cod_vendaProd int not null PRIMARY KEY auto_increment,
 	quantidade_prodVenda int,
+    valor_prodVenda double,
+    valorTotal_prodVenda double,
 	cod_prod_fk int not null,
 	foreign key (cod_prod_fk) references tb_produto (cod_prod)
 );

@@ -54,6 +54,8 @@ namespace Siscream.Models
                         {
                             Codigo = reader.GetInt32("cod_prodVenda"),
                             Quantidade = reader.GetInt32("quantidade_prodVenda")
+                            Valor = reader.GetDouble("valor_prodVenda")
+                            ValorTotal = reader.GetDouble("valorTotal_prodVenda")
                         });
                      
                 }
