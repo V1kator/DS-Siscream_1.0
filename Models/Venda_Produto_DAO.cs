@@ -34,11 +34,11 @@ namespace Siscream.Models
             throw new NotImplementedException();
         }
 
-        public List<Venda_Produto> List()
+        public List<Venda_Produto> _compraItensList()
         {
             try
             {
-                List<Venda_Produto> list = new List<Venda_Produto>();
+                List<Venda_Produto> _compraItensList = new List<Venda_Produto>();
 
                 var query = conn.Query();
                 query.CommandText = "SELECT * FROM tb_Venda_Produto";
@@ -49,17 +49,17 @@ namespace Siscream.Models
                 {
 
                     var prod = new Produto();
-                    
-                        list.Add(new Venda_Produto()
+
+                    _compraItensList.Add(new Venda_Produto()
                         {
                             Codigo = reader.GetInt32("cod_prodVenda"),
-                            Quantidade = reader.GetInt32("quantidade_prodVenda")
-                            Valor = reader.GetDouble("valor_prodVenda")
+                            Quantidade = reader.GetInt32("quantidade_prodVenda"),
+                            Valor = reader.GetDouble("valor_prodVenda"),
                             ValorTotal = reader.GetDouble("valorTotal_prodVenda")
                         });
                      
                 }
-                return list;
+                return _compraItensList;
             }
             catch (Exception e)
             {
@@ -72,6 +72,11 @@ namespace Siscream.Models
         }
 
         public void Update(Venda_Produto t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Venda_Produto> List()
         {
             throw new NotImplementedException();
         }

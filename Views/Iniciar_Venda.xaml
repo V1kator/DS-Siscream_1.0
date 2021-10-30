@@ -102,7 +102,7 @@
             </Separator.RenderTransform>
         </Separator>
 
-        <Button Grid.Column="2" Margin="267.557,10,620,50" Grid.Row="1" Click="Button_Click_1">
+        <Button Grid.Column="2" Margin="267.557,10,620,50" Grid.Row="1" Click="Button_Click_1" RenderTransformOrigin="0.505,0.5">
             <Button.Background>
                 <ImageBrush ImageSource="imagens/adicionar.png"/>
             </Button.Background>
@@ -119,7 +119,7 @@
                 <ImageBrush ImageSource="imagens/lixeira1.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtnomefunc" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="428.4,99,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5"/>
+        <TextBox x:Name="txtnomefunc" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="428.4,99,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5" TextChanged="txtnomefunc_TextChanged"/>
         <DatePicker x:Name="Data_venda" Grid.Column="2" HorizontalAlignment="Left" Margin="694.4,0,-0.4,527.4" VerticalAlignment="Bottom" Height="40" Width="242" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" />
 
 
@@ -151,13 +151,16 @@
             CanUserAddRows="False"
             CanUserDeleteRows="False"
             AlternationCount="2" SelectionChanged="dateGrid_produtos_selecionados_SelectionChanged">
+            
             <DataGrid.Columns>
 
                 <DataGridTextColumn Header="Nome" Width="100" IsReadOnly="True" Binding="{Binding Nome}" />
                 <DataGridTextColumn Header="Quantidade" Width="300" IsReadOnly="False" Binding="{Binding Quantidade}" />
                 <DataGridTextColumn Header="Preço" Width="150" IsReadOnly="True" Binding="{Binding Preco}" />
             </DataGrid.Columns>
+            
         </DataGrid>
+        
         <TextBox x:Name="lbl_preco" IsReadOnly="True" IsEnabled="False" Grid.Column="2" HorizontalAlignment="Left" Margin="796.4,522,0,0" VerticalAlignment="Top" Height="28" Width="122" FontSize="25" RenderTransformOrigin="-0.374,0.185" FontFamily="Source Sans Pro" FontWeight="Bold" Opacity="0.5" TextChanged="lbl_preco_TextChanged"/>
         <Label Content="R$" Grid.Column="2" HorizontalAlignment="Left" Margin="748.4,517,0,0" VerticalAlignment="Top" Height="39" Width="42" FontSize="20" RenderTransformOrigin="-0.374,0.185" FontWeight="Bold"/>
 

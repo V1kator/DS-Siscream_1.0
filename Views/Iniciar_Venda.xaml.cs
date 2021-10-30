@@ -24,6 +24,8 @@ namespace Siscream.Views
 
         public List<Produto> prodselecionado = new List<Produto>();
 
+        private List<Venda_Produto> _compraItensList = new List<Venda_Produto>();
+
         private Funcionario _funcionario = new Funcionario();
 
         double valor = 0;
@@ -64,9 +66,22 @@ namespace Siscream.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+
             var window = new Tela_Pagamento(valor);
             window.ShowDialog();
             this.Close();
+        }
+
+        private double UpdateValorTotal()
+        {
+            double valor = 0.0;
+
+            _compraItensList.ForEach(item => valor += item.ValorTotal);
+
+            lbl_preco.Text = valor.ToString("C");
+
+            return valor;
         }
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
@@ -78,6 +93,27 @@ namespace Siscream.Views
         {
             SubMenu_Vendas submenu_vendas = new SubMenu_Vendas();
             submenu_vendas.ShowDialog();
+        }
+        private void BtnAddProduto_Click(object sender, RoutedEventArgs e)
+        {
+
+            foreach (Produto produto in prodselecionado)
+            {
+
+                if (!_compraItensList.Exists(item => item.Produto.Id == produto.Id))
+                {
+                    _compraItensList.Add(new Venda_Produto()
+                    {
+                        Produto = produto,
+                        Quantidade = 1,
+                        Valor = produto.Preco,
+                        ValorTotal = produto.Preco
+                    }) ;
+
+                }
+            }
+
+            LoadDataGrid();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -102,6 +138,7 @@ namespace Siscream.Views
                 {
                     valor = produto.Quantidade;
                     valor = valor * produto.Preco;
+
                 }
                     
             }
@@ -191,5 +228,9 @@ namespace Siscream.Views
 
         }
 
+        private void txtnomefunc_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
