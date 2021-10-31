@@ -75,8 +75,7 @@ namespace Siscream.Views
             {         
                 Caixa cx = new Caixa();
                 Funcionario funcionario = new Funcionario();
-                cx.id = Convert.ToInt32(ID.Text); 
-
+                
                 funcionario.Nome = func_nome.Text;
 
                 cx.saldoInicial = Convert.ToDouble(saldoIn.Text);

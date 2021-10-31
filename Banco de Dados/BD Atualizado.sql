@@ -50,15 +50,15 @@ CREATE TABLE tb_endereco (
 CREATE TABLE tb_caixa (
     cod_caixa int primary key not null auto_increment,
     funcionario_caixa varchar (100),
-	valorAbertura_caixa double,
-    suprimento double,
-    dinheiro_caixa double,
-	credito_caixa double,
-	debito_caixa double,
-    total_caixa double,
-    valor_retirado_caixa double,
+	valorAbertura_caixa float,
+    suprimento float,
+    dinheiro_caixa float,
+	credito_caixa float,
+	debito_caixa float,
+    total_caixa float,
+    valor_retirado_caixa float,
     especificacoes varchar(500),
-    saldofinal_caixa double
+    saldofinal_caixa float
 );
 
 CREATE TABLE tb_funcionario (
@@ -78,8 +78,7 @@ CREATE TABLE tb_funcionario (
     salario_func float not null,
 	foreign key (cod_end_fk) references tb_endereco (cod_end)
 );
-select*from tb_funcionario;
-insert into tb_funcionario values (null, 'Thallia', '12345673498', 'F', '2003-10-08', '9 93213411', 'thallia@gmail.com', '12345', 'Atendente de Caixa', 'carteira assinada', '123', '2021-10-02', '1500');
+
 CREATE TABLE tb_cliente (
     cod_cli int not null PRIMARY KEY auto_increment,
     nome_cli varchar (100) not null,

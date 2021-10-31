@@ -56,14 +56,12 @@ namespace Siscream.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_caixa (cod_caixa, funcionario_caixa, hora_abertura_caixa , hora_fechamento_caixa, valorAbertura_caixa," +
+                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, valorAbertura_caixa," +
                         "dinheiro_caixa, credito_caixa, debito_caixa, total_caixa, valor_retirado_caixa, especificacoes, saldofinal_caixa) " +
-                        "VALUES (@id, @nome_func, @aberto, @fechado, @saldoInicial, @dinheiroCX, @creditoCX, @debitoCX, @totalCX, @valorRetirado, @especif, @saldoFinal)";
+                        "VALUES (@nome_func, @saldoInicial, @dinheiroCX, @creditoCX, @debitoCX, @totalCX, @valorRetirado, @especif, @saldoFinal)";
 
-                query.Parameters.AddWithValue("@id", t.id);
+               
                 query.Parameters.AddWithValue("@nome_func", t.Funcionario.Nome);
-                query.Parameters.AddWithValue("@aberto", t.aberto);
-                query.Parameters.AddWithValue("@fechado", t.fechado);
                 query.Parameters.AddWithValue("@saldoInicial", t.saldoInicial);
                 query.Parameters.AddWithValue("@dinheiroCX", t.dinheiroCX);
                 query.Parameters.AddWithValue("@creditoCX", t.creditoCX);
@@ -110,35 +108,35 @@ namespace Siscream.Models
 
         public List<Caixa> List()
         {
-            try
-            {
+           try
+              {
 
-                List<Caixa> list = new List<Caixa>();
+                  List<Caixa> list = new List<Caixa>();
 
-                var query = conn.Query();
+                  var query = conn.Query();
 
-                query.CommandText = "SELECT funcionario_caixa FROM tb_caixa";
+                  query.CommandText = "SELECT funcionario_caixa FROM tb_caixa";
 
-                MySqlDataReader reader = query.ExecuteReader();
+                  MySqlDataReader reader = query.ExecuteReader();
 
-                while (reader.Read())
-                {
-                    var cx = new Caixa()
-                    {
+                  while (reader.Read())
+                  {
+                      var cx = new Caixa()
+                      {
 
 
-                    };
+                      };
 
-                    list.Add(cx);
+                      list.Add(cx);
 
-                }
-                return list;
+                  }
+                  return list;
 
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
+              }
+              catch (Exception e)
+              {
+                  throw e;
+              }
         }
 
 

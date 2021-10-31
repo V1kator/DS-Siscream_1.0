@@ -44,10 +44,8 @@
         <Label Content="FUNCIONÁRIO*" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="162,120,0,0" FontSize="18" Height="34" Width="143" RenderTransformOrigin="0.562,1.764"/>
 
         <!--Informações iniciais-->
-        <Label Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="10,91,0,0" FontSize="18" Height="34" Width="143"/>
         <Label Content="Saldo inicial:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="488,120,0,0" FontSize="18" Height="34" Width="117" RenderTransformOrigin="3.698,-0.606"/>
         <TextBox x:Name="saldoIn" HorizontalAlignment="Left" Background="White" FontSize="18" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Grid.Column="1" Margin="488,159,0,0" BorderBrush="Black"/>
-        <TextBox x:Name="ID" HorizontalAlignment="Left" Background="LightGray" FontSize="18" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Grid.Column="1" Margin="62,90,0,0" BorderBrush="Black" RenderTransformOrigin="0.643,0.568"/>
 
         <!-- Entradas Caixa-->
         <Separator HorizontalAlignment="Left" Height="157" Margin="125,201,0,0" VerticalAlignment="Top" Width="949" Grid.Column="1" Background="#FF13A426" RenderTransformOrigin="0.504,0.356"/>
