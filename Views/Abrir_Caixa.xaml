@@ -39,8 +39,8 @@
         <StackPanel Margin="196,29,44,11" Grid.ColumnSpan="2">
             <Label Content=" Funcionário" FontSize="18" HorizontalAlignment="Left" Margin="0 100 0 0" />
             <ComboBox x:Name="func_nome" HorizontalAlignment="Left" Height="30"
-         FontSize="18" VerticalAlignment="Top" Width="180" Grid.Column="1" Margin="0,0,0,0"  
-         SelectedValuePath="Nomea" SelectionChanged="func_nome_SelectionChanged" />
+            DisplayMemberPath="Nome" FontSize="18" VerticalAlignment="Top" Width="180" Grid.Column="1"
+            Margin="0,0,0,0" SelectedValuePath="Nome" SelectionChanged="func_nome_SelectionChanged" />
         </StackPanel>
 
         <StackPanel Grid.Column="1">

@@ -20,7 +20,7 @@ namespace Siscream.Models
 
         }
 
-        public void AbrirCaixaInsert(Caixa t)
+        public void AbrirCaixa(Caixa t)
         {
             try
             {

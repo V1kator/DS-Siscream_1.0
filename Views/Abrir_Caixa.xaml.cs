@@ -81,12 +81,13 @@ namespace Siscream.Views
 
 
                 funcionario.Nome = func_nome.Text;
+
                 cx.periodo = (DateTime)abertura.SelectedDate;
                 cx.saldoInicial = Convert.ToDouble(valorcaixa.Text);
 
 
                 CaixaDAO cxDAO = new CaixaDAO();
-                cxDAO.AbrirCaixaInsert(cx);
+                cxDAO.AbrirCaixa(cx);
                 Funcionario_DAO funcionarioDAO = new Funcionario_DAO();
                 funcionarioDAO.Insert(funcionario);
 
@@ -121,7 +122,11 @@ namespace Siscream.Views
         {
             try
             {
-                func_nome.ItemsSource = new Funcionario_DAO().List();
+
+                var func_select = new Funcionario_DAO().List();
+
+                func_nome.ItemsSource = func_select;
+
             }
             catch (Exception ex)
             {
