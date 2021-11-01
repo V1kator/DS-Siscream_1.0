@@ -22,7 +22,7 @@ namespace Siscream.Models
 
         public void AbrirCaixa(Caixa t)
         {
-           /*try
+           try
             {
                 var query = conn.Query();
 
@@ -46,7 +46,7 @@ namespace Siscream.Models
             finally
             {
                 conn.Close();
-            }*/
+            }
         }
 
 
@@ -107,8 +107,7 @@ namespace Siscream.Models
 
         public List<Caixa> List()
         {
-            throw new NotImplementedException();
-            /*try
+              try
               {
 
                   List<Caixa> list = new List<Caixa>();
@@ -136,7 +135,7 @@ namespace Siscream.Models
               catch (Exception e)
               {
                   throw e;
-              }*/
+              }
         }
 
 
