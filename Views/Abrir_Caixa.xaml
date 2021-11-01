@@ -38,9 +38,9 @@
 
         <StackPanel Margin="196,29,44,11" Grid.ColumnSpan="2">
             <Label Content=" Funcionário" FontSize="18" HorizontalAlignment="Left" Margin="0 100 0 0" />
-            <ComboBox x:Name="func_nome" HorizontalAlignment="Left" Height="30"
-            DisplayMemberPath="Nome" FontSize="18" VerticalAlignment="Top" Width="180" Grid.Column="1"
-            Margin="0,0,0,0" SelectedValuePath="Nome" SelectionChanged="func_nome_SelectionChanged" />
+            <ComboBox x:Name="func_nome" Height="30"
+            DisplayMemberPath="Nome" FontSize="18" VerticalAlignment="Top"
+            Margin="0,0,854,0" SelectedValuePath="Nome" SelectionChanged="func_nome_SelectionChanged" RenderTransformOrigin="1.039,0.367" />
         </StackPanel>
 
         <StackPanel Grid.Column="1">
@@ -51,17 +51,14 @@
 
         </StackPanel>
 
-        <StackPanel Grid.ColumnSpan="2" Margin="190,9,10,13">
-            <Label Content="Senha" FontSize="18" HorizontalAlignment="Right" Margin="300 120 220 0" />
-            <PasswordBox x:Name="Senha" Height="30" Margin="800 5 40 30" BorderThickness="4"/>
-        </StackPanel>
-        
+        <StackPanel Grid.ColumnSpan="2" Margin="190,9,10,13"/>
+
 
         <StackPanel Grid.ColumnSpan="2">
-            <Image Source="imagens/caixa_registradora.png" Height="220" Width="500" Margin="0 270 550 0"/>
-           
-            <TextBox x:Name="valorcaixa" Grid.Column="1" HorizontalAlignment="Left" Height="64" Margin="245,10,550,0" 
-                 Width="230" FontSize="33"  BorderThickness="3" Background="#4682B4" Foreground="White"></TextBox>
+
+            <Image Source="imagens/caixa_registradora.png" Height="220" Width="500" Margin="112,270,662,0"/>
+            <TextBox x:Name="valorcaixa" HorizontalAlignment="Left" Height="64" Margin="245,10,0,0" 
+                 Width="230" FontSize="33"  BorderThickness="3" Background="#4682B4" BorderBrush="black" Foreground="White"/>
         </StackPanel>
 
         <Button x:Name="botao_cancelar" Background="#fc3c4c" HorizontalContentAlignment="Center" FontFamily="Arial Black" 

@@ -28,6 +28,7 @@ namespace Siscream.Views
 
         private void Abrir_Caixa_Loaded(object sender, RoutedEventArgs e)
         {
+            
             LoadComboBox();
         }
 
@@ -82,7 +83,7 @@ namespace Siscream.Views
 
                 funcionario.Nome = func_nome.Text;
 
-                cx.periodo = (DateTime)abertura.SelectedDate;
+                cx.data = (DateTime)abertura.SelectedDate;
                 cx.saldoInicial = Convert.ToDouble(valorcaixa.Text);
 
 

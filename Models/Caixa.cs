@@ -10,9 +10,7 @@ namespace Siscream.Models
     {
         public int id { get; set; }
         public Funcionario Funcionario { get; set; } = new Funcionario();
-        public DateTime periodo { get; set; }
-        public string aberto { get; set; }
-        public string fechado { get; set; }
+        public DateTime data { get; set; }
         public double saldoInicial { get; set; }
         public double dinheiroCX { get; set; }
         public double creditoCX { get; set; }

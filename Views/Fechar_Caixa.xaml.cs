@@ -78,13 +78,12 @@ namespace Siscream.Views
                 
                 funcionario.Nome = func_nome.Text;
 
-                cx.saldoInicial = Convert.ToDouble(saldoIn.Text);
                 cx.dinheiroCX = Convert.ToDouble(dinheiro.Text);
                 cx.creditoCX = Convert.ToDouble(credito.Text);
                 cx.debitoCX = Convert.ToDouble(debito.Text);
                 cx.totalCX = Convert.ToDouble(total.Text);
                 cx.valorRetirado = Convert.ToDouble(Vretirado.Text);
-                cx.especif = especif.Text;
+                cx.especif = Convert.ToString(especif.Text);
                 cx.saldoFinal = Convert.ToDouble(Sfinal.Text);
 
                 CaixaDAO cxDAO = new CaixaDAO(); 
@@ -118,7 +117,6 @@ namespace Siscream.Views
         private void ClearInputs()
         {
             func_nome.Text = "";
-            saldoIn.Text = "";
             dinheiro.Text = "";
             credito.Text = "";
             debito.Text = "";

@@ -152,5 +152,10 @@ namespace Siscream.Views
         {
 
         }
+
+        private void lbl_cep_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

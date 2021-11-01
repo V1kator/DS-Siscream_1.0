@@ -22,17 +22,17 @@ namespace Siscream.Models
 
         public void AbrirCaixa(Caixa t)
         {
-            try
+           /*try
             {
                 var query = conn.Query();
 
-                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, periodo_caixa, valorAbertura_caixa," +
-                                    "VALUES (@nome_func, @periodo, @saldoinicial)";
+                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, valorAbertura_caixa, data_abt" +
+                                    "VALUES (@nome_func, @saldoInicial, @data)";
 
+           
                 query.Parameters.AddWithValue("@nome_func", t.Funcionario.Nome);
-                query.Parameters.AddWithValue("@periodo", t.periodo);
-                query.Parameters.AddWithValue("@saldoinicial", t.saldoInicial);
-               
+                query.Parameters.AddWithValue("@saldoInicial", t.saldoInicial);
+                query.Parameters.AddWithValue("@data", t.data.ToString("yyyy-MM-dd"));
 
                 var result = query.ExecuteNonQuery();
 
@@ -46,7 +46,7 @@ namespace Siscream.Models
             finally
             {
                 conn.Close();
-            }
+            }*/
         }
 
 
@@ -56,13 +56,12 @@ namespace Siscream.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa, valorAbertura_caixa," +
+                query.CommandText = "INSERT INTO tb_caixa (funcionario_caixa," +
                         "dinheiro_caixa, credito_caixa, debito_caixa, total_caixa, valor_retirado_caixa, especificacoes, saldofinal_caixa) " +
-                        "VALUES (@nome_func, @saldoInicial, @dinheiroCX, @creditoCX, @debitoCX, @totalCX, @valorRetirado, @especif, @saldoFinal)";
+                        "VALUES (@nome_func, @dinheiroCX, @creditoCX, @debitoCX, @totalCX, @valorRetirado, @especif, @saldoFinal)";
 
                
                 query.Parameters.AddWithValue("@nome_func", t.Funcionario.Nome);
-                query.Parameters.AddWithValue("@saldoInicial", t.saldoInicial);
                 query.Parameters.AddWithValue("@dinheiroCX", t.dinheiroCX);
                 query.Parameters.AddWithValue("@creditoCX", t.creditoCX);
                 query.Parameters.AddWithValue("@debitoCX", t.debitoCX);
@@ -108,7 +107,8 @@ namespace Siscream.Models
 
         public List<Caixa> List()
         {
-           try
+            throw new NotImplementedException();
+            /*try
               {
 
                   List<Caixa> list = new List<Caixa>();
@@ -136,7 +136,7 @@ namespace Siscream.Models
               catch (Exception e)
               {
                   throw e;
-              }
+              }*/
         }
 
 
