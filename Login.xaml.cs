@@ -47,16 +47,10 @@ namespace Siscream
             }
         }
 
+        //cpf:12345678910
+        //senha:123456
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
-        {
-            var main = new Tela_Menu();
-            main.Show();
-            this.Close();
-        }
-
-
-        /*private void btn_login_Click(object sender, RoutedEventArgs e)
         {
             string usuario = text_cpf_login.Text;
             string senha = text_senha_login.Password.ToString();
@@ -74,7 +68,7 @@ namespace Siscream
 
 
             }
-        }*/
+        }
 
     }
 }

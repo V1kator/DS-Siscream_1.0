@@ -144,3 +144,8 @@ CREATE TABLE tb_devolucao_produtos (
 	foreign key (cod_prod_fk) references tb_produto (cod_prod),
     foreign key (cod_dev_fk) references tb_devolver_produto (cod_dev_pro)
 ); 
+
+INSERT INTO `siscream`.`tb_endereco` (`logradouro_end`, `numero_end`, `bairro_end`, `cidade_end`, `uf_end`, `cep_end`) VALUES ('AV.Brasil', '5236', 'Guimaraes', 'JI-Paraná', 'RO', '1234568');
+INSERT INTO `siscream`.`tb_funcionario` (`nome_func`, `cpf_func`, `sexo_func`, `nascimento_func`, `telefone_func`, `email_func`, `rg_func`, `cargo_func`, `tipoContrato_func`, `senha_func`, `dataAdmissao_func`, `cod_end_fk`, `salario_func`) VALUES ('Valdemar', '12345678910', 'Masculino', '1896/10/10', '258469713', 'Val@gmail.com', '54321', 'Atendente de Caixa', 'Diarista', '123456', '2021/10/10', '1', '1246');
+INSERT INTO `siscream`.`tb_login` (`cod_func_fk`, `cpf_log`, `senha_log`) VALUES ('1', '12345678910', '123456');
+
